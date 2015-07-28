@@ -29,6 +29,17 @@ jQuery(document).ready(
             $('html,body').animate({scrollTop:targetOffset}, speed);
 
         }
+		
+		//
+		var nav = $('.navbar-default');
+	
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 440) {
+			nav.addClass("f-nav");
+		} else {
+			nav.removeClass("f-nav");
+		}
+	});
     }
 );
 
