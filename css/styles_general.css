@@ -14,12 +14,19 @@ nav#mk-main-navigation{    position: absolute;    top: 0px;    right: 0px;     z
 .ubermenu-target.ubermenu-target-with-image  img{margin-top:60px;}
 .ubermenu .ubermenu-tab-layout-left>.ubermenu-tabs-group{ border-right:0px !Important; border-left:1px !Important;}
 .ubermenu-tab-content-panel  li{ background:#fff; }
-.single-product .variations_form table.variations{ display:block !Important;}
+.single-product .variations_form table.variations{ display:block !Important;    margin-top: 10px;}
 #ivpa-content{ display:none; }
 table.variations label{color: #585858;}
 .woocommerce div.product div.images{width:60% !important;}
 .woocommerce div.product div.summary{ width:35%!important;}
 .single_product_title{}
 .f-nav{ position:fixed;width: 100%;z-index:999; top:38px;}
+.summary.entry-summary{ text-align:center; }
+.summary.entry-summary div p{font-family: 'Merriweather', serif;}
+div.product form.cart .variations label{    padding-top: 20!important;}
+#theme-page h3{ max-height:33px; overflow:hidden;}
+.mk-tabs-pane p{    font-family: 'Merriweather', serif;}
+.shopping-cart-header{    position: absolute;    top: 0px;}
+.post-type-archive-product h1, .post-type-archive-product h2, .post-type-archive-product h3{    font-family: 'Poppins', sans-serif;}
 
 

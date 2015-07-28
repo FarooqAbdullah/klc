@@ -21,4 +21,6 @@ Main Stylesheet file is located at stylesheet/css/styles.css
 /*@import url("css/styles.css");*/
 /*@import url("css/bootstrap.min.css");*/
 @import url(http://fonts.googleapis.com/css?family=Muli);
+@import url(http://fonts.googleapis.com/css?family=Poppins:300,400,700&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Merriweather&subset=latin,latin-ext);
 
