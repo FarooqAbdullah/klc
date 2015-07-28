@@ -28,5 +28,10 @@ div.product form.cart .variations label{    padding-top: 20!important;}
 .mk-tabs-pane p{    font-family: 'Merriweather', serif;}
 .shopping-cart-header{    position: absolute !important;    top: 0px;}
 .post-type-archive-product h1, .post-type-archive-product h2, .post-type-archive-product h3{    font-family: 'Poppins', sans-serif; font-weight:bold;}
+.quantity.buttons_added, .stock.in-stock{ display:none !Important;}
+button.single_add_to_cart_button.shop-skin-btn.shop-flat-btn.alt, .text-or {
+    display: inline-block;
+}
+.text-or { margin-top:7px}
 
 

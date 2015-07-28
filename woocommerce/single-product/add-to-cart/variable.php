@@ -77,6 +77,8 @@ global $product, $post;
 			<div class="variations_button">
 				<?php woocommerce_quantity_input(); ?>
 				<button type="submit" class="single_add_to_cart_button shop-skin-btn shop-flat-btn alt"><?php echo $product->single_add_to_cart_text(); ?></button>
+				<div class="text-or"> OR </div>
+				<button type=" " class="single_add_to_cart_button shop-skin-btn shop-flat-btn alt">Customize</button>
 			</div>
 
 			<input type="hidden" name="add-to-cart" value="<?php echo $product->id; ?>" />
