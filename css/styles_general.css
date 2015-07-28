@@ -1,0 +1,17 @@
+/* General CSS Styles for KLNYC Website */
+.mk-header-holder{ border-top:5px solid #4a5ba9;}
+.ubermenu-main{    margin: auto !Important;    float: none !important;}
+.ubermenu-main li a, #menu-primary-menu li a{font-family: 'Muli', sans-serif;}
+.mk-process-steps ul li:hover i{ color:#fff !Important;}
+nav#mk-main-navigation{    position: absolute;    top: 0px;    right: 0px;     z-index: 999;}
+.shopping-cart-header{    float: right;    position: absolute;    top: 0px;    right: 204px;    z-index: 999;}
+.ubermenu-submenu.ubermenu-submenu-type-mega{ background:#fff !important;     padding-top: 25px;}
+.ubermenu-tab-content-panel.ubermenu-column.ubermenu-column-3-4{max-width:150px;}
+.ubermenu-tab-content-panel .ubermenu-target.ubermenu-target-with-image{padding:5px 0px !Important;}
+
+.ubermenu-tabs-group.ubermenu-column.ubermenu-column-1-4{ min-width:220px !important; width:220px !important;     padding-bottom: 60px;}
+.ubermenu-content-block h2{color:#585858;}
+.ubermenu-target.ubermenu-target-with-image  img{margin-top:60px;}
+.ubermenu .ubermenu-tab-layout-left>.ubermenu-tabs-group{ border-right:0px !Important; border-left:1px !Important;}
+
+

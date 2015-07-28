@@ -4,7 +4,7 @@ Theme URI: http://objects.ws
 Author: Objects
 Author URI: http://objects.ws
 Version: 4.3
-Template: Jupiter
+Template: jupiter
 Description: A Beautiful, Professional and Ultimate Wordpress Theme Made by Artbees. Jupiter is a Clean, Flexible, fully responsive and retina ready Wordpress theme. Its smart and hand crafted environment allows you to Build outstanding websites easy and fast.
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -15,5 +15,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /*
 
 Main Stylesheet file is located at stylesheet/css/styles.css
-
+@import url("../jupiter/style.css");
 */
+@import url("css/styles_general.css");
+@import url("css/styles.css");
+@import url("css/bootstrap.min.css");
+@import url(http://fonts.googleapis.com/css?family=Muli);
+
