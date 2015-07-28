@@ -89,6 +89,9 @@
     padding-left: 0;
     padding-right: 0;
 }
+.padding-left_0 {
+    padding-left:0;
+}
 .product-detail p {
     text-align: center;
     margin: 0;
@@ -104,21 +107,76 @@
 }
 .short-product {
     margin-bottom: 25px;
+    max-width:100%;
 }
 .row.section {
     margin-bottom: 200px;
 }
 .product-hover-detail {
-    display: none;
-    width: 500px;
-    height: 700px;
+    /*display: none;*/
+    max-height: 411px;
+    min-height:400px;
     z-index: 999;
-    background: red;
+    background-color: #fff;
     position: absolute;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 0 1px 3px #e8e8e8;
+    transition: ease all 0.2s;
+    opacity: 0;
+    top: -5px;
+    overflow: hidden;
+    /*left: -5px;*/
+}
+.product-hover-detail.even {
+    /*width: 0;*/
+    left:-358px;
+    z-index: -1;
+}
+.product-hover > div {
+    position: relative;
 }
 .product-hover > div:hover {
     cursor: pointer;
 }
-.product-hover > div:hover + div.product-hover-detail {
+.product-hover > div:hover div.product-hover-detail {
     display: block;
+    opacity: 1;
+    width: 685px;
+}
+.product-hover > div:hover div.product-hover-detail.even {
+    overflow: visible;
+    z-index: 1000;
+    left:15px;
+}
+.product-hover > div:hover div.product-hover-detail.odd {
+    left:-358px;
+    overflow: visible;
+    z-index: 1001;
+}
+.product-hover > div div.product-hover-detail.odd {
+    overflow: hidden;
+    left: 0;
+    z-index: -1;
+}
+.product-hover > div > div {
+    padding-top: 15px;
+}
+.quick-shop-wrapper h2,
+.quick-shop-wrapper p {
+    text-align: center;
+}
+.quick-shop-wrapper p {
+    font-size: 13px;
+}
+.quick-shop-wrapper > div {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.quick-shop-wrapper > div .btn {
+    width: 100%;
+}
+.section > div {
+    overflow: hidden;
+    padding-top: 10px;
+    margin-top: -10px;
 }
