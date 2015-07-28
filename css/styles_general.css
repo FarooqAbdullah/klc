@@ -23,7 +23,7 @@ table.variations label{color: #585858;}
 .f-nav{ position:fixed;width: 100%;z-index:999; top:38px;}
 .summary.entry-summary{ text-align:center; }
 .summary.entry-summary div p{font-family: 'Merriweather', serif;}
-div.product form.cart .variations label{    padding-top: 20!important;}
+div.product form.cart .variations label{    padding-top: 20px!important;}
 #theme-page h3{ max-height:33px; overflow:hidden;}
 .mk-tabs-pane p{    font-family: 'Merriweather', serif;}
 .shopping-cart-header{    position: absolute;    top: 0px;}

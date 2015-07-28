@@ -151,7 +151,7 @@ get_header(); ?>
                                 <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                     <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
                                 </a>
-                                <div class="product-hover-detail row even">
+                                <div class="product-hover-detail row even s-product">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                             <div class="row h-img-wrapper">
