@@ -17,14 +17,12 @@ jQuery(document).ready(
         $('.dropdown-menu > ul > li > a').on('click', function(event ){
             event.preventDefault();
             var sectionID = $(this).attr("data-id");
-            //console.log($id);
-            //var sectionID = "americano";
             scrollToID('#' + sectionID, 1000);
         });
         // scroll function
         function scrollToID(id, speed){
 
-            var offSet = 50;
+            var offSet = 150;
             var targetOffset = $(id).offset().top - offSet;
             $('html,body').animate({scrollTop:targetOffset}, speed);
 

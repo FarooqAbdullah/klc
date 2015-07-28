@@ -13,7 +13,6 @@ nav#mk-main-navigation{    position: absolute;    top: 0px;    right: 0px;     z
 .ubermenu-content-block h2{color:#585858;}
 .ubermenu-target.ubermenu-target-with-image  img{margin-top:60px;}
 .ubermenu .ubermenu-tab-layout-left>.ubermenu-tabs-group{ border-right:0px !Important; border-left:1px !Important;}
-.f-nav{ position:absolute; top:38px;}
 .ubermenu-tab-content-panel  li{ background:#fff; }
 .single-product .variations_form table.variations{ display:block !Important;}
 #ivpa-content{ display:none; }
@@ -21,4 +20,6 @@ table.variations label{color: #585858;}
 .woocommerce div.product div.images{width:60% !important;}
 .woocommerce div.product div.summary{ width:35%!important;}
 .single_product_title{}
+.f-nav{ position:fixed;width: 100%;z-index:999; top:38px;}
+
 
