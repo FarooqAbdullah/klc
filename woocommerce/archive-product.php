@@ -148,12 +148,16 @@ get_header(); ?>
                     <div class="row short-product">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 product-hover">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                                <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                    <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                                </a>
                                 <div class="product-hover-detail row even">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                             <div class="row h-img-wrapper">
-                                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                                                <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                    <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                                                </a>
                                             </div>
                                             <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                                                 <p class="color">Navy And White</p>
@@ -191,12 +195,16 @@ get_header(); ?>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 product-hover">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                                <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                    <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                                </a>
                                 <div class="product-hover-detail row odd">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                             <div class="row h-img-wrapper">
-                                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                                                <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                    <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                                                </a>
                                             </div>
                                             <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                                                 <p class="color">Navy And White</p>
@@ -236,7 +244,44 @@ get_header(); ?>
                     <div class="row short-product">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 product-hover">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-3.jpg"  alt=""/>
+                                <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                    <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                                </a>
+                                <div class="product-hover-detail row even">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="row h-img-wrapper">
+                                                <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                    <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                                                </a>
+                                            </div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                                <p class="color">Navy And White</p>
+                                                <p class="name">Daily Grind No Pocket</p>
+                                                <p class="price">$98</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                            <h2>Quick Shop</h2>
+                                            <p>Use your Saved Custom preferences for quick reordereing</p>
+                                            <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                    <option value="one" >One</option>
+                                                    <option value="two" >Two</option>
+                                                    <option value="three" >Three</option>
+                                                </select>
+                                            </div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <button class="btn btn-primary">ADD TO CART</button>
+                                            </div>
+                                            <div>OR</div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <button class="btn btn-default customize">Customize</button>
+                                            </div>
+                                            <div>+ add to favorites/see details</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                                 <p class="color">Navy And White</p>
@@ -244,9 +289,46 @@ get_header(); ?>
                                 <p class="price">$98</p>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 product-hover even">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 product-hover">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                                <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                    <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                                </a>
+                                <div class="product-hover-detail row odd">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="row h-img-wrapper">
+                                                <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                    <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                                                </a>
+                                            </div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                                <p class="color">Navy And White</p>
+                                                <p class="name">Daily Grind No Pocket</p>
+                                                <p class="price">$98</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                            <h2>Quick Shop</h2>
+                                            <p>Use your Saved Custom preferences for quick reordereing</p>
+                                            <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                    <option value="one" >One</option>
+                                                    <option value="two" >Two</option>
+                                                    <option value="three" >Three</option>
+                                                </select>
+                                            </div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <button class="btn btn-primary">ADD TO CART</button>
+                                            </div>
+                                            <div>OR</div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <button class="btn btn-default customize">Customize</button>
+                                            </div>
+                                            <div>+ add to favorites/see details</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                                 <p class="color">Navy And White</p>
@@ -261,17 +343,44 @@ get_header(); ?>
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
-                            <p class="color">Navy And White</p>
-                            <p class="name">Daily Grind No Pocket</p>
-                            <p class="price">$98</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover odd">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                            </a>
+                            <div class="product-hover-detail row even">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="row h-img-wrapper">
+                                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                            <p class="color">Navy And White</p>
+                                            <p class="name">Daily Grind No Pocket</p>
+                                            <p class="price">$98</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                        <h2>Quick Shop</h2>
+                                        <p>Use your Saved Custom preferences for quick reordereing</p>
+                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                <option value="one" >One</option>
+                                                <option value="two" >Two</option>
+                                                <option value="three" >Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-primary">ADD TO CART</button>
+                                        </div>
+                                        <div>OR</div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-default customize">Customize</button>
+                                        </div>
+                                        <div>+ add to favorites/see details</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                             <p class="color">Navy And White</p>
@@ -281,7 +390,44 @@ get_header(); ?>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                            </a>
+                            <div class="product-hover-detail row odd">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="row h-img-wrapper">
+                                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                            <p class="color">Navy And White</p>
+                                            <p class="name">Daily Grind No Pocket</p>
+                                            <p class="price">$98</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                        <h2>Quick Shop</h2>
+                                        <p>Use your Saved Custom preferences for quick reordereing</p>
+                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                <option value="one" >One</option>
+                                                <option value="two" >Two</option>
+                                                <option value="three" >Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-primary">ADD TO CART</button>
+                                        </div>
+                                        <div>OR</div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-default customize">Customize</button>
+                                        </div>
+                                        <div>+ add to favorites/see details</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                             <p class="color">Navy And White</p>
@@ -291,7 +437,91 @@ get_header(); ?>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-3.jpg"  alt=""/>
+                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                            </a>
+                            <div class="product-hover-detail row even">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="row h-img-wrapper">
+                                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                            <p class="color">Navy And White</p>
+                                            <p class="name">Daily Grind No Pocket</p>
+                                            <p class="price">$98</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                        <h2>Quick Shop</h2>
+                                        <p>Use your Saved Custom preferences for quick reordereing</p>
+                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                <option value="one" >One</option>
+                                                <option value="two" >Two</option>
+                                                <option value="three" >Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-primary">ADD TO CART</button>
+                                        </div>
+                                        <div>OR</div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-default customize">Customize</button>
+                                        </div>
+                                        <div>+ add to favorites/see details</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                            <p class="color">Navy And White</p>
+                            <p class="name">Daily Grind No Pocket</p>
+                            <p class="price">$98</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                            </a>
+                            <div class="product-hover-detail row odd">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="row h-img-wrapper">
+                                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                            <p class="color">Navy And White</p>
+                                            <p class="name">Daily Grind No Pocket</p>
+                                            <p class="price">$98</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                        <h2>Quick Shop</h2>
+                                        <p>Use your Saved Custom preferences for quick reordereing</p>
+                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                <option value="one" >One</option>
+                                                <option value="two" >Two</option>
+                                                <option value="three" >Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-primary">ADD TO CART</button>
+                                        </div>
+                                        <div>OR</div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-default customize">Customize</button>
+                                        </div>
+                                        <div>+ add to favorites/see details</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                             <p class="color">Navy And White</p>
@@ -305,7 +535,44 @@ get_header(); ?>
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                            </a>
+                            <div class="product-hover-detail row even">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="row h-img-wrapper">
+                                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                            <p class="color">Navy And White</p>
+                                            <p class="name">Daily Grind No Pocket</p>
+                                            <p class="price">$98</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                        <h2>Quick Shop</h2>
+                                        <p>Use your Saved Custom preferences for quick reordereing</p>
+                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                <option value="one" >One</option>
+                                                <option value="two" >Two</option>
+                                                <option value="three" >Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-primary">ADD TO CART</button>
+                                        </div>
+                                        <div>OR</div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-default customize">Customize</button>
+                                        </div>
+                                        <div>+ add to favorites/see details</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                             <p class="color">Navy And White</p>
@@ -315,7 +582,44 @@ get_header(); ?>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-3.jpg"  alt=""/>
+                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                            </a>
+                            <div class="product-hover-detail row odd">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="row h-img-wrapper">
+                                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                            <p class="color">Navy And White</p>
+                                            <p class="name">Daily Grind No Pocket</p>
+                                            <p class="price">$98</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                        <h2>Quick Shop</h2>
+                                        <p>Use your Saved Custom preferences for quick reordereing</p>
+                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                <option value="one" >One</option>
+                                                <option value="two" >Two</option>
+                                                <option value="three" >Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-primary">ADD TO CART</button>
+                                        </div>
+                                        <div>OR</div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-default customize">Customize</button>
+                                        </div>
+                                        <div>+ add to favorites/see details</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                             <p class="color">Navy And White</p>
@@ -325,7 +629,44 @@ get_header(); ?>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                            </a>
+                            <div class="product-hover-detail row even">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="row h-img-wrapper">
+                                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                            <p class="color">Navy And White</p>
+                                            <p class="name">Daily Grind No Pocket</p>
+                                            <p class="price">$98</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                        <h2>Quick Shop</h2>
+                                        <p>Use your Saved Custom preferences for quick reordereing</p>
+                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                <option value="one" >One</option>
+                                                <option value="two" >Two</option>
+                                                <option value="three" >Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-primary">ADD TO CART</button>
+                                        </div>
+                                        <div>OR</div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-default customize">Customize</button>
+                                        </div>
+                                        <div>+ add to favorites/see details</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                             <p class="color">Navy And White</p>
@@ -335,7 +676,44 @@ get_header(); ?>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                            </a>
+                            <div class="product-hover-detail row odd">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="row h-img-wrapper">
+                                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                            <p class="color">Navy And White</p>
+                                            <p class="name">Daily Grind No Pocket</p>
+                                            <p class="price">$98</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                        <h2>Quick Shop</h2>
+                                        <p>Use your Saved Custom preferences for quick reordereing</p>
+                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                <option value="one" >One</option>
+                                                <option value="two" >Two</option>
+                                                <option value="three" >Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-primary">ADD TO CART</button>
+                                        </div>
+                                        <div>OR</div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-default customize">Customize</button>
+                                        </div>
+                                        <div>+ add to favorites/see details</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                             <p class="color">Navy And White</p>
@@ -368,7 +746,44 @@ get_header(); ?>
                     <div class="row short-product">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 product-hover">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-3.jpg"  alt=""/>
+                                <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                    <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                                </a>
+                                <div class="product-hover-detail row even">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="row h-img-wrapper">
+                                                <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                    <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                                                </a>
+                                            </div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                                <p class="color">Navy And White</p>
+                                                <p class="name">Daily Grind No Pocket</p>
+                                                <p class="price">$98</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                            <h2>Quick Shop</h2>
+                                            <p>Use your Saved Custom preferences for quick reordereing</p>
+                                            <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                    <option value="one" >One</option>
+                                                    <option value="two" >Two</option>
+                                                    <option value="three" >Three</option>
+                                                </select>
+                                            </div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <button class="btn btn-primary">ADD TO CART</button>
+                                            </div>
+                                            <div>OR</div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <button class="btn btn-default customize">Customize</button>
+                                            </div>
+                                            <div>+ add to favorites/see details</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                                 <p class="color">Navy And White</p>
@@ -378,7 +793,44 @@ get_header(); ?>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 product-hover">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                                <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                    <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                                </a>
+                                <div class="product-hover-detail row odd">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="row h-img-wrapper">
+                                                <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                    <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                                                </a>
+                                            </div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                                <p class="color">Navy And White</p>
+                                                <p class="name">Daily Grind No Pocket</p>
+                                                <p class="price">$98</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                            <h2>Quick Shop</h2>
+                                            <p>Use your Saved Custom preferences for quick reordereing</p>
+                                            <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                    <option value="one" >One</option>
+                                                    <option value="two" >Two</option>
+                                                    <option value="three" >Three</option>
+                                                </select>
+                                            </div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <button class="btn btn-primary">ADD TO CART</button>
+                                            </div>
+                                            <div>OR</div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <button class="btn btn-default customize">Customize</button>
+                                            </div>
+                                            <div>+ add to favorites/see details</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                                 <p class="color">Navy And White</p>
@@ -390,7 +842,44 @@ get_header(); ?>
                     <div class="row short-product">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 product-hover">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                                <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                    <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                                </a>
+                                <div class="product-hover-detail row even">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="row h-img-wrapper">
+                                                <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                    <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                                                </a>
+                                            </div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                                <p class="color">Navy And White</p>
+                                                <p class="name">Daily Grind No Pocket</p>
+                                                <p class="price">$98</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                            <h2>Quick Shop</h2>
+                                            <p>Use your Saved Custom preferences for quick reordereing</p>
+                                            <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                    <option value="one" >One</option>
+                                                    <option value="two" >Two</option>
+                                                    <option value="three" >Three</option>
+                                                </select>
+                                            </div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <button class="btn btn-primary">ADD TO CART</button>
+                                            </div>
+                                            <div>OR</div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <button class="btn btn-default customize">Customize</button>
+                                            </div>
+                                            <div>+ add to favorites/see details</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                                 <p class="color">Navy And White</p>
@@ -400,7 +889,44 @@ get_header(); ?>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 product-hover">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                                <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                    <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                                </a>
+                                <div class="product-hover-detail row odd">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="row h-img-wrapper">
+                                                <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                    <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                                                </a>
+                                            </div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                                <p class="color">Navy And White</p>
+                                                <p class="name">Daily Grind No Pocket</p>
+                                                <p class="price">$98</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                            <h2>Quick Shop</h2>
+                                            <p>Use your Saved Custom preferences for quick reordereing</p>
+                                            <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                    <option value="one" >One</option>
+                                                    <option value="two" >Two</option>
+                                                    <option value="three" >Three</option>
+                                                </select>
+                                            </div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <button class="btn btn-primary">ADD TO CART</button>
+                                            </div>
+                                            <div>OR</div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <button class="btn btn-default customize">Customize</button>
+                                            </div>
+                                            <div>+ add to favorites/see details</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                                 <p class="color">Navy And White</p>
@@ -415,7 +941,44 @@ get_header(); ?>
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                            </a>
+                            <div class="product-hover-detail row even">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="row h-img-wrapper">
+                                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                            <p class="color">Navy And White</p>
+                                            <p class="name">Daily Grind No Pocket</p>
+                                            <p class="price">$98</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                        <h2>Quick Shop</h2>
+                                        <p>Use your Saved Custom preferences for quick reordereing</p>
+                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                <option value="one" >One</option>
+                                                <option value="two" >Two</option>
+                                                <option value="three" >Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-primary">ADD TO CART</button>
+                                        </div>
+                                        <div>OR</div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-default customize">Customize</button>
+                                        </div>
+                                        <div>+ add to favorites/see details</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                             <p class="color">Navy And White</p>
@@ -425,7 +988,44 @@ get_header(); ?>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-3.jpg"  alt=""/>
+                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                            </a>
+                            <div class="product-hover-detail row odd">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="row h-img-wrapper">
+                                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                            <p class="color">Navy And White</p>
+                                            <p class="name">Daily Grind No Pocket</p>
+                                            <p class="price">$98</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                        <h2>Quick Shop</h2>
+                                        <p>Use your Saved Custom preferences for quick reordereing</p>
+                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                <option value="one" >One</option>
+                                                <option value="two" >Two</option>
+                                                <option value="three" >Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-primary">ADD TO CART</button>
+                                        </div>
+                                        <div>OR</div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-default customize">Customize</button>
+                                        </div>
+                                        <div>+ add to favorites/see details</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                             <p class="color">Navy And White</p>
@@ -435,7 +1035,44 @@ get_header(); ?>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                            </a>
+                            <div class="product-hover-detail row even">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="row h-img-wrapper">
+                                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                            <p class="color">Navy And White</p>
+                                            <p class="name">Daily Grind No Pocket</p>
+                                            <p class="price">$98</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                        <h2>Quick Shop</h2>
+                                        <p>Use your Saved Custom preferences for quick reordereing</p>
+                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                <option value="one" >One</option>
+                                                <option value="two" >Two</option>
+                                                <option value="three" >Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-primary">ADD TO CART</button>
+                                        </div>
+                                        <div>OR</div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-default customize">Customize</button>
+                                        </div>
+                                        <div>+ add to favorites/see details</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                             <p class="color">Navy And White</p>
@@ -445,7 +1082,44 @@ get_header(); ?>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                            </a>
+                            <div class="product-hover-detail row odd">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="row h-img-wrapper">
+                                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                            <p class="color">Navy And White</p>
+                                            <p class="name">Daily Grind No Pocket</p>
+                                            <p class="price">$98</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                        <h2>Quick Shop</h2>
+                                        <p>Use your Saved Custom preferences for quick reordereing</p>
+                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                <option value="one" >One</option>
+                                                <option value="two" >Two</option>
+                                                <option value="three" >Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-primary">ADD TO CART</button>
+                                        </div>
+                                        <div>OR</div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-default customize">Customize</button>
+                                        </div>
+                                        <div>+ add to favorites/see details</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                             <p class="color">Navy And White</p>
@@ -459,7 +1133,44 @@ get_header(); ?>
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                            </a>
+                            <div class="product-hover-detail row even">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="row h-img-wrapper">
+                                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                            <p class="color">Navy And White</p>
+                                            <p class="name">Daily Grind No Pocket</p>
+                                            <p class="price">$98</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                        <h2>Quick Shop</h2>
+                                        <p>Use your Saved Custom preferences for quick reordereing</p>
+                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                <option value="one" >One</option>
+                                                <option value="two" >Two</option>
+                                                <option value="three" >Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-primary">ADD TO CART</button>
+                                        </div>
+                                        <div>OR</div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-default customize">Customize</button>
+                                        </div>
+                                        <div>+ add to favorites/see details</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                             <p class="color">Navy And White</p>
@@ -469,7 +1180,44 @@ get_header(); ?>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-3.jpg"  alt=""/>
+                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                            </a>
+                            <div class="product-hover-detail row odd">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="row h-img-wrapper">
+                                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                            <p class="color">Navy And White</p>
+                                            <p class="name">Daily Grind No Pocket</p>
+                                            <p class="price">$98</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                        <h2>Quick Shop</h2>
+                                        <p>Use your Saved Custom preferences for quick reordereing</p>
+                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                <option value="one" >One</option>
+                                                <option value="two" >Two</option>
+                                                <option value="three" >Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-primary">ADD TO CART</button>
+                                        </div>
+                                        <div>OR</div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-default customize">Customize</button>
+                                        </div>
+                                        <div>+ add to favorites/see details</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                             <p class="color">Navy And White</p>
@@ -479,7 +1227,44 @@ get_header(); ?>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                            </a>
+                            <div class="product-hover-detail row even">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="row h-img-wrapper">
+                                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                            <p class="color">Navy And White</p>
+                                            <p class="name">Daily Grind No Pocket</p>
+                                            <p class="price">$98</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                        <h2>Quick Shop</h2>
+                                        <p>Use your Saved Custom preferences for quick reordereing</p>
+                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                <option value="one" >One</option>
+                                                <option value="two" >Two</option>
+                                                <option value="three" >Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-primary">ADD TO CART</button>
+                                        </div>
+                                        <div>OR</div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-default customize">Customize</button>
+                                        </div>
+                                        <div>+ add to favorites/see details</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                             <p class="color">Navy And White</p>
@@ -489,7 +1274,44 @@ get_header(); ?>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                            </a>
+                            <div class="product-hover-detail row odd">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="row h-img-wrapper">
+                                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                            <p class="color">Navy And White</p>
+                                            <p class="name">Daily Grind No Pocket</p>
+                                            <p class="price">$98</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                        <h2>Quick Shop</h2>
+                                        <p>Use your Saved Custom preferences for quick reordereing</p>
+                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                <option value="one" >One</option>
+                                                <option value="two" >Two</option>
+                                                <option value="three" >Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-primary">ADD TO CART</button>
+                                        </div>
+                                        <div>OR</div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-default customize">Customize</button>
+                                        </div>
+                                        <div>+ add to favorites/see details</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                             <p class="color">Navy And White</p>
@@ -522,7 +1344,44 @@ get_header(); ?>
                     <div class="row short-product">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 product-hover">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-3.jpg"  alt=""/>
+                                <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                    <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                                </a>
+                                <div class="product-hover-detail row even">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="row h-img-wrapper">
+                                                <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                    <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                                                </a>
+                                            </div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                                <p class="color">Navy And White</p>
+                                                <p class="name">Daily Grind No Pocket</p>
+                                                <p class="price">$98</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                            <h2>Quick Shop</h2>
+                                            <p>Use your Saved Custom preferences for quick reordereing</p>
+                                            <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                    <option value="one" >One</option>
+                                                    <option value="two" >Two</option>
+                                                    <option value="three" >Three</option>
+                                                </select>
+                                            </div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <button class="btn btn-primary">ADD TO CART</button>
+                                            </div>
+                                            <div>OR</div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <button class="btn btn-default customize">Customize</button>
+                                            </div>
+                                            <div>+ add to favorites/see details</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                                 <p class="color">Navy And White</p>
@@ -532,7 +1391,44 @@ get_header(); ?>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 product-hover">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                                <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                    <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                                </a>
+                                <div class="product-hover-detail row odd">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="row h-img-wrapper">
+                                                <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                    <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                                                </a>
+                                            </div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                                <p class="color">Navy And White</p>
+                                                <p class="name">Daily Grind No Pocket</p>
+                                                <p class="price">$98</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                            <h2>Quick Shop</h2>
+                                            <p>Use your Saved Custom preferences for quick reordereing</p>
+                                            <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                    <option value="one" >One</option>
+                                                    <option value="two" >Two</option>
+                                                    <option value="three" >Three</option>
+                                                </select>
+                                            </div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <button class="btn btn-primary">ADD TO CART</button>
+                                            </div>
+                                            <div>OR</div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <button class="btn btn-default customize">Customize</button>
+                                            </div>
+                                            <div>+ add to favorites/see details</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                                 <p class="color">Navy And White</p>
@@ -544,7 +1440,44 @@ get_header(); ?>
                     <div class="row short-product">
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 product-hover">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                                <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                    <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                                </a>
+                                <div class="product-hover-detail row even">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="row h-img-wrapper">
+                                                <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                    <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                                                </a>
+                                            </div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                                <p class="color">Navy And White</p>
+                                                <p class="name">Daily Grind No Pocket</p>
+                                                <p class="price">$98</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                            <h2>Quick Shop</h2>
+                                            <p>Use your Saved Custom preferences for quick reordereing</p>
+                                            <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                    <option value="one" >One</option>
+                                                    <option value="two" >Two</option>
+                                                    <option value="three" >Three</option>
+                                                </select>
+                                            </div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <button class="btn btn-primary">ADD TO CART</button>
+                                            </div>
+                                            <div>OR</div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <button class="btn btn-default customize">Customize</button>
+                                            </div>
+                                            <div>+ add to favorites/see details</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                                 <p class="color">Navy And White</p>
@@ -554,7 +1487,44 @@ get_header(); ?>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 product-hover">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                                <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                    <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                                </a>
+                                <div class="product-hover-detail row odd">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <div class="row h-img-wrapper">
+                                                <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                    <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                                                </a>
+                                            </div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                                <p class="color">Navy And White</p>
+                                                <p class="name">Daily Grind No Pocket</p>
+                                                <p class="price">$98</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                            <h2>Quick Shop</h2>
+                                            <p>Use your Saved Custom preferences for quick reordereing</p>
+                                            <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                    <option value="one" >One</option>
+                                                    <option value="two" >Two</option>
+                                                    <option value="three" >Three</option>
+                                                </select>
+                                            </div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <button class="btn btn-primary">ADD TO CART</button>
+                                            </div>
+                                            <div>OR</div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <button class="btn btn-default customize">Customize</button>
+                                            </div>
+                                            <div>+ add to favorites/see details</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                                 <p class="color">Navy And White</p>
@@ -569,7 +1539,44 @@ get_header(); ?>
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-3.jpg"  alt=""/>
+                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                            </a>
+                            <div class="product-hover-detail row even">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="row h-img-wrapper">
+                                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                            <p class="color">Navy And White</p>
+                                            <p class="name">Daily Grind No Pocket</p>
+                                            <p class="price">$98</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                        <h2>Quick Shop</h2>
+                                        <p>Use your Saved Custom preferences for quick reordereing</p>
+                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                <option value="one" >One</option>
+                                                <option value="two" >Two</option>
+                                                <option value="three" >Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-primary">ADD TO CART</button>
+                                        </div>
+                                        <div>OR</div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-default customize">Customize</button>
+                                        </div>
+                                        <div>+ add to favorites/see details</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                             <p class="color">Navy And White</p>
@@ -579,7 +1586,44 @@ get_header(); ?>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                            </a>
+                            <div class="product-hover-detail row odd">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="row h-img-wrapper">
+                                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                            <p class="color">Navy And White</p>
+                                            <p class="name">Daily Grind No Pocket</p>
+                                            <p class="price">$98</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                        <h2>Quick Shop</h2>
+                                        <p>Use your Saved Custom preferences for quick reordereing</p>
+                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                <option value="one" >One</option>
+                                                <option value="two" >Two</option>
+                                                <option value="three" >Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-primary">ADD TO CART</button>
+                                        </div>
+                                        <div>OR</div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-default customize">Customize</button>
+                                        </div>
+                                        <div>+ add to favorites/see details</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                             <p class="color">Navy And White</p>
@@ -589,7 +1633,44 @@ get_header(); ?>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                            </a>
+                            <div class="product-hover-detail row even">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="row h-img-wrapper">
+                                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                            <p class="color">Navy And White</p>
+                                            <p class="name">Daily Grind No Pocket</p>
+                                            <p class="price">$98</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                        <h2>Quick Shop</h2>
+                                        <p>Use your Saved Custom preferences for quick reordereing</p>
+                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                <option value="one" >One</option>
+                                                <option value="two" >Two</option>
+                                                <option value="three" >Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-primary">ADD TO CART</button>
+                                        </div>
+                                        <div>OR</div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-default customize">Customize</button>
+                                        </div>
+                                        <div>+ add to favorites/see details</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                             <p class="color">Navy And White</p>
@@ -599,7 +1680,44 @@ get_header(); ?>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                            </a>
+                            <div class="product-hover-detail row odd">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="row h-img-wrapper">
+                                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                            <p class="color">Navy And White</p>
+                                            <p class="name">Daily Grind No Pocket</p>
+                                            <p class="price">$98</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                        <h2>Quick Shop</h2>
+                                        <p>Use your Saved Custom preferences for quick reordereing</p>
+                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                <option value="one" >One</option>
+                                                <option value="two" >Two</option>
+                                                <option value="three" >Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-primary">ADD TO CART</button>
+                                        </div>
+                                        <div>OR</div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-default customize">Customize</button>
+                                        </div>
+                                        <div>+ add to favorites/see details</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                             <p class="color">Navy And White</p>
@@ -613,7 +1731,44 @@ get_header(); ?>
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                            </a>
+                            <div class="product-hover-detail row even">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="row h-img-wrapper">
+                                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                            <p class="color">Navy And White</p>
+                                            <p class="name">Daily Grind No Pocket</p>
+                                            <p class="price">$98</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                        <h2>Quick Shop</h2>
+                                        <p>Use your Saved Custom preferences for quick reordereing</p>
+                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                <option value="one" >One</option>
+                                                <option value="two" >Two</option>
+                                                <option value="three" >Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-primary">ADD TO CART</button>
+                                        </div>
+                                        <div>OR</div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-default customize">Customize</button>
+                                        </div>
+                                        <div>+ add to favorites/see details</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                             <p class="color">Navy And White</p>
@@ -623,7 +1778,44 @@ get_header(); ?>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                            </a>
+                            <div class="product-hover-detail row odd">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="row h-img-wrapper">
+                                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                            <p class="color">Navy And White</p>
+                                            <p class="name">Daily Grind No Pocket</p>
+                                            <p class="price">$98</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                        <h2>Quick Shop</h2>
+                                        <p>Use your Saved Custom preferences for quick reordereing</p>
+                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                <option value="one" >One</option>
+                                                <option value="two" >Two</option>
+                                                <option value="three" >Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-primary">ADD TO CART</button>
+                                        </div>
+                                        <div>OR</div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-default customize">Customize</button>
+                                        </div>
+                                        <div>+ add to favorites/see details</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                             <p class="color">Navy And White</p>
@@ -633,7 +1825,44 @@ get_header(); ?>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                            </a>
+                            <div class="product-hover-detail row even">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="row h-img-wrapper">
+                                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                            <p class="color">Navy And White</p>
+                                            <p class="name">Daily Grind No Pocket</p>
+                                            <p class="price">$98</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                        <h2>Quick Shop</h2>
+                                        <p>Use your Saved Custom preferences for quick reordereing</p>
+                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                <option value="one" >One</option>
+                                                <option value="two" >Two</option>
+                                                <option value="three" >Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-primary">ADD TO CART</button>
+                                        </div>
+                                        <div>OR</div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-default customize">Customize</button>
+                                        </div>
+                                        <div>+ add to favorites/see details</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                             <p class="color">Navy And White</p>
@@ -643,7 +1872,44 @@ get_header(); ?>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
+                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                            </a>
+                            <div class="product-hover-detail row odd">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="row h-img-wrapper">
+                                            <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
+                                                <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                            <p class="color">Navy And White</p>
+                                            <p class="name">Daily Grind No Pocket</p>
+                                            <p class="price">$98</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                        <h2>Quick Shop</h2>
+                                        <p>Use your Saved Custom preferences for quick reordereing</p>
+                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
+                                                <option value="one" >One</option>
+                                                <option value="two" >Two</option>
+                                                <option value="three" >Three</option>
+                                            </select>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-primary">ADD TO CART</button>
+                                        </div>
+                                        <div>OR</div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-default customize">Customize</button>
+                                        </div>
+                                        <div>+ add to favorites/see details</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                             <p class="color">Navy And White</p>
