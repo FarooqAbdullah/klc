@@ -33,9 +33,9 @@ jQuery(document).ready(
 	
         $(window).scroll(function () {
             if ($(this).scrollTop() > 440) {
-                nav.addClass("f-nav");
+                //nav.addClass("f-nav");
             } else {
-                nav.removeClass("f-nav");
+                //nav.removeClass("f-nav");
             }
         });
 
