@@ -29,9 +29,12 @@ div.product form.cart .variations label{    padding-top: 20px!important;}
 .shopping-cart-header{    position: absolute !important;    top: 0px;}
 .post-type-archive-product h1, .post-type-archive-product h2, .post-type-archive-product h3{    font-family: 'Poppins', sans-serif; font-weight:bold;}
 .quantity.buttons_added, .stock.in-stock{ display:none !Important;}
-button.single_add_to_cart_button.shop-skin-btn.shop-flat-btn.alt, .text-or {
-    display: inline-block;
-}
+button.single_add_to_cart_button.shop-skin-btn.shop-flat-btn.alt, .text-or {display: inline-block;}
 .text-or { margin-top:7px}
 
-
+@media(max-width:767px){
+.woocommerce div.product div.images, .woocommerce div.product div.summary{width:100% !important;}
+}
+@media handheld, only screen and (min-width:320px) and (max-width:767px){
+#mk-footer [class=mk-col-1-4] {  width:48% !important;}
+}
