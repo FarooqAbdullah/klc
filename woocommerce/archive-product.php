@@ -24,12 +24,12 @@ get_header(); ?>
 		// do_action( 'woocommerce_before_main_content' );
 	?>
 
-		<?php // do_action( 'woocommerce_archive_description' ); ?>
+<!--		--><?php // do_action( 'woocommerce_archive_description' ); ?>
 
-		<?php /*if ( have_posts() ) : */?><!--
+		<?php if ( have_posts() ) : ?>
 
 			<?php
-/*				/**
+				/**
 
 				 * woocommerce_before_shop_loop hook
 				 *
@@ -37,20 +37,23 @@ get_header(); ?>
 				 * @hooked woocommerce_catalog_ordering - 30
 				 */
 
-				/*do_action( 'woocommerce_before_shop_loop' );
-			*/?>
+//				do_action( 'woocommerce_before_shop_loop' );
+			?>
 
-			<?php /*woocommerce_product_loop_start(); */?>
+<!--			--><?php //woocommerce_product_loop_start(); ?>
 
-				<?php /*woocommerce_product_subcategories(); */?>
+<!--				--><?php //woocommerce_product_subcategories(); ?>
 
-				<?php /*while ( have_posts() ) : the_post(); */?>
+				<?php $num = 1;  while ( have_posts() ) : the_post(); ?>
+<!--                    --><?php //   echo $num;
+        $num++;
+        ?>
 
-					<?php /*wc_get_template_part( 'content', 'product' ); */?>
+<!--					--><?php //wc_get_template_part( 'content', 'product' ); ?>
 
-				<?php /*endwhile; // end of the loop. */?>
+				<?php endwhile; // end of the loop. ?>
 
-			<?php /*woocommerce_product_loop_end(); */?>
+<!--			--><?php //woocommerce_product_loop_end(); ?>
 
 			<?php
 /*				/**
@@ -59,16 +62,16 @@ get_header(); ?>
 				 * @hooked woocommerce_pagination - 10
 				 */
 
-				/* do_action( 'woocommerce_after_shop_loop' );
-			*/?>
+//				do_action( 'woocommerce_after_shop_loop' );
+			?>
 
 		<?php /*elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : */?>
 
 			<?php /*wc_get_template( 'loop/no-products-found.php' ); */?>
 
-		<?php /*endif; */?>
+		<?php endif; ?>
 
-	--><?php
+	<?php
 /*		/**
 
 		 * woocommerce_after_main_content hook
@@ -151,7 +154,7 @@ get_header(); ?>
                                 <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                     <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
                                 </a>
-                                <div class="product-hover-detail row even s-product">
+                                <div class="product-hover-detail row even s-product main-item-hover-wrapper">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                             <div class="row h-img-wrapper">
@@ -169,11 +172,18 @@ get_header(); ?>
                                             <h2>Quick Shop</h2>
                                             <p>Use your Saved Custom preferences for quick reordereing</p>
                                             <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                    <option value="one" >One</option>
-                                                    <option value="two" >Two</option>
-                                                    <option value="three" >Three</option>
-                                                </select>
+                                                <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                                </label>
+                                                <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                                </label>
                                             </div>
                                             <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <button class="btn btn-primary">ADD TO CART</button>
@@ -198,7 +208,7 @@ get_header(); ?>
                                 <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                     <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
                                 </a>
-                                <div class="product-hover-detail row odd">
+                                <div class="product-hover-detail row odd main-item-hover-wrapper">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                             <div class="row h-img-wrapper">
@@ -216,11 +226,18 @@ get_header(); ?>
                                             <h2>Quick Shop</h2>
                                             <p>Use your Saved Custom preferences for quick reordereing</p>
                                             <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                    <option value="one" >One</option>
-                                                    <option value="two" >Two</option>
-                                                    <option value="three" >Three</option>
-                                                </select>
+                                                <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                                </label>
+                                                <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                                </label>
                                             </div>
                                             <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <button class="btn btn-primary">ADD TO CART</button>
@@ -247,7 +264,7 @@ get_header(); ?>
                                 <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                     <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
                                 </a>
-                                <div class="product-hover-detail row even">
+                                <div class="product-hover-detail row even main-item-hover-wrapper">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                             <div class="row h-img-wrapper">
@@ -265,11 +282,18 @@ get_header(); ?>
                                             <h2>Quick Shop</h2>
                                             <p>Use your Saved Custom preferences for quick reordereing</p>
                                             <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                    <option value="one" >One</option>
-                                                    <option value="two" >Two</option>
-                                                    <option value="three" >Three</option>
-                                                </select>
+                                                <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                                </label>
+                                                <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                                </label>
                                             </div>
                                             <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <button class="btn btn-primary">ADD TO CART</button>
@@ -294,7 +318,7 @@ get_header(); ?>
                                 <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                     <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
                                 </a>
-                                <div class="product-hover-detail row odd">
+                                <div class="product-hover-detail row odd main-item-hover-wrapper">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                             <div class="row h-img-wrapper">
@@ -312,11 +336,18 @@ get_header(); ?>
                                             <h2>Quick Shop</h2>
                                             <p>Use your Saved Custom preferences for quick reordereing</p>
                                             <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                    <option value="one" >One</option>
-                                                    <option value="two" >Two</option>
-                                                    <option value="three" >Three</option>
-                                                </select>
+                                                <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                                </label>
+                                                <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                                </label>
                                             </div>
                                             <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <button class="btn btn-primary">ADD TO CART</button>
@@ -346,7 +377,7 @@ get_header(); ?>
                             <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                 <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
                             </a>
-                            <div class="product-hover-detail row even">
+                            <div class="product-hover-detail row even main-item-hover-wrapper">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="row h-img-wrapper">
@@ -364,11 +395,18 @@ get_header(); ?>
                                         <h2>Quick Shop</h2>
                                         <p>Use your Saved Custom preferences for quick reordereing</p>
                                         <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                <option value="one" >One</option>
-                                                <option value="two" >Two</option>
-                                                <option value="three" >Three</option>
-                                            </select>
+                                            <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                            </label>
+                                            <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                            </label>
                                         </div>
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-primary">ADD TO CART</button>
@@ -393,7 +431,7 @@ get_header(); ?>
                             <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                 <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
                             </a>
-                            <div class="product-hover-detail row odd">
+                            <div class="product-hover-detail row odd main-item-hover-wrapper">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="row h-img-wrapper">
@@ -411,11 +449,18 @@ get_header(); ?>
                                         <h2>Quick Shop</h2>
                                         <p>Use your Saved Custom preferences for quick reordereing</p>
                                         <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                <option value="one" >One</option>
-                                                <option value="two" >Two</option>
-                                                <option value="three" >Three</option>
-                                            </select>
+                                            <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                            </label>
+                                            <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                            </label>
                                         </div>
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-primary">ADD TO CART</button>
@@ -440,7 +485,7 @@ get_header(); ?>
                             <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                 <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
                             </a>
-                            <div class="product-hover-detail row even">
+                            <div class="product-hover-detail row even main-item-hover-wrapper">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="row h-img-wrapper">
@@ -458,11 +503,18 @@ get_header(); ?>
                                         <h2>Quick Shop</h2>
                                         <p>Use your Saved Custom preferences for quick reordereing</p>
                                         <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                <option value="one" >One</option>
-                                                <option value="two" >Two</option>
-                                                <option value="three" >Three</option>
-                                            </select>
+                                            <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                            </label>
+                                            <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                            </label>
                                         </div>
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-primary">ADD TO CART</button>
@@ -487,7 +539,7 @@ get_header(); ?>
                             <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                 <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
                             </a>
-                            <div class="product-hover-detail row odd">
+                            <div class="product-hover-detail row odd main-item-hover-wrapper">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="row h-img-wrapper">
@@ -505,11 +557,18 @@ get_header(); ?>
                                         <h2>Quick Shop</h2>
                                         <p>Use your Saved Custom preferences for quick reordereing</p>
                                         <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                <option value="one" >One</option>
-                                                <option value="two" >Two</option>
-                                                <option value="three" >Three</option>
-                                            </select>
+                                            <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                            </label>
+                                            <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                            </label>
                                         </div>
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-primary">ADD TO CART</button>
@@ -538,7 +597,7 @@ get_header(); ?>
                             <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                 <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
                             </a>
-                            <div class="product-hover-detail row even">
+                            <div class="product-hover-detail row even main-item-hover-wrapper">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="row h-img-wrapper">
@@ -556,11 +615,18 @@ get_header(); ?>
                                         <h2>Quick Shop</h2>
                                         <p>Use your Saved Custom preferences for quick reordereing</p>
                                         <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                <option value="one" >One</option>
-                                                <option value="two" >Two</option>
-                                                <option value="three" >Three</option>
-                                            </select>
+                                            <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                            </label>
+                                            <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                            </label>
                                         </div>
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-primary">ADD TO CART</button>
@@ -585,7 +651,7 @@ get_header(); ?>
                             <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                 <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
                             </a>
-                            <div class="product-hover-detail row odd">
+                            <div class="product-hover-detail row odd main-item-hover-wrapper">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="row h-img-wrapper">
@@ -603,11 +669,18 @@ get_header(); ?>
                                         <h2>Quick Shop</h2>
                                         <p>Use your Saved Custom preferences for quick reordereing</p>
                                         <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                <option value="one" >One</option>
-                                                <option value="two" >Two</option>
-                                                <option value="three" >Three</option>
-                                            </select>
+                                            <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                            </label>
+                                            <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                            </label>
                                         </div>
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-primary">ADD TO CART</button>
@@ -632,7 +705,7 @@ get_header(); ?>
                             <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                 <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
                             </a>
-                            <div class="product-hover-detail row even">
+                            <div class="product-hover-detail row even main-item-hover-wrapper">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="row h-img-wrapper">
@@ -650,11 +723,18 @@ get_header(); ?>
                                         <h2>Quick Shop</h2>
                                         <p>Use your Saved Custom preferences for quick reordereing</p>
                                         <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                <option value="one" >One</option>
-                                                <option value="two" >Two</option>
-                                                <option value="three" >Three</option>
-                                            </select>
+                                            <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                            </label>
+                                            <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                            </label>
                                         </div>
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-primary">ADD TO CART</button>
@@ -679,7 +759,7 @@ get_header(); ?>
                             <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                 <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
                             </a>
-                            <div class="product-hover-detail row odd">
+                            <div class="product-hover-detail row odd main-item-hover-wrapper">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="row h-img-wrapper">
@@ -697,11 +777,18 @@ get_header(); ?>
                                         <h2>Quick Shop</h2>
                                         <p>Use your Saved Custom preferences for quick reordereing</p>
                                         <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                <option value="one" >One</option>
-                                                <option value="two" >Two</option>
-                                                <option value="three" >Three</option>
-                                            </select>
+                                            <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                            </label>
+                                            <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                            </label>
                                         </div>
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-primary">ADD TO CART</button>
@@ -749,7 +836,7 @@ get_header(); ?>
                                 <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                     <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
                                 </a>
-                                <div class="product-hover-detail row even">
+                                <div class="product-hover-detail row even main-item-hover-wrapper">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                             <div class="row h-img-wrapper">
@@ -767,11 +854,18 @@ get_header(); ?>
                                             <h2>Quick Shop</h2>
                                             <p>Use your Saved Custom preferences for quick reordereing</p>
                                             <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                    <option value="one" >One</option>
-                                                    <option value="two" >Two</option>
-                                                    <option value="three" >Three</option>
-                                                </select>
+                                                <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                                </label>
+                                                <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                                </label>
                                             </div>
                                             <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <button class="btn btn-primary">ADD TO CART</button>
@@ -796,7 +890,7 @@ get_header(); ?>
                                 <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                     <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
                                 </a>
-                                <div class="product-hover-detail row odd">
+                                <div class="product-hover-detail row odd main-item-hover-wrapper">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                             <div class="row h-img-wrapper">
@@ -814,11 +908,18 @@ get_header(); ?>
                                             <h2>Quick Shop</h2>
                                             <p>Use your Saved Custom preferences for quick reordereing</p>
                                             <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                    <option value="one" >One</option>
-                                                    <option value="two" >Two</option>
-                                                    <option value="three" >Three</option>
-                                                </select>
+                                                <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                                </label>
+                                                <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                                </label>
                                             </div>
                                             <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <button class="btn btn-primary">ADD TO CART</button>
@@ -845,7 +946,7 @@ get_header(); ?>
                                 <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                     <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
                                 </a>
-                                <div class="product-hover-detail row even">
+                                <div class="product-hover-detail row even main-item-hover-wrapper">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                             <div class="row h-img-wrapper">
@@ -863,11 +964,18 @@ get_header(); ?>
                                             <h2>Quick Shop</h2>
                                             <p>Use your Saved Custom preferences for quick reordereing</p>
                                             <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                    <option value="one" >One</option>
-                                                    <option value="two" >Two</option>
-                                                    <option value="three" >Three</option>
-                                                </select>
+                                                <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                                </label>
+                                                <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                                </label>
                                             </div>
                                             <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <button class="btn btn-primary">ADD TO CART</button>
@@ -892,7 +1000,7 @@ get_header(); ?>
                                 <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                     <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
                                 </a>
-                                <div class="product-hover-detail row odd">
+                                <div class="product-hover-detail row odd main-item-hover-wrapper">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                             <div class="row h-img-wrapper">
@@ -910,11 +1018,18 @@ get_header(); ?>
                                             <h2>Quick Shop</h2>
                                             <p>Use your Saved Custom preferences for quick reordereing</p>
                                             <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                    <option value="one" >One</option>
-                                                    <option value="two" >Two</option>
-                                                    <option value="three" >Three</option>
-                                                </select>
+                                                <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                                </label>
+                                                <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                                </label>
                                             </div>
                                             <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <button class="btn btn-primary">ADD TO CART</button>
@@ -944,7 +1059,7 @@ get_header(); ?>
                             <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                 <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
                             </a>
-                            <div class="product-hover-detail row even">
+                            <div class="product-hover-detail row even main-item-hover-wrapper">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="row h-img-wrapper">
@@ -962,11 +1077,18 @@ get_header(); ?>
                                         <h2>Quick Shop</h2>
                                         <p>Use your Saved Custom preferences for quick reordereing</p>
                                         <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                <option value="one" >One</option>
-                                                <option value="two" >Two</option>
-                                                <option value="three" >Three</option>
-                                            </select>
+                                            <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                            </label>
+                                            <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                            </label>
                                         </div>
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-primary">ADD TO CART</button>
@@ -991,7 +1113,7 @@ get_header(); ?>
                             <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                 <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
                             </a>
-                            <div class="product-hover-detail row odd">
+                            <div class="product-hover-detail row odd main-item-hover-wrapper">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="row h-img-wrapper">
@@ -1009,11 +1131,18 @@ get_header(); ?>
                                         <h2>Quick Shop</h2>
                                         <p>Use your Saved Custom preferences for quick reordereing</p>
                                         <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                <option value="one" >One</option>
-                                                <option value="two" >Two</option>
-                                                <option value="three" >Three</option>
-                                            </select>
+                                            <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                            </label>
+                                            <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                            </label>
                                         </div>
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-primary">ADD TO CART</button>
@@ -1038,7 +1167,7 @@ get_header(); ?>
                             <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                 <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
                             </a>
-                            <div class="product-hover-detail row even">
+                            <div class="product-hover-detail row even main-item-hover-wrapper">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="row h-img-wrapper">
@@ -1056,11 +1185,18 @@ get_header(); ?>
                                         <h2>Quick Shop</h2>
                                         <p>Use your Saved Custom preferences for quick reordereing</p>
                                         <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                <option value="one" >One</option>
-                                                <option value="two" >Two</option>
-                                                <option value="three" >Three</option>
-                                            </select>
+                                            <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                            </label>
+                                            <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                            </label>
                                         </div>
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-primary">ADD TO CART</button>
@@ -1085,7 +1221,7 @@ get_header(); ?>
                             <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                 <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
                             </a>
-                            <div class="product-hover-detail row odd">
+                            <div class="product-hover-detail row odd main-item-hover-wrapper">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="row h-img-wrapper">
@@ -1103,11 +1239,18 @@ get_header(); ?>
                                         <h2>Quick Shop</h2>
                                         <p>Use your Saved Custom preferences for quick reordereing</p>
                                         <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                <option value="one" >One</option>
-                                                <option value="two" >Two</option>
-                                                <option value="three" >Three</option>
-                                            </select>
+                                            <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                            </label>
+                                            <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                            </label>
                                         </div>
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-primary">ADD TO CART</button>
@@ -1136,7 +1279,7 @@ get_header(); ?>
                             <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                 <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
                             </a>
-                            <div class="product-hover-detail row even">
+                            <div class="product-hover-detail row even main-item-hover-wrapper">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="row h-img-wrapper">
@@ -1154,11 +1297,18 @@ get_header(); ?>
                                         <h2>Quick Shop</h2>
                                         <p>Use your Saved Custom preferences for quick reordereing</p>
                                         <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                <option value="one" >One</option>
-                                                <option value="two" >Two</option>
-                                                <option value="three" >Three</option>
-                                            </select>
+                                            <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                            </label>
+                                            <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                            </label>
                                         </div>
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-primary">ADD TO CART</button>
@@ -1183,7 +1333,7 @@ get_header(); ?>
                             <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                 <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
                             </a>
-                            <div class="product-hover-detail row odd">
+                            <div class="product-hover-detail row odd main-item-hover-wrapper">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="row h-img-wrapper">
@@ -1201,11 +1351,18 @@ get_header(); ?>
                                         <h2>Quick Shop</h2>
                                         <p>Use your Saved Custom preferences for quick reordereing</p>
                                         <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                <option value="one" >One</option>
-                                                <option value="two" >Two</option>
-                                                <option value="three" >Three</option>
-                                            </select>
+                                            <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                            </label>
+                                            <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                            </label>
                                         </div>
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-primary">ADD TO CART</button>
@@ -1230,7 +1387,7 @@ get_header(); ?>
                             <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                 <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
                             </a>
-                            <div class="product-hover-detail row even">
+                            <div class="product-hover-detail row even main-item-hover-wrapper">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="row h-img-wrapper">
@@ -1248,11 +1405,18 @@ get_header(); ?>
                                         <h2>Quick Shop</h2>
                                         <p>Use your Saved Custom preferences for quick reordereing</p>
                                         <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                <option value="one" >One</option>
-                                                <option value="two" >Two</option>
-                                                <option value="three" >Three</option>
-                                            </select>
+                                            <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                            </label>
+                                            <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                            </label>
                                         </div>
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-primary">ADD TO CART</button>
@@ -1277,7 +1441,7 @@ get_header(); ?>
                             <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                 <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
                             </a>
-                            <div class="product-hover-detail row odd">
+                            <div class="product-hover-detail row odd main-item-hover-wrapper">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="row h-img-wrapper">
@@ -1295,11 +1459,18 @@ get_header(); ?>
                                         <h2>Quick Shop</h2>
                                         <p>Use your Saved Custom preferences for quick reordereing</p>
                                         <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                <option value="one" >One</option>
-                                                <option value="two" >Two</option>
-                                                <option value="three" >Three</option>
-                                            </select>
+                                            <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                            </label>
+                                            <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                            </label>
                                         </div>
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-primary">ADD TO CART</button>
@@ -1347,7 +1518,7 @@ get_header(); ?>
                                 <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                     <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
                                 </a>
-                                <div class="product-hover-detail row even">
+                                <div class="product-hover-detail row even main-item-hover-wrapper">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                             <div class="row h-img-wrapper">
@@ -1365,11 +1536,18 @@ get_header(); ?>
                                             <h2>Quick Shop</h2>
                                             <p>Use your Saved Custom preferences for quick reordereing</p>
                                             <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                    <option value="one" >One</option>
-                                                    <option value="two" >Two</option>
-                                                    <option value="three" >Three</option>
-                                                </select>
+                                                <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                                </label>
+                                                <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                                </label>
                                             </div>
                                             <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <button class="btn btn-primary">ADD TO CART</button>
@@ -1394,7 +1572,7 @@ get_header(); ?>
                                 <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                     <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
                                 </a>
-                                <div class="product-hover-detail row odd">
+                                <div class="product-hover-detail row odd main-item-hover-wrapper">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                             <div class="row h-img-wrapper">
@@ -1412,11 +1590,18 @@ get_header(); ?>
                                             <h2>Quick Shop</h2>
                                             <p>Use your Saved Custom preferences for quick reordereing</p>
                                             <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                    <option value="one" >One</option>
-                                                    <option value="two" >Two</option>
-                                                    <option value="three" >Three</option>
-                                                </select>
+                                                <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                                </label>
+                                                <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                                </label>
                                             </div>
                                             <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <button class="btn btn-primary">ADD TO CART</button>
@@ -1443,7 +1628,7 @@ get_header(); ?>
                                 <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                     <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
                                 </a>
-                                <div class="product-hover-detail row even">
+                                <div class="product-hover-detail row even main-item-hover-wrapper">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                             <div class="row h-img-wrapper">
@@ -1461,11 +1646,18 @@ get_header(); ?>
                                             <h2>Quick Shop</h2>
                                             <p>Use your Saved Custom preferences for quick reordereing</p>
                                             <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                    <option value="one" >One</option>
-                                                    <option value="two" >Two</option>
-                                                    <option value="three" >Three</option>
-                                                </select>
+                                                <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                                </label>
+                                                <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                                </label>
                                             </div>
                                             <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <button class="btn btn-primary">ADD TO CART</button>
@@ -1490,7 +1682,7 @@ get_header(); ?>
                                 <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                     <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
                                 </a>
-                                <div class="product-hover-detail row odd">
+                                <div class="product-hover-detail row odd main-item-hover-wrapper">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                             <div class="row h-img-wrapper">
@@ -1508,11 +1700,18 @@ get_header(); ?>
                                             <h2>Quick Shop</h2>
                                             <p>Use your Saved Custom preferences for quick reordereing</p>
                                             <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                    <option value="one" >One</option>
-                                                    <option value="two" >Two</option>
-                                                    <option value="three" >Three</option>
-                                                </select>
+                                                <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                                </label>
+                                                <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                                </label>
                                             </div>
                                             <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <button class="btn btn-primary">ADD TO CART</button>
@@ -1542,7 +1741,7 @@ get_header(); ?>
                             <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                 <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
                             </a>
-                            <div class="product-hover-detail row even">
+                            <div class="product-hover-detail row even main-item-hover-wrapper">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="row h-img-wrapper">
@@ -1560,11 +1759,18 @@ get_header(); ?>
                                         <h2>Quick Shop</h2>
                                         <p>Use your Saved Custom preferences for quick reordereing</p>
                                         <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                <option value="one" >One</option>
-                                                <option value="two" >Two</option>
-                                                <option value="three" >Three</option>
-                                            </select>
+                                            <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                            </label>
+                                            <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                            </label>
                                         </div>
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-primary">ADD TO CART</button>
@@ -1589,7 +1795,7 @@ get_header(); ?>
                             <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                 <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
                             </a>
-                            <div class="product-hover-detail row odd">
+                            <div class="product-hover-detail row odd main-item-hover-wrapper">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="row h-img-wrapper">
@@ -1607,11 +1813,18 @@ get_header(); ?>
                                         <h2>Quick Shop</h2>
                                         <p>Use your Saved Custom preferences for quick reordereing</p>
                                         <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                <option value="one" >One</option>
-                                                <option value="two" >Two</option>
-                                                <option value="three" >Three</option>
-                                            </select>
+                                            <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                            </label>
+                                            <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                            </label>
                                         </div>
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-primary">ADD TO CART</button>
@@ -1636,7 +1849,7 @@ get_header(); ?>
                             <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                 <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
                             </a>
-                            <div class="product-hover-detail row even">
+                            <div class="product-hover-detail row even main-item-hover-wrapper">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="row h-img-wrapper">
@@ -1654,11 +1867,18 @@ get_header(); ?>
                                         <h2>Quick Shop</h2>
                                         <p>Use your Saved Custom preferences for quick reordereing</p>
                                         <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                <option value="one" >One</option>
-                                                <option value="two" >Two</option>
-                                                <option value="three" >Three</option>
-                                            </select>
+                                            <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                            </label>
+                                            <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                            </label>
                                         </div>
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-primary">ADD TO CART</button>
@@ -1683,7 +1903,7 @@ get_header(); ?>
                             <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                 <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
                             </a>
-                            <div class="product-hover-detail row odd">
+                            <div class="product-hover-detail row odd main-item-hover-wrapper">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="row h-img-wrapper">
@@ -1701,11 +1921,18 @@ get_header(); ?>
                                         <h2>Quick Shop</h2>
                                         <p>Use your Saved Custom preferences for quick reordereing</p>
                                         <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                <option value="one" >One</option>
-                                                <option value="two" >Two</option>
-                                                <option value="three" >Three</option>
-                                            </select>
+                                            <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                            </label>
+                                            <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                            </label>
                                         </div>
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-primary">ADD TO CART</button>
@@ -1734,7 +1961,7 @@ get_header(); ?>
                             <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                 <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
                             </a>
-                            <div class="product-hover-detail row even">
+                            <div class="product-hover-detail row even main-item-hover-wrapper">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="row h-img-wrapper">
@@ -1752,11 +1979,18 @@ get_header(); ?>
                                         <h2>Quick Shop</h2>
                                         <p>Use your Saved Custom preferences for quick reordereing</p>
                                         <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                <option value="one" >One</option>
-                                                <option value="two" >Two</option>
-                                                <option value="three" >Three</option>
-                                            </select>
+                                            <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                            </label>
+                                            <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                            </label>
                                         </div>
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-primary">ADD TO CART</button>
@@ -1781,7 +2015,7 @@ get_header(); ?>
                             <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                 <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
                             </a>
-                            <div class="product-hover-detail row odd">
+                            <div class="product-hover-detail row odd main-item-hover-wrapper">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="row h-img-wrapper">
@@ -1799,11 +2033,18 @@ get_header(); ?>
                                         <h2>Quick Shop</h2>
                                         <p>Use your Saved Custom preferences for quick reordereing</p>
                                         <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                <option value="one" >One</option>
-                                                <option value="two" >Two</option>
-                                                <option value="three" >Three</option>
-                                            </select>
+                                            <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                            </label>
+                                            <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                            </label>
                                         </div>
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-primary">ADD TO CART</button>
@@ -1828,7 +2069,7 @@ get_header(); ?>
                             <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                 <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/shirt.jpg"  alt=""/>
                             </a>
-                            <div class="product-hover-detail row even">
+                            <div class="product-hover-detail row even main-item-hover-wrapper">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="row h-img-wrapper">
@@ -1846,11 +2087,18 @@ get_header(); ?>
                                         <h2>Quick Shop</h2>
                                         <p>Use your Saved Custom preferences for quick reordereing</p>
                                         <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                <option value="one" >One</option>
-                                                <option value="two" >Two</option>
-                                                <option value="three" >Three</option>
-                                            </select>
+                                            <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                            </label>
+                                            <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                            </label>
                                         </div>
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-primary">ADD TO CART</button>
@@ -1875,7 +2123,7 @@ get_header(); ?>
                             <a href="<?php echo site_url(); ?>/?product=daily-grind-no-pocket-4">
                                 <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product-2.jpg"  alt=""/>
                             </a>
-                            <div class="product-hover-detail row odd">
+                            <div class="product-hover-detail row odd main-item-hover-wrapper">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="row h-img-wrapper">
@@ -1893,11 +2141,18 @@ get_header(); ?>
                                         <h2>Quick Shop</h2>
                                         <p>Use your Saved Custom preferences for quick reordereing</p>
                                         <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <select name="custom_preferences" class="form-control" id="custom_preferences">
-                                                <option value="one" >One</option>
-                                                <option value="two" >Two</option>
-                                                <option value="three" >Three</option>
-                                            </select>
+                                            <label for="saved-preferences">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
+                                                        Saved Preferences
+                                                    </span>
+                                            </label>
+                                            <label for="klnyc">
+                                                    <span class="custom-checkbox-wrapper btn btn-primary">
+                                                        <input type="checkbox" name="klnyc" id="klnyc"/>
+                                                        KLNYC
+                                                    </span>
+                                            </label>
                                         </div>
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-primary">ADD TO CART</button>
@@ -1930,4 +2185,4 @@ get_header(); ?>
 		 */
 		do_action( 'woocommerce_sidebar' );
 	?>
-<?php get_footer(); ?>
+<?php get_footer();
