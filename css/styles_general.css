@@ -1,16 +1,20 @@
 /* General CSS Styles for KLNYC Website */
-.mk-header-holder{ border-top:5px solid #4a5ba9;}
+.mk-header-holder{ border-top:5px solid #000;}
 .ubermenu-main{    margin: auto !Important;    float: none !important;}
 .ubermenu-main li a, #menu-primary-menu li a{font-family: 'Muli', sans-serif;}
 .mk-process-steps ul li:hover i{ color:#fff !Important;}
 nav#mk-main-navigation{    position: absolute;    top: 0px;    right: 0px;     z-index: 999;}
 .shopping-cart-header{    float: right;    position: absolute;    top: 0px;    right: 204px;    z-index: 999;}
-.ubermenu-submenu.ubermenu-submenu-type-mega{ background:#fff !important;     padding-top: 25px;}
+.ubermenu-submenu.ubermenu-submenu-type-mega{ background:#4c4c4c !important;     padding-top: 25px;}
+.ubermenu-skin-black-white-2 .ubermenu-tab-content-panel{background:#4c4c4c !important; }
 .ubermenu-tab-content-panel.ubermenu-column.ubermenu-column-3-4{max-width:150px;}
 .ubermenu-tab-content-panel .ubermenu-target.ubermenu-target-with-image{padding:5px 0px !Important;}
+.ubermenu-skin-black-white-2 .ubermenu-submenu, .ubermenu-skin-black-white-2 .ubermenu-submenu .ubermenu-target { color: #eee !important;}
+.ubermenu-skin-black-white-2 .ubermenu-submenu .ubermenu-tab.ubermenu-active > .ubermenu-target {     background: none!important;     color: #fff; 
+}
 
 .ubermenu-tabs-group.ubermenu-column.ubermenu-column-1-4{ min-width:220px !important; width:220px !important;     padding-bottom: 60px;}
-.ubermenu-content-block h2{color:#585858;}
+.ubermenu-content-block h2{color:#fff;}
 .ubermenu-target.ubermenu-target-with-image  img{margin-top:60px;}
 .ubermenu .ubermenu-tab-layout-left>.ubermenu-tabs-group{ border-right:0px !Important; border-left:1px !Important;}
 .ubermenu-tab-content-panel  li{ background:#fff; }
@@ -38,3 +42,5 @@ button.single_add_to_cart_button.shop-skin-btn.shop-flat-btn.alt, .text-or {disp
 @media handheld, only screen and (min-width:320px) and (max-width:767px){
 #mk-footer [class=mk-col-1-4] {  width:48% !important;}
 }
+.product-preferences{    margin-bottom: 10px;}
+.tparrows.preview1:after{ background:transparent;}

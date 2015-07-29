@@ -51,6 +51,11 @@ jQuery(document).ready(
                 //productHoverWidth();
             }
         );
+		
+		//Preference Button Click
+		$('.product-preferences label').click(function(){
+			$('.variations').show();
+		});
     }
 );
 

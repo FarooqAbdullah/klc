@@ -19,7 +19,12 @@ global $product, $post;
 <form class="variations_form cart" method="post" enctype='multipart/form-data' data-product_id="<?php echo $post->ID; ?>" data-product_variations="<?php echo esc_attr( json_encode( $available_variations ) ) ?>">
 	<?php if ( ! empty( $available_variations ) ) : ?>
 	
-		<table class="variations" cellspacing="0" style="display:none;">
+	<div class="product-preferences">
+	<label for="saved-preferences"><span class="custom-checkbox-wrapper btn btn-primary"><input type="checkbox" name="saved-preferences" id="saved-preferences">Saved Preferences</span></label>&nbsp; &nbsp; <label for="klnyc"><span class="custom-checkbox-wrapper btn btn-primary"><input type="checkbox" name="klnyc" id="klnyc">KLNYC
+     </span>
+                                                </label></div>
+												
+		<table class="variations" cellspacing="0" style="display:none !important;">
 			<tbody>
 				<?php $loop = 0; foreach ( $attributes as $name => $options ) : $loop++; ?>
 					<tr>
