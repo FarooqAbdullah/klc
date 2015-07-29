@@ -31,13 +31,26 @@ jQuery(document).ready(
 		//
 		var nav = $('.navbar-default');
 	
-	$(window).scroll(function () {
-		if ($(this).scrollTop() > 440) {
-			nav.addClass("f-nav");
-		} else {
-			nav.removeClass("f-nav");
-		}
-	});
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 440) {
+                nav.addClass("f-nav");
+            } else {
+                nav.removeClass("f-nav");
+            }
+        });
+
+        // item hover width
+        function productHoverWidth() {
+            var $item_wrapper_div = $('.main-item-hover-wrapper').closest('div').closest('div.product-hover').width();
+            $('.main-item-hover-wrapper').css('width',$item_wrapper_div * 2);
+        }
+
+        //productHoverWidth();
+        $(window).resize(
+            function () {
+                //productHoverWidth();
+            }
+        );
     }
 );
 
