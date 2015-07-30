@@ -37,7 +37,6 @@ function theme_styles_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'theme_styles_scripts');
 
-
 //WooCommerce Functions
 add_filter( 'woocommerce_product_tabs', 'wcs_woo_remove_reviews_tab', 98 );
 function wcs_woo_remove_reviews_tab($tabs) {
@@ -58,4 +57,101 @@ add_filter( 'woocommerce_output_related_products_args', 'jk_related_products_arg
 	$args['posts_per_page'] = 4; // 4 related products
 	$args['columns'] = 2; // arranged in 2 columns
 	return $args;
+}
+
+function get_woocategories_with_subcategories () {
+    $args = array(
+        'orderby'    => 'id',
+        'hide_empty' => false,
+        'order'      => 'ASC',
+        'parent'     => ''
+    );
+    $product_categories = get_terms( 'product_cat', $args );
+    $category = array();
+    foreach($product_categories as $product_category) {
+        if($product_category->parent != 0) {
+            $category[$product_category->parent]['has_child'] = true;
+        }
+        $category[$product_category->term_id]['term_id'] = $product_category->term_id;
+        $category[$product_category->term_id]['name'] = $product_category->name;
+        $category[$product_category->term_id]['slug'] = $product_category->slug;
+        $category[$product_category->term_id]['term_group'] = $product_category->term_group;
+        $category[$product_category->term_id]['term_taxonomy_id'] = $product_category->term_taxonomy_id;
+        $category[$product_category->term_id]['taxonomy'] = $product_category->taxonomy;
+        $category[$product_category->term_id]['description'] = $product_category->description;
+        $category[$product_category->term_id]['parent'] = $product_category->parent;
+        $category[$product_category->term_id]['count'] = $product_category->count;
+        $category[$product_category->term_id]['has_child'] = (isset($category[$product_category->term_id]['has_child']) ? $category[$product_category->term_id]['has_child'] : false );
+    }
+    return $category;
+}
+
+function get_woo_subcategories ($parent_id) {
+    $args = array(
+        'orderby'    => 'id',
+        'hide_empty' => false,
+        'order'      => 'ASC',
+        'parent'     => $parent_id
+    );
+    $product_sub_categories = get_terms( 'product_cat', $args );
+    $sub_category = array();
+    foreach($product_sub_categories as $product_sub_category) {
+        $sub_category[$product_sub_category->term_id]['term_id'] = $product_sub_category->term_id;
+        $sub_category[$product_sub_category->term_id]['name'] = $product_sub_category->name;
+        $dataID = explode(' ', $product_sub_category->name );
+        $num = 1;
+        $sub_category[$product_sub_category->term_id][$num] =null;
+        foreach($dataID as $data) {
+            if($num == 1) {
+                $sub_category[$product_sub_category->term_id]['dataID'] .= strtolower($data);
+            }
+            else {
+                $sub_category[$product_sub_category->term_id]['dataID'] .= ucfirst(strtolower($data));
+            }
+            $num++;
+        }
+        $sub_category[$product_sub_category->term_id]['slug'] = $product_sub_category->slug;
+        $sub_category[$product_sub_category->term_id]['term_group'] = $product_sub_category->term_group;
+        $sub_category[$product_sub_category->term_id]['term_taxonomy_id'] = $product_sub_category->term_taxonomy_id;
+        $sub_category[$product_sub_category->term_id]['taxonomy'] = $product_sub_category->taxonomy;
+        $sub_category[$product_sub_category->term_id]['description'] = $product_sub_category->description;
+        $sub_category[$product_sub_category->term_id]['parent'] = $product_sub_category->parent;
+        $sub_category[$product_sub_category->term_id]['count'] = $product_sub_category->count;
+    }
+    return $sub_category;
+}
+
+function get_woo_parent_categories () {
+    $args = array(
+        'orderby'    => 'id',
+        'hide_empty' => false,
+        'order'      => 'ASC',
+        'parent'     => ''
+    );
+    $product_parent_categories = get_terms( 'product_cat', $args );
+    $parent_category = array();
+    $parent_id = null;
+    foreach($product_parent_categories as $product_parent_category) {
+        if($product_parent_category->term_id != 0) {
+            $parent_id[$product_parent_category->parent] = $product_parent_category->parent;
+        }
+        if($product_parent_category->parent == 0 ) {
+            $parent_category[$product_parent_category->term_id]['term_id'] = $product_parent_category->term_id;
+            $parent_category[$product_parent_category->term_id]['name'] = $product_parent_category->name;
+            $parent_category[$product_parent_category->term_id]['slug'] = $product_parent_category->slug;
+            $parent_category[$product_parent_category->term_id]['term_group'] = $product_parent_category->term_group;
+            $parent_category[$product_parent_category->term_id]['term_taxonomy_id'] = $product_parent_category->term_taxonomy_id;
+            $parent_category[$product_parent_category->term_id]['taxonomy'] = $product_parent_category->taxonomy;
+            $parent_category[$product_parent_category->term_id]['description'] = $product_parent_category->description;
+            $parent_category[$product_parent_category->term_id]['parent'] = $product_parent_category->parent;
+            $parent_category[$product_parent_category->term_id]['count'] = $product_parent_category->count;
+            if($parent_id[$product_parent_category->term_id] == $product_parent_category->term_id ) {
+                $parent_category[$product_parent_category->term_id]['has_child'] = true;
+            }
+            else {
+                $parent_category[$product_parent_category->term_id]['has_child'] = false;
+            }
+        }
+    }
+    return $parent_category;
 }

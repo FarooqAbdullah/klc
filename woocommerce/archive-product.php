@@ -25,23 +25,68 @@ get_header('shop'); ?>
 	?>
 
 <!--		--><?php // do_action( 'woocommerce_archive_description' );
-    var_dump("working here <br />");
-/*$catObject = get_term_by('slug', get_query_var('term'), 'product_cat');
-$catParentObject = get_term_by('id', $catObject->parent, 'product_cat');
 
-var_dump($catParentObject);
-var_dump("<br /><br /><br /><br />");
-var_dump($catObject);*/
-$args = array(
-    'orderby'    => 'slug',
-    'hide_empty' => false
-);
+$parent_categories = get_woo_parent_categories();
 
-$product_categories = get_terms( 'product_cat', $args );
-foreach($product_categories as $product_category){
-//    var_dump($product_category); break;
+?>
+    <div class="body_wrapper shop-archive">
+        <nav class="navbar navbar-default f-nav">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"></a>
+                </div>
 
-}
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <?php
+                        foreach($parent_categories as $parent_category) {
+                            if($parent_category['has_child']) {
+                                ?>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $parent_category['name']; ?></a>
+                                    <div class="dropdown-menu">
+                                        <div class="arrow-up"></div>
+                                        <ul>
+                                            <?php
+                                                $sub_categories = get_woo_subcategories($parent_category['term_id']);
+                                            foreach($sub_categories as $sub_category) {
+                                                echo '<li><a href="#'.$sub_category['dataID'].'" data-id="'.$sub_category['dataID'].'">'.$sub_category['name'].'</a></li>';
+                                            }
+                                            ?>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <?php
+                            }
+                            else {
+                                echo '<li><a href="#">'.$parent_category['name'].'</a></li>';
+                            }
+                        }
+                        ?>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        <div class="slider_wrapper">
+            <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product.jpg"  alt="Slider Image"/>
+            <div class="title"><?php echo  do_action('page_title'); ?></h2></div>
+        </div>
+
+<?php
+
+//foreach($product_categories as $product_category) {
+//    var_dump($product_category);
+//    break;
+//}
 ?>
 
 		<?php if ( have_posts() ) : ?>
@@ -66,56 +111,12 @@ foreach($product_categories as $product_category){
         }
     }*/
 			?>
-    <div class="body_wrapper shop-archive">
-    <nav class="navbar navbar-default f-nav">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#"></a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li><a href="#">Tops</a></li>
-                    <li><a href="#">Casual Shirts</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dress Shirts</a>
-                        <div class="dropdown-menu">
-                            <div class="arrow-up"></div>
-                            <ul>
-                                <li><a href="#dailyGrind" data-id="dailyGrind">Daily Grind</a></li>
-                                <li><a href="#summerWeightAmericano" data-id="summerWeightAmericano">Summer Weight Americano</a></li>
-                                <li><a href="#americano" data-id="americano">Americano</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li><a href="#">Tall Shirts</a></li>
-                    <li><a href="#">Polos & Tees</a></li>
-                    <li><a href="#">FLEECE & HENLEYS</a></li>
-                    <li><a href="#">SWEATERS</a></li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
-
-    <div class="slider_wrapper">
-        <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product.jpg"  alt="Slider Image"/>
-		<div class="title"><?php echo  do_action('page_title'); ?></h2></div>
-    </div>
-
 			<?php woocommerce_product_loop_start(); ?>
 
 				<?php woocommerce_product_subcategories(); ?>
 
 				<?php $num = 1;  while ( have_posts() ) : the_post(); ?>
-                    <?php    echo $num;
+<!--                    --><?php //   echo $num;
         $num++;
         ?>
 
