@@ -78,6 +78,7 @@ $parent_categories = get_woo_parent_categories();
 
         <div class="slider_wrapper">
             <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product.jpg"  alt="Slider Image"/>
+            <div class="title"><?php echo  do_action('page_title'); ?></h2></div>
         </div>
 
 <?php
@@ -110,8 +111,6 @@ $parent_categories = get_woo_parent_categories();
         }
     }*/
 			?>
-
-
 			<?php woocommerce_product_loop_start(); ?>
 
 				<?php woocommerce_product_subcategories(); ?>

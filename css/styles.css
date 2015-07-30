@@ -187,4 +187,10 @@
 }
 .shop-archive .slider_wrapper {
     padding-top: 49px;
+    position: relative;
+}
+.slider_wrapper .title {
+    position: absolute;
+    top: 60px;
+    left: 15%;
 }
