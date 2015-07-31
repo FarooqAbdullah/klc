@@ -27,7 +27,7 @@ table.variations label{color: #585858;}
 .woocommerce div.product div.images{width:60% !important;}
 .woocommerce div.product div.summary{ width:35%!important;}
 .single_product_title{}
-.f-nav{ position:fixed;width: 100%;z-index:999; top:38px;border-radius:0;}
+.f-nav{ position:fixed;width: 100%;z-index:999; top:58px;border-radius:0;background-color: #585858;border-left: 0;border-right: 0;border-bottom: 0;}
 .summary.entry-summary{ text-align:center; }
 .summary.entry-summary div p{font-family: 'Merriweather', serif;}
 div.product form.cart .variations label{    padding-top: 20px!important;}
@@ -54,6 +54,5 @@ button.single_add_to_cart_button.shop-skin-btn.shop-flat-btn.alt, .text-or {disp
 .grid-item .overlay{    pointer-events: none; background: #000;    width: 100%;    height: 100%;    display: block;    position: absolute;
     opacity: 0;    top: 0px;}
 	.grid-item:hover .overlay{ opacity: 0.5;transition:0.5s linear all;}
-aaa.product-cat-hyper {a    position: absolute;}
 h2.product-category-name{    pointer-events: none;  background:url(../images/tran-black.png); padding-top:15px; padding-bottom:15px;  z-index: 9999;   position: absolute;text-align: center; color: #fff; top: 50%; font-family: 'avenir', sans-serif;    width: 100%;    transform: translateY(-50%);}
 	.grid-item a{    display: block;line-height: 5px;}
