@@ -1,7 +1,10 @@
+
+
 /* General CSS Styles for KLNYC Website */
+
 .mk-header-holder{ border-top:5px solid #000;}
 .ubermenu-main{    margin: auto !Important;    float: none !important;}
-.ubermenu-main li a, #menu-primary-menu li a{font-family: 'Muli', sans-serif;}
+.ubermenu-main li a, #menu-primary-menu li a{font-family: 'avenir', sans-serif;}
 .mk-process-steps ul li:hover i{ color:#fff !Important;}
 nav#mk-main-navigation{    position: absolute;    top: 0px;    right: 0px;     z-index: 999;}
 .shopping-cart-header{    float: right;    position: absolute;    top: 0px;    right: 204px;    z-index: 999;}
@@ -45,3 +48,12 @@ button.single_add_to_cart_button.shop-skin-btn.shop-flat-btn.alt, .text-or {disp
 .product-preferences{    margin-bottom: 10px;}
 .tparrows.preview1:after{ background:transparent;}
 .title h1{ color:#fff; }
+.grid-item{ width:31%;     overflow: hidden; margin:15px;}
+.grid-item img{ max-width:100%; margin-bottom:0px; transition:0.5s linear all;}
+.grid-item:hover img{ transform:scale(1.3);}
+.grid-item .overlay{    pointer-events: none; background: #000;    width: 100%;    height: 100%;    display: block;    position: absolute;
+    opacity: 0;    top: 0px;}
+	.grid-item:hover .overlay{ opacity: 0.5;transition:0.5s linear all;}
+aaa.product-cat-hyper {a    position: absolute;}
+h2.product-category-name{    pointer-events: none;  background:url(../images/tran-black.png); padding-top:15px; padding-bottom:15px;  z-index: 9999;   position: absolute;text-align: center; color: #fff; top: 50%; font-family: 'avenir', sans-serif;    width: 100%;    transform: translateY(-50%);}
+	.grid-item a{    display: block;line-height: 5px;}

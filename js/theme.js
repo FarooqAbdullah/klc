@@ -56,5 +56,16 @@ jQuery(document).ready(
 		$('.product-preferences label').click(function(){
 			$('.variations').show();
 		});
+		//Maonry
+			var $grid =$('#masonry-grid-products').masonry({
+			//columnWidth: 200,
+			itemSelector: '.grid-item',
+			columnWidth: '.grid-item',
+  percentPosition: true
+			});
+
+			$grid.imagesLoaded().progress( function() {
+			$grid.masonry('layout');
+			});
     }
 );
