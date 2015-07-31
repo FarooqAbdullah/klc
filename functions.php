@@ -86,6 +86,58 @@ function get_woocategories_with_subcategories () {
     return $category;
 }
 
+function get_woocategories_id_from_category_slug ($slug) {
+    $args = array(
+        'orderby'    => 'id',
+        'hide_empty' => false,
+        'order'      => 'ASC',
+        'parent'     => ''
+    );
+    $product_categories = get_terms( 'product_cat', $args );
+    foreach($product_categories as $product_category) {
+        if($product_category->slug == $slug) {
+            return $product_category->term_id;
+        }
+    }
+//    return $category;
+}
+
+function get_woocategories_parent ($category_id) {
+    $args = array(
+        'orderby'    => 'id',
+        'hide_empty' => false,
+        'order'      => 'ASC',
+        'parent'     => ''
+    );
+    $product_categories = get_terms( 'product_cat', $args );
+    $temp = $parent = array();
+    foreach($product_categories as $product_category) {
+        $temp[$product_category->term_id]['name'] = $product_category->name;
+        $temp[$product_category->term_id]['term_id'] = $product_category->term_id;
+        $temp[$product_category->term_id]['description'] = $product_category->description;
+        $temp[$product_category->term_id]['parent'] = $product_category->parent;
+    }
+    foreach($product_categories as $product_category) {
+        if($product_category->term_id == $category_id) {
+            if($product_category->parent == 0){
+                $parent['name'] = $product_category->name;
+                $parent['term_id'] = $product_category->term_id;
+                $parent['description'] = $product_category->description;
+                $parent['parent'] = $product_category->parent;
+                $parent['slug'] = $product_category->slug;
+            }
+            else {
+                $parent['name'] = $temp[$product_category->parent]['name'];
+                $parent['term_id'] = $temp[$product_category->parent]['term_id'];
+                $parent['description'] = $temp[$product_category->parent]['description'];
+                $parent['parent'] = $temp[$product_category->parent]['parent'];
+                $parent['slug'] = $temp[$product_category->parent]['slug'];
+            }
+        }
+    }
+    return $parent;
+}
+
 function get_woo_subcategories ($parent_id) {
     $args = array(
         'orderby'    => 'id',

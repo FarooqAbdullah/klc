@@ -251,8 +251,8 @@ if ( has_post_thumbnail() ) {
 			<h3><a href="<?php echo get_permalink();?>"><?php the_title(); ?></a></h3>
 			<?php do_action( 'woocommerce_after_shop_loop_item_title' ); ?>
 
-			<?php 
-			if($mk_options['woocommerce_loop_show_desc'] == 'true') : 
+			<?php
+			if($mk_options['woocommerce_loop_show_desc'] == 'true') :
 				echo '<div class="product-item-desc">' . apply_filters( 'woocommerce_short_description', $post->post_excerpt ) . '</div>'; 
 			endif;
 			?>
