@@ -1,6 +1,12 @@
-jQuery(document).ready(
+jQuery(document).ready(		
     function ($) {
-
+		//Function to get Position of an element
+		function getPosition(element){
+			var p= $(element).position();
+			return p;
+			//console.log(p);
+		}
+		//End Position Fn
         $(function(){
             var $class, $className;
             $('.dropdown').hover(function() {
@@ -49,6 +55,8 @@ jQuery(document).ready(
         $(window).resize(
             function () {
                 //productHoverWidth();
+				var menuPosition=getPosition('#menu-item-13');			
+				$('.ubermenu-submenu-id-13').css('padding-left', menuPosition.left);
             }
         );
 		
@@ -67,5 +75,16 @@ jQuery(document).ready(
 			$grid.imagesLoaded().progress( function() {
 			$grid.masonry('layout');
 			});
+			//Set Menu Item Position on load
+			var menuPosition=getPosition('#menu-item-13');			
+			$('.ubermenu-submenu-id-13').css('padding-left', menuPosition.left);
+			
+			//Resize
+			
+			
+
+
     }
 );
+
+

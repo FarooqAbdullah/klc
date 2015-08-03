@@ -2,32 +2,42 @@
 
 /* General CSS Styles for KLNYC Website */
 
-.mk-header-holder{ border-top:5px solid #000;}
+.mk-header-holder{ }
 .ubermenu-main{    margin: auto !Important;    float: none !important;}
-.ubermenu-main li a, #menu-primary-menu li a{font-family: 'avenir', sans-serif;}
+.ubermenu-main li a, #menu-primary-menu li a, #mk-main-navigation li a{font-family: 'MyriadPro'; font-size:13px;}
 .mk-process-steps ul li:hover i{ color:#fff !Important;}
 nav#mk-main-navigation{    position: absolute;    top: 0px;    right: 0px;     z-index: 999;}
 .shopping-cart-header{    float: right;    position: absolute;    top: 0px;    right: 204px;    z-index: 999;}
-.ubermenu-submenu.ubermenu-submenu-type-mega{ background:#4c4c4c !important;     padding-top: 25px;}
-.ubermenu-skin-black-white-2 .ubermenu-tab-content-panel{background:#4c4c4c !important; }
-.ubermenu-tab-content-panel.ubermenu-column.ubermenu-column-3-4{max-width:150px;}
+.ubermenu-submenu.ubermenu-submenu-type-mega{ background:#050608 !important;   }
+.ubermenu-skin-black-white-2 .ubermenu-tab-content-panel{background:#050608 !important; }
+.ubermenu-tab-content-panel.ubermenu-column.ubermenu-column-3-4{ }
 .ubermenu-tab-content-panel .ubermenu-target.ubermenu-target-with-image{padding:5px 0px !Important;}
 .ubermenu-skin-black-white-2 .ubermenu-submenu, .ubermenu-skin-black-white-2 .ubermenu-submenu .ubermenu-target { color: #eee !important;}
 .ubermenu-skin-black-white-2 .ubermenu-submenu .ubermenu-tab.ubermenu-active > .ubermenu-target {     background: none!important;     color: #fff; 
 }
 
-.ubermenu-tabs-group.ubermenu-column.ubermenu-column-1-4{ min-width:220px !important; width:220px !important;     padding-bottom: 60px;}
+.ubermenu-tabs-group.ubermenu-column.ubermenu-column-1-4{ /*min-width:220px !important; width:220px !important; */    padding-bottom: 60px;}
 .ubermenu-content-block h2{color:#fff;}
-.ubermenu-target.ubermenu-target-with-image  img{margin-top:60px;}
+.ubermenu-target.ubermenu-target-with-image  img{ }
 .ubermenu .ubermenu-tab-layout-left>.ubermenu-tabs-group{ border-right:0px !Important; border-left:1px !Important;}
 .ubermenu-tab-content-panel  li{ background:#fff; }
+/*******Sub Menu COlumn Width FIx *****/
+#menu-item-87 .ubermenu-tabs-group>li{max-width:220px; float:none !important;}
+.ubermenu-submenu-id-87 li a{ padding-top:3px !important; padding-bottom:2px !important; text-transform:none !important; text-transform:capitalize !important;}
+.ubermenu-submenu-id-87 .ubermenu-tab-content-panel{min-width:786px;left:220px !important;}
+.ubermenu-submenu.ubermenu-submenu-id-13{ padding-bottom:15px !important;}
+.ubermenu-tab-content-panel li{min-width: 786px !important;}
+.ubermenu .ubermenu-image{    width: 786px;height: 186px !important;    margin-top: 35px !important; margin-bottom:15px !important;}
+.ubermenu-sub-indicators .ubermenu-tabs.ubermenu-tab-layout-left>.ubermenu-tabs-group>.ubermenu-has-submenu-drop>.ubermenu-target:after{content:" " !important;}
+/*******Sub Menu COlumn Width FIx *****/
 .single-product .variations_form table.variations{ display:block !Important;    margin-top: 10px;}
 #ivpa-content{ display:none; }
 table.variations label{color: #585858;}
 .woocommerce div.product div.images{width:60% !important;}
 .woocommerce div.product div.summary{ width:35%!important;}
 .single_product_title{}
-.f-nav{ position:fixed;width: 100%;z-index:999; top:58px;border-radius:0;background-color: #585858;border-left: 0;border-right: 0;border-bottom: 0;}
+.f-nav{ position:fixed;width: 100%;z-index:999; top:58px;border-radius:0;background-color: #727272;border-left: 0;border-right: 0;border-bottom: 0;}
+.f-nav li a{ font-family:MyriadPro, sans-serif; text-transform:uppercase; font-size:13px; color:#fff !important;letter-spacing: 0.5px;}
 .summary.entry-summary{ text-align:center; }
 .summary.entry-summary div p{font-family: 'Merriweather', serif;}
 div.product form.cart .variations label{    padding-top: 20px!important;}
@@ -45,6 +55,7 @@ button.single_add_to_cart_button.shop-skin-btn.shop-flat-btn.alt, .text-or {disp
 @media handheld, only screen and (min-width:320px) and (max-width:767px){
 #mk-footer [class=mk-col-1-4] {  width:48% !important;}
 }
+
 .product-preferences{    margin-bottom: 10px;}
 .tparrows.preview1:after{ background:transparent;}
 .title h1{ color:#fff; }
