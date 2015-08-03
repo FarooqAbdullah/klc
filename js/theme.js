@@ -76,13 +76,14 @@ jQuery(document).ready(
 			$grid.masonry('layout');
 			});
 			//Set Menu Item Position on load
+			setTimeout(function(){
 			var menuPosition=getPosition('#menu-item-13');			
 			$('.ubermenu-submenu-id-13').css('padding-left', menuPosition.left);
+			}, 500);
 			
 			//Resize
-			
-			
-
+			//$(window).trigger('resize');
+		
 
     }
 );
