@@ -27,7 +27,7 @@ table.variations label{color: #585858;}
 .woocommerce div.product div.images{width:60% !important;}
 .woocommerce div.product div.summary{ width:35%!important;}
 .single_product_title{}
-.f-nav{ position:fixed;width: 100%;z-index:999; top:58px;border-radius:0;background-color: #585858;border-left: 0;border-right: 0;border-bottom: 0;}
+.f-nav{ position:fixed;width: 100%;z-index:999; top:58px;border-radius:0;background-color: #727272;border-left: 0;border-right: 0;border-bottom: 0;}
 .summary.entry-summary{ text-align:center; }
 .summary.entry-summary div p{font-family: 'Merriweather', serif;}
 div.product form.cart .variations label{    padding-top: 20px!important;}

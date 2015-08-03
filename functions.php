@@ -173,6 +173,34 @@ function get_woo_subcategories ($parent_id) {
     return $sub_category;
 }
 
+function get_single_category_post ($slug) {
+
+    $product_category_post = get_term_by( 'slug', $slug, 'product_cat' );
+    $sub_category[$product_category_post->term_id]['term_id'] = $product_category_post->term_id;
+    $sub_category[$product_category_post->term_id]['name'] = $product_category_post->name;
+    $dataID = explode(' ', $product_category_post->name );
+    $num = 1;
+    $sub_category[$product_category_post->term_id][$num] =null;
+    foreach($dataID as $data) {
+        if($num == 1) {
+            $sub_category[$product_category_post->term_id]['dataID'] .= strtolower($data);
+        }
+        else {
+            $sub_category[$product_category_post->term_id]['dataID'] .= ucfirst(strtolower($data));
+        }
+        $num++;
+    }
+    $sub_category[$product_category_post->term_id]['slug'] = $product_category_post->slug;
+    $sub_category[$product_category_post->term_id]['term_group'] = $product_category_post->term_group;
+    $sub_category[$product_category_post->term_id]['term_taxonomy_id'] = $product_category_post->term_taxonomy_id;
+    $sub_category[$product_category_post->term_id]['taxonomy'] = $product_category_post->taxonomy;
+    $sub_category[$product_category_post->term_id]['description'] = $product_category_post->description;
+    $sub_category[$product_category_post->term_id]['parent'] = $product_category_post->parent;
+    $sub_category[$product_category_post->term_id]['count'] = $product_category_post->count;
+
+    return $sub_category;
+}
+
 function get_woo_parent_categories () {
     $args = array(
         'orderby'    => 'id',
@@ -206,4 +234,19 @@ function get_woo_parent_categories () {
         }
     }
     return $parent_category;
+}
+
+//add_action( 'init', '_set_cookie' );
+function _set_cookie($value) {
+    setcookie( 'current_category', $value , time() + 3600);
+}
+
+//add_action( 'wp_head', 'my_getcookie' );
+function _get_cookie($name) {
+    $cookie_result  = isset( $_COOKIE[$name] ) ? $_COOKIE[$name] : 'not set';
+    return $cookie_result;
+}
+
+function _delete_cookie($name) {
+    setcookie( $name, '', time() - 3600, COOKIEPATH, COOKIE_DOMAIN );
 }

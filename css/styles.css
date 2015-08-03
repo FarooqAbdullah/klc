@@ -36,7 +36,7 @@
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 10px solid #696969;
+    border-bottom: 10px solid #c4c2c3;
     position: absolute;
     top: -10px;
     left: 282px;
@@ -119,15 +119,15 @@
     z-index: 999;
     background-color: #fff;
     position: absolute;
-    border: 1px solid #e5e5e5;
-    box-shadow: 0 0 1px 3px #e8e8e8;
+    border: 1px solid #c1c1c1;
+    /*box-shadow: 0 0 1px 3px #e8e8e8;*/
     transition: ease all 0.2s;
     opacity: 0;
     top: -5px;
     overflow: hidden;
     /*left: -5px;*/
 }
-.product-hover-detail.even {
+.product-hover-detail.odd {
     /*width: 0;*/
     left:-358px;
     z-index: -1;
@@ -143,17 +143,17 @@
     opacity: 1;
     width: 685px;
 }
-.product-hover > div:hover div.product-hover-detail.even {
+.product-hover > div:hover div.product-hover-detail.odd {
     overflow: visible;
     z-index: 1000;
     left:15px;
 }
-.product-hover > div:hover div.product-hover-detail.odd {
+.product-hover > div:hover div.product-hover-detail.even {
     left:-358px;
     overflow: visible;
     z-index: 1001;
 }
-.product-hover > div div.product-hover-detail.odd {
+.product-hover > div div.product-hover-detail.even {
     overflow: hidden;
     left: 0;
     z-index: -1;
@@ -212,13 +212,13 @@
     background-color:transparent;
 }
 .f-nav.navbar-default .navbar-nav > li .dropdown-menu {
-    background-color:#696969;
+    background-color:#c4c2c3;
     top:98%;
     border: none;
     border-radius:0;
 }
 .f-nav.navbar-default .navbar-nav > li .dropdown-menu >ul>li>a {
-    color: #e4e4e4;
+    color: #474747;
 }
 .f-nav.navbar-default .navbar-nav > li .dropdown-menu >ul>li>a:hover {
     color: #ffffff;
@@ -228,4 +228,14 @@
 }
 #mk-header ul ul li {
     position: relative;
+}
+.saved-preferences > label {
+    display: block;
+}
+.btn.customize {
+    background-color: #303030;
+    color:#fff;
+}
+.row.category-title {
+    min-height: 100px;
 }
