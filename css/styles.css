@@ -56,6 +56,8 @@
 }
 .big-image {
     border: 1px solid #c9c9c9; background:#f3f3f5; padding:15px 15px !important;
+    min-height: 782px;
+
 }
 .big-image .head-content-wrapper {
     padding: 10% 5%;
