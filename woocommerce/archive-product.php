@@ -1,4 +1,10 @@
 <?php
+$browse_category = _get_cookie('current_category');
+_delete_cookie('current_category');
+_set_cookie('daily grind');
+
+
+
 /**
  * The Template for displaying product archives, including the main shop page which is a post type archive.
  *
@@ -27,7 +33,6 @@ get_header('shop'); ?>
 <!--		--><?php // do_action( 'woocommerce_archive_description' );
 
 $parent_categories = get_woo_parent_categories();
-
 ?>
     <div class="body_wrapper shop-archive">
         <nav class="navbar navbar-default f-nav">
@@ -46,6 +51,7 @@ $parent_categories = get_woo_parent_categories();
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
+                    <li><a href="<?php get_permalink(); ?>?show=all">All</a></li>
                         <?php
 foreach($parent_categories as $parent_category) {
     if($parent_category['has_child']) {
@@ -84,14 +90,24 @@ foreach($parent_categories as $parent_category) {
 $current_category = "dress-shirts";
 $current_category_id = get_woocategories_id_from_category_slug($current_category);
 $parent_cat = get_woocategories_parent($current_category_id);
-?>
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <h1 class="main-head"><?php echo $parent_cat['name']; ?></h1>
-            </div>
+
+    ?>
+    <div class="row category-title">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <?php
+        if(trim($_GET['show']) == "all") { ?>
+            <h1 class="main-head"><?php echo $parent_cat['name']; ?></h1>
+            <?php }?>
         </div>
+    </div>
 <?php
-$sub_categories_post = get_woo_subcategories($parent_cat['term_id']);
+
+if((trim($_GET['show'])) == "all") {
+    $sub_categories_post = get_woo_subcategories($parent_cat['term_id']);
+}
+else {
+    $sub_categories_post = get_single_category_post('daily-grind');
+}
 if(empty($sub_categories_post)) {
     echo __( 'No Category found' );
 }
@@ -151,10 +167,10 @@ else {
                 $image_output_src = $image_src_array[0];
                 $even = "";
                 if($j%2 == 1){
-                    $even = 'even';
+                    $even = 'odd';
                 }
                 else {
-                    $even = 'odd';
+                    $even = 'even';
                 }
                 if($j == 1 || $j == 3) {
                     ?>
@@ -185,9 +201,9 @@ else {
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
                                         <h2>Quick Shop</h2>
-                                        <p>Use your Saved Custom preferences for quick reordereing</p>
-                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <label for="saved-preferences">
+                                        <p>Use your Saved Custom preferences or KLYNC design</p>
+                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12 saved-preferences">
+                                            <!--<label for="saved-preferences">
                                                     <span class="custom-checkbox-wrapper btn btn-primary">
                                                         <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
                                                         Saved Preferences
@@ -198,6 +214,12 @@ else {
                                                         <input type="checkbox" name="klnyc" id="klnyc"/>
                                                         KLNYC
                                                     </span>
+                                            </label>-->
+                                            <label for="custom-preferences">
+                                                <select name="custom-preferences" id="custom-preferences" class="form-control">
+                                                    <option value="saved-preferences"> Saved Preferences </option>
+                                                    <option value="saved-preferences"> KLYNC Preferences </option>
+                                                </select>
                                             </label>
                                         </div>
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -207,7 +229,7 @@ else {
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-default customize">Customize</button>
                                         </div>
-                                        <div>+ add to favorites/see details</div>
+                                        <!--                                        <div>+ add to favorites/see details</div>-->
                                     </div>
                                 </div>
                             </div>
@@ -268,9 +290,9 @@ else {
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
                                         <h2>Quick Shop</h2>
-                                        <p>Use your Saved Custom preferences for quick reordereing</p>
-                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <label for="saved-preferences">
+                                        <p>Use your Saved Custom preferences or KLYNC design</p>
+                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12 saved-preferences">
+                                            <!--<label for="saved-preferences">
                                                     <span class="custom-checkbox-wrapper btn btn-primary">
                                                         <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
                                                         Saved Preferences
@@ -281,6 +303,12 @@ else {
                                                         <input type="checkbox" name="klnyc" id="klnyc"/>
                                                         KLNYC
                                                     </span>
+                                            </label>-->
+                                            <label for="custom-preferences">
+                                                <select name="custom-preferences" id="custom-preferences" class="form-control">
+                                                    <option value="saved-preferences"> Saved Preferences </option>
+                                                    <option value="saved-preferences"> KLYNC Preferences </option>
+                                                </select>
                                             </label>
                                         </div>
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -290,7 +318,7 @@ else {
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-default customize">Customize</button>
                                         </div>
-                                        <div>+ add to favorites/see details</div>
+                                        <!--                                        <div>+ add to favorites/see details</div>-->
                                     </div>
                                 </div>
                             </div>
