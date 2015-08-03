@@ -246,7 +246,7 @@ function _set_cookie($value) {
 
 //add_action( 'wp_head', 'my_getcookie' );
 function _get_cookie($name) {
-    $cookie_result  = isset( $_COOKIE[$name] ) ? $_COOKIE[$name] : 'not set';
+    $cookie_result  = isset( $_COOKIE[$name] ) ? $_COOKIE[$name] : 'daily-grind';
     return $cookie_result;
 }
 

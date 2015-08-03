@@ -1,10 +1,14 @@
 <?php
-$browse_category = _get_cookie('current_category');
-_delete_cookie('current_category');
-_set_cookie('daily grind');
+$query_string = trim($_GET['category']);
+$browse_category = null;
+if($query_string == "all") {
+    $browse_category = _get_cookie('current_category');
+    _delete_cookie('current_category');
 
-
-
+}else {
+    _set_cookie($query_string);
+    $browse_category = $query_string;
+}
 /**
  * The Template for displaying product archives, including the main shop page which is a post type archive.
  *
@@ -31,7 +35,7 @@ get_header('shop'); ?>
 ?>
 
 <!--		--><?php // do_action( 'woocommerce_archive_description' );
-
+$current_page_url = get_permalink('shop');
 $parent_categories = get_woo_parent_categories();
 ?>
     <div class="body_wrapper shop-archive">
@@ -51,20 +55,26 @@ $parent_categories = get_woo_parent_categories();
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                    <li><a href="<?php get_permalink(); ?>?show=all">All</a></li>
+                    <li><a href="<?php get_permalink(); ?>?category=all">All</a></li>
                         <?php
 foreach($parent_categories as $parent_category) {
     if($parent_category['has_child']) {
         ?>
         <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $parent_category['name']; ?></a>
+            <a href="<?php echo $current_page_url . "?category=" . $parent_category['slug']; ?>" class="dropdown-toggle" data-toggle="" role="button" aria-haspopup="tue" aria-expanded="fase"><?php echo $parent_category['name']; ?></a>
             <div class="dropdown-menu">
                 <div class="arrow-up"></div>
                 <ul>
                     <?php
                     $sub_categories = get_woo_subcategories($parent_category['term_id']);
                     foreach($sub_categories as $sub_category) {
-                        echo '<li><a href="#'.$sub_category['dataID'].'" data-id="'.$sub_category['dataID'].'">'.$sub_category['name'].'</a></li>';
+                        if($query_string == "all" && $query_string ==  $parent_category['slug'] ) {
+                            $url_ = "#" . $sub_category['dataID'];
+                        }
+                        else {
+                            $url_ = $current_page_url . "?category=" . $sub_category['slug'];
+                        }
+                        echo '<li><a href="'.$url_.'" data-d="'.$sub_category['dataID'].'">'.$sub_category['name'].'</a></li>';
                     }
                     ?>
                 </ul>
@@ -73,7 +83,7 @@ foreach($parent_categories as $parent_category) {
     <?php
     }
     else {
-        echo '<li><a href="#">'.$parent_category['name'].'</a></li>';
+        echo '<li><a href="'.$current_page_url . "?category=" . $parent_category['slug'].'">'.$parent_category['name'].'</a></li>';
     }
 }
 ?>
@@ -87,7 +97,7 @@ foreach($parent_categories as $parent_category) {
             <div class="title"><?php echo  do_action('page_title'); ?></h2></div>
         </div>
         <?php
-$current_category = "dress-shirts";
+$current_category = $browse_category;
 $current_category_id = get_woocategories_id_from_category_slug($current_category);
 $parent_cat = get_woocategories_parent($current_category_id);
 
@@ -95,18 +105,18 @@ $parent_cat = get_woocategories_parent($current_category_id);
     <div class="row category-title">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <?php
-        if(trim($_GET['show']) == "all") { ?>
+        if(trim($_GET['category']) == "all") { ?>
             <h1 class="main-head"><?php echo $parent_cat['name']; ?></h1>
             <?php }?>
         </div>
     </div>
 <?php
 
-if((trim($_GET['show'])) == "all") {
+if((trim($_GET['category'])) == "all") {
     $sub_categories_post = get_woo_subcategories($parent_cat['term_id']);
 }
 else {
-    $sub_categories_post = get_single_category_post('daily-grind');
+    $sub_categories_post = get_single_category_post($browse_category);
 }
 if(empty($sub_categories_post)) {
     echo __( 'No Category found' );
@@ -119,20 +129,27 @@ else {
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 big-image  padding_left_right_0">
                     <div>
                         <div class="row head-content-wrapper">
-                            <h2><?php echo $cat_posts['name']; ?></h2>
+                            <h2><?php echo (!empty($cat_posts['name']) ? $cat_posts['name'] : "Category Name Not Found"); ?></h2>
                             <p>
-                                <?php echo $cat_posts['description']; ?>
+                                <?php echo (!empty($cat_posts['description']) ? $cat_posts['description'] : "Category Description Not Found"); ?>
                             </p>
-                            <p>
+                            <!--<p>
                                 Available in 3 fits and 3 collars
-                            </p>
+                            </p>-->
                         </div>
-                        <div class="row">
+                        <div class="row text-center">
                             <?php
-        $thumbnail_id = get_woocommerce_term_meta( $cat_posts['term_id'], 'thumbnail_id', true );
-        $image_url = wp_get_attachment_url( $thumbnail_id );
-        ?>
-                            <img src="<?php echo $image_url; ?>"  alt=""/>
+                                $thumbnail_id = get_woocommerce_term_meta( $cat_posts['term_id'], 'thumbnail_id', true );
+                                $image_url = wp_get_attachment_url( $thumbnail_id );
+        if(!empty($image_url)) {
+            ?>
+            <img src="<?php echo $image_url; ?>" alt=""/>
+
+        <?php
+        }else {
+            echo "Category Image not Found";
+        }
+                            ?>
                         </div>
                     </div>
                 </div>
