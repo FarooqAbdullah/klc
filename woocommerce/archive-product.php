@@ -68,13 +68,19 @@ foreach($parent_categories as $parent_category) {
                     <?php
                     $sub_categories = get_woo_subcategories($parent_category['term_id']);
                     foreach($sub_categories as $sub_category) {
-                        if($query_string == "all" && $query_string ==  $parent_category['slug'] ) {
+                        $url_ = null;
+                        if($query_string == "all") {
                             $url_ = "#" . $sub_category['dataID'];
+                            ?>
+                            <li><a href="<?php echo $url_; ?>" data-id="<?php echo $sub_category['dataID']; ?>" id="slugUrl"><?php echo $sub_category['name']; ?></a></li>
+                        <?php
                         }
                         else {
                             $url_ = $current_page_url . "?category=" . $sub_category['slug'];
+                            ?>
+                            <li><a href="<?php echo $url_; ?>" data-id="<?php echo $sub_category['dataID']; ?>" id="withoutSlugUrl"><?php echo $sub_category['name']; ?></a></li>
+                        <?php
                         }
-                        echo '<li><a href="'.$url_.'" data-d="'.$sub_category['dataID'].'">'.$sub_category['name'].'</a></li>';
                     }
                     ?>
                 </ul>

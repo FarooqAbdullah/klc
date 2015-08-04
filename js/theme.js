@@ -20,7 +20,15 @@ jQuery(document).ready(
         });
 
         // navigation click actions
-        $('.dropdown-menu > ul > li > a').on('click', function(event ){
+        $('.dropdown-menu > ul > li > a#withoutSlugUrl').on('click', function(event ){
+            //alert("working");
+            //event.preventDefault();
+            var sectionID = $(this).attr("data-id");
+            var url = $(this).attr("href");
+            console.log(url);
+            scrollToID('#' + sectionID, 1000);
+        });
+        $('.dropdown-menu > ul > li > a#slugUrl').on('click', function(event ){
             event.preventDefault();
             var sectionID = $(this).attr("data-id");
             scrollToID('#' + sectionID, 1000);
