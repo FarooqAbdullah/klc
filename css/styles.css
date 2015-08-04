@@ -242,3 +242,6 @@
 .row.category-title {
     min-height: 100px;
 }
+.no-categories-found {
+    min-height: 300px;
+}

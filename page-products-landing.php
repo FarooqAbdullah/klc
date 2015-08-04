@@ -49,7 +49,7 @@ get_header('shop'); the_post();
 
      ?>
 	 <div class="grid-item">
-	 <a class="product-cat-hyper" href="<?php echo site_url(); ?>/product-category/<?php echo $cat->slug; ?>"><img src="<?php echo $image ?>" class=""></a>
+	 <a class="product-cat-hyper" href="<?php echo get_term_link( $cat->slug, 'product_cat' ); ?>"><img src="<?php echo $image ?>" class=""></a>
 	 <div class="overlay"></div>
 	 <h2 class="product-category-name"> <?php echo $cat->name;?> </h2>
 	 </div>
