@@ -248,7 +248,7 @@ else {
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-primary">ADD TO CART</button>
                                         </div>
-                                        <div>OR</div>
+                                        <div class="or-text">OR</div>
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-default customize">Customize</button>
                                         </div>
@@ -337,7 +337,7 @@ else {
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-primary">ADD TO CART</button>
                                         </div>
-                                        <div>OR</div>
+                                        <div class="or-text">OR</div>
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-default customize">Customize</button>
                                         </div>
