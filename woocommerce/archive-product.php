@@ -147,13 +147,9 @@ get_header('shop'); ?>
                             <?php
                             $sub_categories = get_woo_subcategories($parent_category['term_id']);
                             foreach ($sub_categories as $sub_category) {
-//                                var_dump($sub_category['slug']);
-//                                $child_parent_category =  get_woocategories_parent('',$sub_category['slug']);
-                                $url_ = null;
-//                                echo "<pre>";
-//                                print_r($child_parent_category);
-//                                echo "</pre>";
-                                if ($query_string == "all") {
+                                $child_parent_category =  get_woocategories_parent('',$sub_category['slug']);
+                                $par_slug = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+                                if ($query_string == "all" && $child_parent_category['slug'] == $par_slug) {
                                     $url_ = "#" . $sub_category['dataID'];
                                     ?>
                                     <li><a href="<?php echo $url_; ?>" data-id="<?php echo $sub_category['dataID']; ?>"

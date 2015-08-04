@@ -145,6 +145,13 @@ function get_woocategories_parent ($category_id = null, $category_slug = null) {
                 $parent['parent'] = $product_category->parent;
                 $parent['slug'] = $product_category->slug;
             }
+            else {
+                $parent['name'] = $temp[$product_category->parent]['name'];
+                $parent['term_id'] = $temp[$product_category->parent]['term_id'];
+                $parent['description'] = $temp[$product_category->parent]['description'];
+                $parent['parent'] = $temp[$product_category->parent]['parent'];
+                $parent['slug'] = $temp[$product_category->parent]['slug'];
+            }
         }
     }
     return $parent;
