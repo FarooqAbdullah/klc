@@ -183,7 +183,6 @@ if ($show_header != 'no-header' && $show_header != 'no-header-title' && $show_he
     echo (($mk_options['header_size'] == 'true') ? 'mk-background-stretch' : ''); ?>"></div>
 
 
-
   <?php
     
     /* Header toolbar responsive toggle icon */
