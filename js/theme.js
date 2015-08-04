@@ -46,7 +46,7 @@ jQuery(document).ready(
 		var nav = $('.navbar-default');
 	
         $(window).scroll(function () {
-            if ($(this).scrollTop() > 440) {
+            if ($(this).scrollTop() > 300) {
                 nav.addClass("f-nav-fixed");
             } else {
                 nav.removeClass("f-nav-fixed");

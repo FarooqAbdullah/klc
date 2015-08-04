@@ -51,6 +51,7 @@ div.product form.cart .variations label{    padding-top: 20px!important;}
 button.single_add_to_cart_button.shop-skin-btn.shop-flat-btn.alt, .text-or {display: inline-block;}
 .text-or { margin-top:7px}
 .mk-header-holder{background:#050608;}
+@media(min-width:767px) {.big-image{min-height: 782px;}}
 @media(max-width:767px){
 .woocommerce div.product div.images, .woocommerce div.product div.summary{width:100% !important;}
 .header-logo  { max-width:150px; background:#050608;}
@@ -62,15 +63,17 @@ button.single_add_to_cart_button.shop-skin-btn.shop-flat-btn.alt, .text-or {disp
 
 @media (min-width:320px) and (max-width:960px) {
 
-#mk-header .header-logo{ position:absolute !Important; top;0px; z-index:9999; pointer-events:none;}
+#mk-header .header-logo{ position:absolute !Important; top:0px; z-index:9999; pointer-events:none;}
  .dropdownJavascript li#menu-item-13{display:none;} 
 div.shopping-cart-header{padding-left: 0px;margin-right: 0px !important;padding-right: 0px;min-width: 59px;     right: 85px;}
 .ubermenu-tab-content-panel{ display:none !important; }
  }
  
 @media(max-width:1140px){
-#mk-header .header-logo{ position:absolute !Important; top;0px; z-index:9999; pointer-events:none;}
+#mk-header .header-logo{ position:absolute !Important; top:0px; z-index:9999; pointer-events:none;}
  .dropdownJavascript li#menu-item-13{display:none;} 
+ .f-nav{ position:relative; margin-bottom: 0px; top:0px;}
+ .shop-archive .slider_wrapper {padding-top: 0px !Important; }
  
 }
 @media(min-width:1140px) {.main-navigation-ul>li.menu-item{height:53px; line-height:53px;} }
