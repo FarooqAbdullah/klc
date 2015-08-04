@@ -52,6 +52,7 @@ button.single_add_to_cart_button.shop-skin-btn.shop-flat-btn.alt, .text-or {disp
 
 @media(max-width:767px){
 .woocommerce div.product div.images, .woocommerce div.product div.summary{width:100% !important;}
+.header-logo  { max-width:150px;}
 }
 @media handheld, only screen and (min-width:320px) and (max-width:767px){
 #mk-footer [class=mk-col-1-4] {  width:48% !important;}
@@ -71,3 +72,8 @@ h2.product-category-name{    pointer-events: none;  background:url(../images/tra
 	.quick-shop-wrapper h2{    font-family: 'Poppins';font-weight: bold; }
 	.quick-shop-wrapper  .or-text{font-family: 'Poppins';font-weight: bold; }
 	#custom-preferences{ border-radius:0px; border:1px solid #e8eae9; box-shadow:none;}
+	.header-style-1 .menu-hover-style-5 .main-navigation-ul > li
+	 {
+		height:47px;
+		line-height:47px;
+	}
