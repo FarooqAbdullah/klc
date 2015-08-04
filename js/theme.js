@@ -63,8 +63,17 @@ jQuery(document).ready(
         $(window).resize(
             function () {
                 //productHoverWidth();
-				var menuPosition=getPosition('#menu-item-13');			
+				var menuPosition=getPosition('#menu-item-13');
+					if($( window ).width()>='768'){	
 				$('.ubermenu-submenu-id-13').css('padding-left', menuPosition.left);
+					}
+					else {
+						var width=$(window).width();
+						$('#ubermenu-main-2-primary-menu').css('width',width);
+						$('#ubermenu-main-2-primary-menu').css('min-width',width);
+						$('#ubermenu-main-2-primary-menu').css('position','fixed');
+						$('#ubermenu-main-2-primary-menu').css('left','0px');
+					}
             }
         );
 		
@@ -72,7 +81,7 @@ jQuery(document).ready(
 		$('.product-preferences label').click(function(){
 			$('.variations').show();
 		});
-		//Maonry
+		//Masonry
 			var $grid =$('#masonry-grid-products').masonry({
 			//columnWidth: 200,
 			itemSelector: '.grid-item',
@@ -85,8 +94,23 @@ jQuery(document).ready(
 			});
 			//Set Menu Item Position on load
 			setTimeout(function(){
-			var menuPosition=getPosition('#menu-item-13');			
+			var menuPosition=getPosition('#menu-item-13');	
+			//console.log($( window ).width());
+			if($( window ).width()>='768'){
+            //console.log('greate');				
 			$('.ubermenu-submenu-id-13').css('padding-left', menuPosition.left);
+			}
+			else {
+				var width=$(window).width();
+				$('#ubermenu-main-2-primary-menu').css('width',width);
+				$('#ubermenu-main-2-primary-menu').css('min-width',width);
+				$('#ubermenu-main-2-primary-menu').css('position','fixed');
+				$('#ubermenu-main-2-primary-menu').css('left','0px');
+				var leftpos=(width*71.87)/100;
+				
+				
+				
+			}
 			}, 500);
 			
 			//Resize
