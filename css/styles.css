@@ -147,13 +147,13 @@
 }
 .product-hover > div:hover div.product-hover-detail.odd {
     overflow: visible;
-    z-index: 1000;
+    z-index: 998;
     left:15px;
 }
 .product-hover > div:hover div.product-hover-detail.even {
     left:-358px;
     overflow: visible;
-    z-index: 1001;
+    z-index: 998;
 }
 .product-hover > div div.product-hover-detail.even {
     overflow: hidden;
