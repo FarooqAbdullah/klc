@@ -195,13 +195,6 @@ if(is_shop()) {
 <?php
     $sub_categories_post = get_woo_subcategories($parent_cat['term_id']);
     if (empty($sub_categories_post)) {
-        /**/?><!--
-        <div class="no-categories-found">
-            <h2 class="text-center">
-                <?php /*echo __('No Product Found.');*/?>
-            </h2>
-        </div>
-    --><?php
         ?>
                 <div class="row section" id="<?php echo $parent_cat['dataID']; ?>">
             <div class="section col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -248,7 +241,7 @@ if(is_shop()) {
             $j = 1;
             while ($loop->have_posts()) : $loop->the_post();
                 $product = new WC_Product( get_the_ID() );
-                $price = $product->price;
+                $price = $product->get_price();
                 // wc_get_template_part( 'content', 'product' );
                 $image_src_array = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full', true);
                 $image_output_src = $image_src_array[0];
@@ -318,7 +311,7 @@ if(is_shop()) {
 
                             <p class="name">Daily Grind No Pocket</p>
 
-                            <p class="price">$<?php echo $price; ?></p>
+                            <p class="price"><?php echo wc_price($price); ?></p>
                         </div>
                     </div>
                 <?php
