@@ -130,7 +130,7 @@ if(is_shop()) {
         if ($parent_category['has_child']) {
             $child_static_class = null;
             $child_static_position = null;
-            if($browse_parent_category['slug'] == $parent_category['slug']) {
+            if($browse_category == $parent_category['slug']) {
                 $child_static_class = "open";
                 $child_static_position = "position:static;";
             }
@@ -510,9 +510,7 @@ if(is_shop()) {
                                 <a href="<?php echo get_permalink(); ?>">
                                     <img src="<?php echo $image_output_src; ?>" alt=""/>
                                 </a>
-
-                                <div
-                                    class="product-hover-detail row <?php echo $even; ?> s-product main-item-hover-wrapper">
+                                <div class="product-hover-detail row <?php echo $even; ?> s-product main-item-hover-wrapper">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                             <div class="row h-img-wrapper">
