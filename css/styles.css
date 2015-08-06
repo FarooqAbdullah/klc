@@ -245,3 +245,6 @@
 .no-categories-found {
     min-height: 300px;
 }
+img {
+    max-width: 100%;
+}

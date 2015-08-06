@@ -1,17 +1,14 @@
 <?php
-$query_string = trim($_GET['category']);
-if(empty($query_string)) {
-    $query_string = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
-}
-$browse_category = null;
-if($query_string == "all") {
+$query_string = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+$browse_category = $query_string;
+/*if($query_string == "all") {
     $browse_category = _get_cookie('current_category');
     _delete_cookie('current_category');
 
 }else {
     _set_cookie($query_string);
     $browse_category = $query_string;
-}
+}*/
 /**
  * The Template for displaying product archives, including the main shop page which is a post type archive.
  *
@@ -127,20 +124,27 @@ if(is_shop()) {
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                    <?php
-    $parent_category =  get_woocategories_parent('',$browse_category);
-    $parent_category = (!empty($parent_category) ? $parent_category : $browse_category);
-    ?>
-                    <li><a href="<?php echo get_term_link( $parent_category['slug'], 'product_cat' );?>?category=all">All</a></li>
+                    <li><a href="<?php echo esc_url(get_permalink(get_page_by_title('all'))); ?>">All</a></li>
                         <?php
     foreach ($parent_categories as $parent_category) {
         if ($parent_category['has_child']) {
+            $child_static_class = null;
+            $child_static_position = null;
+            if($browse_parent_category['slug'] == $parent_category['slug']) {
+                $child_static_class = "open";
+                $child_static_position = "position:static;";
+            }
+            else {
+                $child_static_class = "";
+                $child_static_position = "";
+            }
+            $child_static_slug_id = $parent_category['slug'];
             ?>
-            <li class="dropdown">
+            <li class="dropdown <?php echo $child_static_class; ?>" style="<?php echo $child_static_position; ?>" id="<?php echo $child_static_slug_id; ?>">
                 <a href="<?php echo get_term_link( $parent_category['slug'], 'product_cat' ); ?>"
                    class="dropdown-toggle" data-toggle="" role="button" aria-haspopup="tue"
-                   aria-expanded="fase"><?php echo $parent_category['name']; ?></a>
-
+                   aria-expanded="fase"><?php echo $parent_category['name']; ?>
+                </a>
                 <div class="dropdown-menu">
                     <div class="arrow-up"></div>
                     <ul>
@@ -149,14 +153,14 @@ if(is_shop()) {
                         foreach ($sub_categories as $sub_category) {
                             $child_parent_category =  get_woocategories_parent('',$sub_category['slug']);
                             $par_slug = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
-                            if ($query_string == "all" && $child_parent_category['slug'] == $par_slug) {
+                            if ($child_parent_category['slug'] == $par_slug) {
                                 $url_ = "#" . $sub_category['dataID'];
                                 ?>
                                 <li><a href="<?php echo $url_; ?>" data-id="<?php echo $sub_category['dataID']; ?>"
                                        id="slugUrl"><?php echo $sub_category['name']; ?></a></li>
                             <?php
                             } else {
-                                $url_ = get_term_link( $sub_category['slug'], 'product_cat' );
+                                $url_ = get_term_link( $parent_category['slug'], 'product_cat' );
                                 ?>
                                 <li><a href="<?php echo $url_; ?>" data-id="<?php echo $sub_category['dataID']; ?>"
                                        id="withoutSlugUrl"><?php echo $sub_category['name']; ?></a></li>
@@ -186,18 +190,18 @@ if(is_shop()) {
     <div class="row category-title">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <?php
-    if (trim($_GET['category']) == "all") { ?>
+//        if (trim($_GET['category']) == "all") { ?>
         <h1 class="main-head"><?php echo $parent_cat['name']; ?></h1>
-    <?php } ?>
+<!--        --><?php //}?>
         </div>
     </div>
 <?php
+    $sub_categories_post = get_woo_subcategories($parent_cat['term_id']);
+    /*if ((trim($_GET['category'])) == "all") {
 
-    if ((trim($_GET['category'])) == "all") {
-        $sub_categories_post = get_woo_subcategories($parent_cat['term_id']);
     } else {
         $sub_categories_post = get_single_category_post($browse_category);
-    }
+    }*/
     if (empty($sub_categories_post)) {
         ?>
         <div class="no-categories-found">
@@ -260,10 +264,11 @@ if(is_shop()) {
             );
             $loop = new WP_Query($args);
             $count = $loop->post_count;
-
             if ($loop->have_posts()) {
                 $j = 1;
                 while ($loop->have_posts()) : $loop->the_post();
+                    $product = new WC_Product( get_the_ID() );
+                    $price = $product->price;
                     // wc_get_template_part( 'content', 'product' );
                     $image_src_array = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full', true);
                     $image_output_src = $image_src_array[0];
@@ -299,7 +304,7 @@ if(is_shop()) {
                                             <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
                                                 <p class="color">Navy And White</p>
                                                 <p class="name"><?php the_title(); ?></p>
-                                                <p class="price">$98</p>
+                                                <p class="price">$<?php echo $price; ?></p>
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
@@ -307,10 +312,10 @@ if(is_shop()) {
 
                                             <p>Use your Saved Custom preferences or KLYNC design</p>
                                             <?php
-                                                global $product, $post;
+                                            //                                                global $product, $post;
                                             ?>
-<!--                                            --><?php //do_action( 'woocommerce_before_add_to_cart_form' ); ?>
-<!--                                            <form class="variations_form cart" method="post" enctype='multipart/form-data' data-product_id="--><?php //echo $post->ID; ?><!--">-->
+                                            <!--                                            --><?php //do_action( 'woocommerce_before_add_to_cart_form' ); ?>
+                                            <!--                                            <form class="variations_form cart" method="post" enctype='multipart/form-data' data-product_id="--><?php //echo $post->ID; ?><!--">-->
                                             <div
                                                 class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12 saved-preferences">
                                                 <!--<label for="saved-preferences">
@@ -337,17 +342,17 @@ if(is_shop()) {
                                             </div>
                                             <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <button class="btn btn-primary">ADD TO CART</button>
-<!--                                                --><?php //do_action( 'woocommerce_before_add_to_cart_button' ); ?>
-<!--                                                --><?php //woocommerce_quantity_input(); ?>
-<!--                                                <button type="submit" class="single_add_to_cart_button shop-skin-btn shop-flat-btn alt">--><?php //echo $product->single_add_to_cart_text(); ?><!--</button>-->
-<!--                                                --><?php //do_action( 'woocommerce_after_add_to_cart_button' ); ?>
+                                                <!--                                                --><?php //do_action( 'woocommerce_before_add_to_cart_button' ); ?>
+                                                <!--                                                --><?php //woocommerce_quantity_input(); ?>
+                                                <!--                                                <button type="submit" class="single_add_to_cart_button shop-skin-btn shop-flat-btn alt">--><?php //echo $product->single_add_to_cart_text(); ?><!--</button>-->
+                                                <!--                                                --><?php //do_action( 'woocommerce_after_add_to_cart_button' ); ?>
                                             </div>
                                             <div class="or-text">OR</div>
                                             <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <button class="btn btn-default customize">Customize</button>
                                             </div>
-<!--                                                </form>-->
-<!--                                                --><?php //do_action( 'woocommerce_after_add_to_cart_form' ); ?>
+                                            <!--                                                </form>-->
+                                            <!--                                                --><?php //do_action( 'woocommerce_after_add_to_cart_form' ); ?>
                                             <!--                                        <div>+ add to favorites/see details</div>-->
                                         </div>
                                     </div>
@@ -358,7 +363,7 @@ if(is_shop()) {
 
                                 <p class="name">Daily Grind No Pocket</p>
 
-                                <p class="price">$98</p>
+                                <p class="price">$<?php echo $price; ?></p>
                             </div>
                         </div>
                     <?php
@@ -409,7 +414,7 @@ if(is_shop()) {
 
                                                 <p class="name">Daily Grind No Pocket</p>
 
-                                                <p class="price">$98</p>
+                                                <p class="price">$<?php echo $price; ?></p>
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
@@ -458,7 +463,7 @@ if(is_shop()) {
 
                                 <p class="name">Daily Grind No Pocket</p>
 
-                                <p class="price">$98</p>
+                                <p class="price">$<?php echo $price; ?></p>
                             </div>
                         </div>
                     <?php
