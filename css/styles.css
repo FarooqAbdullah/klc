@@ -83,7 +83,6 @@
 }
 .big-image .head-content-wrapper + .row img {
     width:100%;
-    min-height: 640px;
 }
 .section {
     margin-bottom: 30px;
