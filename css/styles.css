@@ -135,11 +135,13 @@
 .product-hover > div:hover {
     cursor: pointer;
 }
+@media(min-width:1140px){
 .product-hover > div:hover div.product-hover-detail {
     display: block;
     opacity: 1;
     width: 685px;
     z-index:1000;
+}
 }
 .product-hover > div:hover div.product-hover-detail.odd {
     /*overflow: visible;
