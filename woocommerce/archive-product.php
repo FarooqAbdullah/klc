@@ -189,27 +189,246 @@ if(is_shop()) {
     ?>
     <div class="row category-title">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <?php
-//        if (trim($_GET['category']) == "all") { ?>
-        <h1 class="main-head"><?php echo $parent_cat['name']; ?></h1>
-<!--        --><?php //}?>
+            <h1 class="main-head"><?php echo $parent_cat['name']; ?></h1>
         </div>
     </div>
 <?php
     $sub_categories_post = get_woo_subcategories($parent_cat['term_id']);
-    /*if ((trim($_GET['category'])) == "all") {
-
-    } else {
-        $sub_categories_post = get_single_category_post($browse_category);
-    }*/
     if (empty($sub_categories_post)) {
-        ?>
+        /**/?><!--
         <div class="no-categories-found">
             <h2 class="text-center">
-                <?php echo __('No Product Found.');?>
+                <?php /*echo __('No Product Found.');*/?>
             </h2>
         </div>
+    --><?php
+        ?>
+                <div class="row section" id="<?php echo $parent_cat['dataID']; ?>">
+            <div class="section col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 big-image  padding_left_right_0">
+                    <div>
+                        <div class="row head-content-wrapper">
+                            <h2><?php echo(!empty($parent_cat['name']) ? $parent_cat['name'] : "Category Name Not Found"); ?></h2>
+                            <p>
+                                <?php echo(!empty($parent_cat['description']) ? $parent_cat['description'] : "Category Description Not Found"); ?>
+                            </p>
+                        </div>
+                        <div class="row text-center">
+                            <?php
+        $thumbnail_id = get_woocommerce_term_meta($parent_cat['term_id'], 'thumbnail_id', true);
+        $image_url = wp_get_attachment_url($thumbnail_id);
+        if (!empty($image_url)) {
+            ?>
+            <img src="<?php echo $image_url; ?>" alt=""/>
+
+        <?php
+        } else {
+            echo "Category Image not Found";
+        }
+        ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <?php
+        $args = array(
+            'post_type' => 'product',
+            'posts_per_page' => 12,
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'product_cat',
+                    'field' => 'slug',
+                    'terms' => $parent_cat['slug']
+                ),
+            )
+        );
+        $loop = new WP_Query($args);
+        $count = $loop->post_count;
+        if ($loop->have_posts()) {
+            $j = 1;
+            while ($loop->have_posts()) : $loop->the_post();
+                $product = new WC_Product( get_the_ID() );
+                $price = $product->price;
+                // wc_get_template_part( 'content', 'product' );
+                $image_src_array = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full', true);
+                $image_output_src = $image_src_array[0];
+                $even = "";
+                if ($j % 2 == 1) {
+                    $even = 'odd';
+                } else {
+                    $even = 'even';
+                }
+                if ($j == 1 || $j == 3) {
+                    ?>
+
+                    <div class="row short-product">
+                <?php
+                }
+                if ($j < 5) {
+                    ?>
+                    <div class="col-lg-6 col-md-6 col-sm-6 product-hover">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <a href="<?php echo get_permalink(); ?>">
+                                <img src="<?php echo $image_output_src; ?>" alt=""/>
+                            </a>
+
+                            <div
+                                class="product-hover-detail row <?php echo $even; ?> s-product main-item-hover-wrapper">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="row h-img-wrapper">
+                                            <a href="<?php echo get_permalink(); ?>">
+                                                <img src="<?php echo $image_output_src; ?>" alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                            <p class="color">Navy And White</p>
+                                            <p class="name"><?php the_title(); ?></p>
+                                            <p class="price">$<?php echo $price; ?></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                        <h2>Quick Shop</h2>
+
+                                        <p>Use your Saved Custom preferences or KLYNC design</p>
+                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12 saved-preferences">
+                                            <label for="custom-preferences">
+                                                <select name="custom-preferences" id="custom-preferences"
+                                                        class="form-control">
+                                                    <option value="saved-preferences"> Saved Preferences
+                                                    </option>
+                                                    <option value="saved-preferences"> KLYNC Preferences
+                                                    </option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-primary">ADD TO CART</button>
+                                        </div>
+                                        <div class="or-text">OR</div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-default customize">Customize</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                            <p class="color">Navy And White</p>
+
+                            <p class="name">Daily Grind No Pocket</p>
+
+                            <p class="price">$<?php echo $price; ?></p>
+                        </div>
+                    </div>
+                <?php
+                }
+                if (($j == 1 && $count == 1) || ($j == 3 && $count == 3) || $j == 4) {
+                    ?>
+                    </div>
+                    </div>
+                    </div>
+                <?php
+                }
+                if ($j == 2 && $count == 2) {
+                    ?>
+                    </div>
+                    </div>
+                <?php
+                }
+                if ($j == 2) {
+                    ?>
+                                </div>
+                                <?php
+                }
+                if ($j == 5 || $j == 9) {
+                    ?>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="row">
+                <?php
+                }
+                if ($j > 4) {
+                    ?>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <a href="<?php echo get_permalink(); ?>">
+                                <img src="<?php echo $image_output_src; ?>" alt=""/>
+                            </a>
+
+                            <div class="product-hover-detail row <?php echo $even; ?> main-item-hover-wrapper">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="row h-img-wrapper">
+                                            <a href="<?php echo get_permalink(); ?>">
+                                                <img src="<?php echo $image_output_src; ?>" alt=""/>
+                                            </a>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                            <p class="color">Navy And White</p>
+
+                                            <p class="name">Daily Grind No Pocket</p>
+
+                                            <p class="price">$<?php echo $price; ?></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                        <h2>Quick Shop</h2>
+
+                                        <p>Use your Saved Custom preferences or KLYNC design</p>
+
+                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12 saved-preferences">
+                                            <label for="custom-preferences">
+                                                <select name="custom-preferences" id="custom-preferences"
+                                                        class="form-control">
+                                                    <option value="saved-preferences"> Saved Preferences
+                                                    </option>
+                                                    <option value="saved-preferences"> KLYNC Preferences
+                                                    </option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-primary">ADD TO CART</button>
+                                        </div>
+                                        <div class="or-text">OR</div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-default customize">Customize</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                            <p class="color">Navy And White</p>
+
+                            <p class="name">Daily Grind No Pocket</p>
+
+                            <p class="price">$<?php echo $price; ?></p>
+                        </div>
+                    </div>
+                <?php
+                }
+                if ($j == 8 || $j == 12 || ($count == 5 && $j == 5) || ($count == 6 && $j == 6) || ($count == 7 && $j == 7) || ($count == 9 && $j == 9) || ($count == 10 && $j == 10) || ($count == 11 && $j == 11)) {
+                    ?>
+                    </div>
+                    </div>
+                <?php
+                }
+                $j++;
+            endwhile;
+        } else {
+            echo __('No products found');
+            ?>
+                        </div>
+                        </div>
+                        <?php
+        }
+        wp_reset_postdata();
+        ?>
+                        </div>
     <?php
+
     } else {
         foreach ($sub_categories_post as $cat_posts) {
             ?>
