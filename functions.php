@@ -231,9 +231,11 @@ function get_woo_parent_categories () {
     $parent_category = array();
     $parent_id = null;
     foreach($product_parent_categories as $product_parent_category) {
-        if($product_parent_category->term_id != 0) {
+        if($product_parent_category->parent != 0) {
             $parent_id[$product_parent_category->parent] = $product_parent_category->parent;
         }
+    }
+    foreach($product_parent_categories as $product_parent_category) {
         if($product_parent_category->parent == 0 ) {
             $parent_category[$product_parent_category->term_id]['term_id'] = $product_parent_category->term_id;
             $parent_category[$product_parent_category->term_id]['name'] = $product_parent_category->name;
@@ -269,12 +271,3 @@ function _get_cookie($name) {
 function _delete_cookie($name) {
     setcookie( $name, '', time() - 3600, COOKIEPATH, COOKIE_DOMAIN );
 }
-
-/*function wc_custom_shop_archive_title( $title ) {
-    if ( is_shop() ) {
-        return str_replace( __( 'Products', 'woocommerce' ), 'My title', $title );
-    }
-
-    return $title;
-}
-add_filter( 'wp_title', 'wc_custom_shop_archive_title' );*/

@@ -51,7 +51,7 @@ div.product form.cart .variations label{    padding-top: 20px!important;}
 button.single_add_to_cart_button.shop-skin-btn.shop-flat-btn.alt, .text-or {display: inline-block;}
 .text-or { margin-top:7px}
 .mk-header-holder{background:#050608;}
-@media(min-width:767px) {.big-image{min-height: 782px;}}
+@media(min-width:767px) {.big-image{min-height: 782px;}.big-image .head-content-wrapper + .row img {min-height: 640px;}}
 @media(max-width:767px){
 .woocommerce div.product div.images, .woocommerce div.product div.summary{width:100% !important;}
 .header-logo  { max-width:150px; background:#050608;}

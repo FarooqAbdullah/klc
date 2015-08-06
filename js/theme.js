@@ -1,10 +1,31 @@
 jQuery(document).ready(		
     function ($) {
+        var parent_item_id;
+        function activeStringClass(queryString) {
+            console.log(queryString);
+            if(queryString != null){
+                //scrollToID('#' + queryString, 1000);
+                var offSet = 250;
+                var targetOffset = $('#' + queryString).offset().top - offSet;
+                $('html,body').animate({scrollTop:targetOffset}, 1000);
+            }
+        }
+        console.log(sessionStorage.getItem('queryString'));
+        if(sessionStorage.getItem('queryString') !=  "undefined" && sessionStorage.getItem('queryString') !=  null) {
+            parent_item_id = sessionStorage.getItem('queryString');
+            setTimeout(
+                activeStringClass(sessionStorage.getItem('queryString')),sessionStorage.removeItem('queryString'),1000
+            );
+        }
+        else {
+            sessionStorage.removeItem('queryString');
+        }
+
+
 		//Function to get Position of an element
 		function getPosition(element){
 			var p= $(element).position();
 			return p;
-			//console.log(p);
 		}
 		//End Position Fn
         $(function(){
@@ -12,21 +33,27 @@ jQuery(document).ready(
             $('.dropdown').hover(function() {
                     $(this).addClass('open');
                     $(this).css('position','static');
+                    $(this).siblings().removeClass('open');
+                    $(this).siblings().css('position','relative');
                 },
                 function() {
                     $(this).removeClass('open');
                     $(this).css('position','relative');
+                    var url = window.location.href;
+                    var _array = url.split('/');
+                    var selected_parent = _array[_array.length-2];
+                    $('#'+selected_parent).addClass('open');
+                    $('#'+selected_parent).css('position','static');
                 });
         });
 
         // navigation click actions
         $('.dropdown-menu > ul > li > a#withoutSlugUrl').on('click', function(event ){
-            //alert("working");
-            //event.preventDefault();
+            event.preventDefault();
             var sectionID = $(this).attr("data-id");
             var url = $(this).attr("href");
-            console.log(url);
-            scrollToID('#' + sectionID, 1000);
+            sessionStorage.setItem('queryString', sectionID);
+            window.location=url;
         });
         $('.dropdown-menu > ul > li > a#slugUrl').on('click', function(event ){
             event.preventDefault();
@@ -35,11 +62,9 @@ jQuery(document).ready(
         });
         // scroll function
         function scrollToID(id, speed){
-
-            var offSet = 150;
+            var offSet = 250;
             var targetOffset = $(id).offset().top - offSet;
             $('html,body').animate({scrollTop:targetOffset}, speed);
-
         }
 		
 		//
