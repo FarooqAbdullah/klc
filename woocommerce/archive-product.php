@@ -241,6 +241,17 @@ if(is_shop()) {
             $j = 1;
             while ($loop->have_posts()) : $loop->the_post();
                 $product = new WC_Product( get_the_ID() );
+                $attributes = $product->get_attributes();
+                $color_choices = null;
+                if(!empty($attributes)) {
+                    $color_values = get_the_terms( $product->id, 'pa_color');
+                    if($color_values) {
+                        foreach ( $color_values as $color_value ) {
+                            $color_choices .= $color_value->name . " and ";
+                        }
+                        $color_choices = rtrim($color_choices,' and ');
+                    }
+                }
                 $price = $product->get_price();
                 // wc_get_template_part( 'content', 'product' );
                 $image_src_array = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full', true);
@@ -275,9 +286,9 @@ if(is_shop()) {
                                             </a>
                                         </div>
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
-                                            <p class="color">Navy And White</p>
+                                            <p class="color"><?php echo $color_choices; ?></p>
                                             <p class="name"><?php the_title(); ?></p>
-                                            <p class="price">$<?php echo $price; ?></p>
+                                            <p class="price"><?php echo wc_price($price); ?></p>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
@@ -307,9 +318,9 @@ if(is_shop()) {
                             </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
-                            <p class="color">Navy And White</p>
+                            <p class="color"><?php echo $color_choices; ?></p>
 
-                            <p class="name">Daily Grind No Pocket</p>
+                            <p class="name"><?php the_title(); ?></p>
 
                             <p class="price"><?php echo wc_price($price); ?></p>
                         </div>
@@ -358,11 +369,11 @@ if(is_shop()) {
                                             </a>
                                         </div>
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
-                                            <p class="color">Navy And White</p>
+                                            <p class="color"><?php echo $color_choices; ?></p>
 
-                                            <p class="name">Daily Grind No Pocket</p>
+                                            <p class="name"><?php the_title(); ?></p>
 
-                                            <p class="price">$<?php echo $price; ?></p>
+                                            <p class="price"><?php echo wc_price($price); ?></p>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
@@ -393,11 +404,11 @@ if(is_shop()) {
                             </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
-                            <p class="color">Navy And White</p>
+                            <p class="color"><?php echo $color_choices; ?></p>
 
-                            <p class="name">Daily Grind No Pocket</p>
+                            <p class="name"><?php the_title(); ?></p>
 
-                            <p class="price">$<?php echo $price; ?></p>
+                            <p class="price"><?php echo wc_price($price); ?></p>
                         </div>
                     </div>
                 <?php
@@ -480,7 +491,18 @@ if(is_shop()) {
                 $j = 1;
                 while ($loop->have_posts()) : $loop->the_post();
                     $product = new WC_Product( get_the_ID() );
-                    $price = $product->price;
+                    $attributes = $product->get_attributes();
+                    $color_choices = null;
+                    if(!empty($attributes)) {
+                        $color_values = get_the_terms( $product->id, 'pa_color');
+                        if($color_values) {
+                            foreach ( $color_values as $color_value ) {
+                                $color_choices .= $color_value->name . " and ";
+                            }
+                            $color_choices = rtrim($color_choices,' and ');
+                        }
+                    }
+                    $price = $product->get_price();
                     // wc_get_template_part( 'content', 'product' );
                     $image_src_array = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full', true);
                     $image_output_src = $image_src_array[0];
@@ -512,21 +534,16 @@ if(is_shop()) {
                                                 </a>
                                             </div>
                                             <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
-                                                <p class="color">Navy And White</p>
+                                                <p class="color"><?php echo $color_choices; ?></p>
                                                 <p class="name"><?php the_title(); ?></p>
-                                                <p class="price">$<?php echo $price; ?></p>
+                                                <p class="price"><?php echo wc_price($price); ?></p>
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
                                             <h2>Quick Shop</h2>
 
                                             <p>Use your Saved Custom preferences or KLYNC design</p>
-                                            <?php
-                                            //                                                global $product, $post;
-                                            ?>
-                                            <!--                                            --><?php //do_action( 'woocommerce_before_add_to_cart_form' ); ?>
-                                            <!--                                            <form class="variations_form cart" method="post" enctype='multipart/form-data' data-product_id="--><?php //echo $post->ID; ?><!--">-->
-                                            <div
+                                           <div
                                                 class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12 saved-preferences">
                                                 <!--<label for="saved-preferences">
                                                         <span class="custom-checkbox-wrapper btn btn-primary">
@@ -552,28 +569,21 @@ if(is_shop()) {
                                             </div>
                                             <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <button class="btn btn-primary">ADD TO CART</button>
-                                                <!--                                                --><?php //do_action( 'woocommerce_before_add_to_cart_button' ); ?>
-                                                <!--                                                --><?php //woocommerce_quantity_input(); ?>
-                                                <!--                                                <button type="submit" class="single_add_to_cart_button shop-skin-btn shop-flat-btn alt">--><?php //echo $product->single_add_to_cart_text(); ?><!--</button>-->
-                                                <!--                                                --><?php //do_action( 'woocommerce_after_add_to_cart_button' ); ?>
                                             </div>
                                             <div class="or-text">OR</div>
                                             <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <button class="btn btn-default customize">Customize</button>
                                             </div>
-                                            <!--                                                </form>-->
-                                            <!--                                                --><?php //do_action( 'woocommerce_after_add_to_cart_form' ); ?>
-                                            <!--                                        <div>+ add to favorites/see details</div>-->
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
-                                <p class="color">Navy And White</p>
+                                <p class="color"><?php echo $color_choices; ?></p>
 
-                                <p class="name">Daily Grind No Pocket</p>
+                                <p class="name"><?php the_title(); ?></p>
 
-                                <p class="price">$<?php echo $price; ?></p>
+                                <p class="price"><?php echo wc_price($price); ?></p>
                             </div>
                         </div>
                     <?php
@@ -620,11 +630,11 @@ if(is_shop()) {
                                                 </a>
                                             </div>
                                             <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
-                                                <p class="color">Navy And White</p>
+                                                <p class="color"><?php echo $color_choices; ?></p>
 
-                                                <p class="name">Daily Grind No Pocket</p>
+                                                <p class="name"><?php the_title(); ?></p>
 
-                                                <p class="price">$<?php echo $price; ?></p>
+                                                <p class="price"><?php echo wc_price($price); ?></p>
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
@@ -669,11 +679,10 @@ if(is_shop()) {
                                 </div>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
-                                <p class="color">Navy And White</p>
+                                <p class="color"><?php echo $color_choices; ?></p>
 
-                                <p class="name">Daily Grind No Pocket</p>
-
-                                <p class="price">$<?php echo $price; ?></p>
+                                <p class="name"><?php the_title(); ?></p>
+                                <p class="price"><?php echo wc_price($price); ?></p>
                             </div>
                         </div>
                     <?php
