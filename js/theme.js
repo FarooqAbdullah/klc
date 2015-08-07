@@ -64,8 +64,9 @@ jQuery(document).ready(
             event.preventDefault();
             var sectionID = $(this).attr("data-target");
 			var offSet = 130;
-            var targetOffset = $('.' + sectionID).offset().top - offSet;
+            var targetOffset = $('.gift-section.' + sectionID).offset().top - offSet;
             $('html,body').animate({scrollTop:targetOffset}, 1000);
+			$(this).addClass('active');
         });
         // scroll function
         function scrollToID(id, speed){
@@ -92,6 +93,25 @@ jQuery(document).ready(
                
 				nav2.removeClass("f-nav-fixed");
             }
+			
+			//VIsiblity
+			$('.menu-gifts-pricing li a').removeClass('active');
+			 $('.menu-gifts-pricing li a').each(function(){
+				 var currentClass=$(this).attr('data-target');
+				if($('.gift-section').hasClass(currentClass))
+				{
+					//console.log('true : ' + currentClass);
+					 if($('.gift-section.'+currentClass).visible() )
+              		{
+               		 $('.menu-gifts-pricing li a.'+currentClass).addClass('active');
+                    // console.log(currentvisible);
+          				}
+					
+				}
+				else {
+					console.log('false:' + $('.gift-section').attr('class'));
+				}
+				 });
         });
 
         // item hover width
