@@ -60,6 +60,13 @@ jQuery(document).ready(
             var sectionID = $(this).attr("data-id");
             scrollToID('#' + sectionID, 1000);
         });
+		$('.menu-gifts-pricing  ul li a').on('click', function(event ){
+            event.preventDefault();
+            var sectionID = $(this).attr("data-target");
+			var offSet = 130;
+            var targetOffset = $('.' + sectionID).offset().top - offSet;
+            $('html,body').animate({scrollTop:targetOffset}, 1000);
+        });
         // scroll function
         function scrollToID(id, speed){
             var offSet = 250;
@@ -69,12 +76,21 @@ jQuery(document).ready(
 		
 		//
 		var nav = $('.navbar-default');
+		var nav2=$('.menu-gifts-pricing');
 	
         $(window).scroll(function () {
             if ($(this).scrollTop() > 300) {
                 nav.addClass("f-nav-fixed");
+				
             } else {
                 nav.removeClass("f-nav-fixed");
+				
+            }
+			 if ($(this).scrollTop() > 550) {               
+				nav2.addClass("f-nav-fixed");
+            } else {
+               
+				nav2.removeClass("f-nav-fixed");
             }
         });
 

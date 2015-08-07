@@ -122,7 +122,8 @@
     opacity: 0;
     top: -5px;
     /*overflow: hidden;*/
-    /*left: -5px;*/
+    /*left: -5px;*/  
+	z-index:998;
 }
 .product-hover-detail.odd {
     /*width: 0;*/
@@ -140,7 +141,7 @@
     display: block;
     opacity: 1;
     width: 685px;
-    z-index:1000;
+    z-index:998;
 }
 }
 .product-hover > div:hover div.product-hover-detail.odd {
@@ -205,7 +206,7 @@
     padding-bottom:17px;
 }
 #mk-header {
-    z-index:1000;
+   
 }
 .f-nav .dropdown.open > a,
 .f-nav .dropdown.open > a:hover {
