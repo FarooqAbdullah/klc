@@ -247,3 +247,6 @@
 img {
     max-width: 100%;
 }
+.vc_row.container {
+    margin: 0 auto;
+}

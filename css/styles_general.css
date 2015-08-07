@@ -92,7 +92,7 @@ div.shopping-cart-header{padding-left: 0px;margin-right: 0px !important;padding-
 	.grid-item:hover .overlay{ opacity: 0.5;transition:0.5s linear all;}
 h2.product-category-name{    pointer-events: none;  background:url(../images/tran-black.png); padding-top:15px; padding-bottom:15px;  z-index: 999;   position: absolute;text-align: center; color: #fff; top: 50%; font-family: 'avenir', sans-serif;    width: 100%;    transform: translateY(-50%);}
 	.grid-item a{    display: block;line-height: 5px;}
-	.quick-shop-wrapper h2{    font-family: 'Poppins';font-weight: bold; }
+	.quick-shop-wrapper h2{font-family: 'Poppins';font-weight: bold; }
 	.quick-shop-wrapper  .or-text{font-family: 'Poppins';font-weight: bold; }
 	#custom-preferences{ border-radius:0px; border:1px solid #e8eae9; box-shadow:none;}
 	#mk-header{ border-bottom:0px !important;     z-index: 1001!important;}
