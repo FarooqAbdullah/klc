@@ -105,8 +105,9 @@ if(is_shop()) {
     ?>
     <div class="body_wrapper shop-archive">
         <div class="slider_wrapper">
-            <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product.jpg"  alt="Slider Image"/>
-            <div class="title"><?php echo do_action('page_title'); ?></h2></div>
+          <!--  <img src="<?php echo site_url(); ?>/wp-content/themes/klnyc/images/product.jpg"  alt="Slider Image"/>
+				<div class="title"><?php echo do_action('page_title'); ?></h2></div> -->
+				<?php echo do_shortcode('[rev_slider productslistingslider]'); ?>
         </div>
         <nav class="navbar navbar-default f-nav">
             <div class="container-fluid">

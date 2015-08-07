@@ -69,12 +69,15 @@ jQuery(document).ready(
 		
 		//
 		var nav = $('.navbar-default');
+		var nav2=$('.menu-gifts-pricing');
 	
         $(window).scroll(function () {
             if ($(this).scrollTop() > 300) {
                 nav.addClass("f-nav-fixed");
+				nav2.addClass("f-nav-fixed");
             } else {
                 nav.removeClass("f-nav-fixed");
+				nav2.removeClass("f-nav-fixed");
             }
         });
 

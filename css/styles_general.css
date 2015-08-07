@@ -36,7 +36,7 @@ table.variations label{color: #585858;}
 .woocommerce div.product div.images{width:60% !important;}
 .woocommerce div.product div.summary{ width:35%!important;}
 .single_product_title{}
-.f-nav-fixed {position:fixed;z-index:1001;top:53px;}
+.f-nav-fixed {position:fixed;z-index:999;top:53px;}
 .f-nav{ width: 100%; border-radius:0;background-color: #727272;border-left: 0;border-right: 0;border-bottom: 0; border-top: 0px;}
 .f-nav li a{ font-family:MyriadPro, sans-serif; text-transform:uppercase; font-size:13px; color:#fff !important;letter-spacing: 0.5px;}
 .summary.entry-summary{ text-align:center; }
@@ -95,4 +95,20 @@ h2.product-category-name{    pointer-events: none;  background:url(../images/tra
 	.quick-shop-wrapper h2{    font-family: 'Poppins';font-weight: bold; }
 	.quick-shop-wrapper  .or-text{font-family: 'Poppins';font-weight: bold; }
 	#custom-preferences{ border-radius:0px; border:1px solid #e8eae9; box-shadow:none;}
-	
+	#mk-header{ border-bottom:0px !important;     z-index: 1001!important;}
+	.mk-header-holder, .mk-header-inner{z-index: 1001!important;}
+	.tp-arr-imgholder, .tp-arr-imgholder2, .tp-arr-titleholder{ display:none !Important;}
+	.tp-arr-allwrapper{ opacity:0 !Important;}
+	.tparrows.preview4:hover:after{    transform-origin: 100% 100% !Important;  -webkit-transform-origin: 100% 100% !Important;
+	     -webkit-transform: rotateY(0deg)!Important;
+     transform: rotateY(0deg)!Important; 
+	}
+	.tp-leftarrow.preview4:hover:after { -webkit-transform: rotateY(0deg)!Important; transform: rotateY(0deg)!Important;}
+	.menu-gifts-pricing ul, .menu-gifts-pricing li { margin:0px; padding:0px; list-style:none}
+	 .menu-gifts-pricing li{ float:left; }
+	 .menu-gifts-pricing  li a{padding:10px  20px; display:block;}
+	 .gift-section h4{ font-size:15px !Important; font-weight:normal!Important; text-transform:none!Important;}
+	 .gift-section{border-bottom:1px solid #ccc;}
+	 #gifts-menu-holder{ border:1px 0px; border-color:#333; border-style:solid;}
+	 .gift-section .wpb_content_element{ margin-bottom:0px !important;}
+	.vc_row.container{ margin:0 auto;}
