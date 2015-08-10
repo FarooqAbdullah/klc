@@ -273,3 +273,58 @@ function _get_cookie($name) {
 function _delete_cookie($name) {
     setcookie( $name, '', time() - 3600, COOKIEPATH, COOKIE_DOMAIN );
 }
+////////////////////
+
+//Login and Register shortcodes
+
+/* * *********** WP LOGIN FORM ******************* */
+
+function login_form_shortcode() {
+    if (is_user_logged_in())
+        return '';
+
+    $url = strtok(( is_ssl() ? 'https://' : 'http://' ) . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'], '?');
+    return wp_login_form(array('echo' => false, 'redirect' => $url));
+}
+
+function login_add_shortcodes() {
+    add_shortcode('login-form', 'login_form_shortcode');
+}
+
+add_action('init', 'login_add_shortcodes');
+
+/* * *********** Register Form ******************* */
+//1. Add a new form element...
+add_action('register_form', 'myplugin_register_form');
+
+function myplugin_register_form() {
+
+    $user_pass = (!empty($_POST['user_pass']) ) ? trim($_POST['user_pass']) : '';
+    ?>
+    <p>
+        <label for="user_pass"><?php _e('Password', 'mydomain') ?><br />
+            <input type="text" name="user_pass" id="user_pass" class="input" value="<?php echo esc_attr(wp_unslash($user_pass)); ?>" size="25" /></label>
+    </p>
+    <?php
+}
+
+//2. Add validation. In this case, we make sure first_name is required.
+add_filter('registration_errors', 'myplugin_registration_errors', 10, 3);
+
+function myplugin_registration_errors($errors, $sanitized_user_login, $user_email) {
+    $user_pass = $_POST['user_pass'];
+    if (empty($_POST['user_pass']) || !empty($_POST['user_pass']) && trim($_POST['user_pass']) == '') {
+        $errors->add('user_pass_error', __('<strong>ERROR</strong>: You must include a first name.', 'mydomain'));
+    }
+
+    return $errors;
+}
+
+//3. Finally, save our extra registration user meta.
+add_action('user_register', 'myplugin_user_register');
+
+function myplugin_user_register($user_id) {
+    if (!empty($_POST['first_name'])) {
+        update_users($user_pass, 'user_pass', trim($_POST['user_pass']));
+    }
+}

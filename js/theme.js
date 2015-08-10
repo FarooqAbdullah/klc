@@ -177,6 +177,14 @@ jQuery(document).ready(
 			//Resize
 			//$(window).trigger('resize');
 		
+		
+		 
+		//Login Modal Open
+		 $("#menu-item-13 a").attr("data-toggle", "modal");
+         $("#menu-item-13 a").attr("data-target", "#ModalLogin");
+		$('#wp-submit').after('<div class="reset pull-right"> <a  href="#" data-toggle="modal" data-target="#ModalReset" data-dismiss="modal" >Reset Password ?</a> | <a  href="#" data-toggle="modal" data-target="#ModalRegister" data-dismiss="modal" >Register Now</a> </div>');
+
+
 
     }
 );
