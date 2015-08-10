@@ -113,22 +113,23 @@
     /*display: none;*/
     max-height: 411px;
     min-height:400px;
-    z-index: 999;
+    z-index: 998;
+    width: 685px;
     background-color: #fff;
     position: absolute;
     border: 1px solid #c1c1c1;
     /*box-shadow: 0 0 1px 3px #e8e8e8;*/
-    transition: ease all 0.2s;
+    transition: ease all 0.7s;
     opacity: 0;
     top: -5px;
     /*overflow: hidden;*/
-    /*left: -5px;*/  
-	z-index:998;
+    /*left: -5px;*/
 }
 .product-hover-detail.odd {
     /*width: 0;*/
-    /*left:-358px;
-    z-index: -1;*/
+    /*left:-358px;*/
+    z-index: -1;
+    overflow: hidden;
 }
 .product-hover > div {
     position: relative;
@@ -144,20 +145,29 @@
     z-index:998;
 }
 }
+.product-hover > div > a > img {
+    padding-top:15px;
+}
+.product-hover > div {
+    overflow: hidden;
+}
+.product-hover > div:hover {
+    overflow: visible;
+}
 .product-hover > div:hover div.product-hover-detail.odd {
-    /*overflow: visible;
+    overflow: visible;
     z-index: 998;
-    left:15px;*/
+    /*left:15px;*/
 }
 .product-hover > div:hover div.product-hover-detail.even {
     left:-358px;
-    /*overflow: visible;*/
-    /*z-index: 998;*/
+    overflow: visible;
+    z-index: 998;
 }
 .product-hover > div div.product-hover-detail.even {
-    /*overflow: hidden;*/
-    /*left: 0;*/
-    /*z-index: -1;*/
+    overflow: hidden;
+    left: -358px;
+    z-index: -1;
 }
 .product-hover > div > div {
     padding-top: 15px;
@@ -249,4 +259,12 @@ img {
 }
 .vc_row.container {
     margin: 0 auto;
+}
+.product-hover img {
+    max-height: 300px;
+    min-height: 300px;
+}
+.row.short-product,
+.row.fourth-product {
+    padding-bottom: 50px;
 }
