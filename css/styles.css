@@ -1,6 +1,7 @@
 
 .wrapper {
-    max-width:100%;
+    max-width:1140px;
+    margin: 0 auto;
 }
 .row {
     margin-right:0;
@@ -108,6 +109,9 @@
 }
 .row.section {
     margin-bottom: 200px;
+    max-width:1600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .row.section > div {
     margin-bottom: 50px;
