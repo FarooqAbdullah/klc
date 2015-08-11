@@ -113,13 +113,30 @@
     margin-bottom: 50px;
 }
 .product-hover > div  a {
-    background-color:#e5e5e5;
-}
-.product-hover > div > a > img {
+    background-color: #f3f3f5;
+    display: inline-block;
     max-height: 318px;
     min-height: 318px;
     max-width: 295px;
     min-width:295px;
+    line-height: 318px;
+    overflow: hidden;
+}
+.product-hover > div > a > img {
+    width: 275px;
+    height: 290px;
+    vertical-align: middle;
+    display: inline-block;
+    margin: auto;
+    transition: linear all 0.2s;
+    transform: scale(1);
+}
+.product-hover > div.product-hover-next:hover > a > img {
+   /* zoom: 150%;*/
+    transform: scale(1.1);
+    vertical-align: middle;
+    display: inline-block;
+    margin: auto;
 }
 .quick-shop-wrapper {
     padding-top: 50px;
@@ -217,17 +234,25 @@ img {
 }
 .product-hover-next {
     border:1px solid transparent;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    overflow: hidden;
+    transition: ease all 0.2s;
+}
+.product-hover-next:hover {
+
 }
 .product-hover-next.odd:hover {
     border-top: 1px solid #c1c1c1;
     border-left: 1px solid #c1c1c1;
     border-bottom: 1px solid #c1c1c1;
+    overflow: visible;
 }
 .padding-right_0 {
     padding-right: 0 !important;
 }
 .product-hover-detail {
-    display: none;
+    /*display: none;*/
     height: calc(100% + 2px);
     z-index: 998;
     width: 100%;
@@ -237,7 +262,7 @@ img {
     position: absolute;
     border: 1px solid #c1c1c1;
     border-left:0 ;
-    /*transition: ease all 0.7s;*/
+    transition: ease all 0.7s;
     opacity: 0;
 }
 .product-hover > div.product-hover-next {
@@ -248,13 +273,14 @@ img {
     border-top: 1px solid #c1c1c1;
     border-right: 1px solid #c1c1c1;
     border-bottom: 1px solid #c1c1c1;
-    z-index:999;
+    z-index:998;
+    overflow: visible;
 }
 .product-hover > div:hover {
     cursor: pointer;
 }
 .product-hover > div.product-hover-next:hover .product-hover-detail {
-    display: block;
+    /*display: block;*/
     opacity: 1;
 }
 .product-hover > div.product-hover-next.even:hover .product-hover-detail {
