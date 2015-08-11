@@ -109,68 +109,20 @@
 .row.section {
     margin-bottom: 200px;
 }
-.product-hover-detail {
-    /*display: none;*/
-    max-height: 411px;
-    min-height:400px;
-    z-index: 998;
-    width: 685px;
-    background-color: #fff;
-    position: absolute;
-    border: 1px solid #c1c1c1;
-    /*box-shadow: 0 0 1px 3px #e8e8e8;*/
-    transition: ease all 0.7s;
-    opacity: 0;
-    top: -5px;
-    /*overflow: hidden;*/
-    /*left: -5px;*/
+.row.section > div {
+    margin-bottom: 50px;
 }
-.product-hover-detail.odd {
-    /*width: 0;*/
-    /*left:-358px;*/
-    z-index: -1;
-    overflow: hidden;
-}
-.product-hover > div {
-    position: relative;
-}
-.product-hover > div:hover {
-    cursor: pointer;
-}
-@media(min-width:1140px){
-.product-hover > div:hover div.product-hover-detail {
-    display: block;
-    opacity: 1;
-    width: 685px;
-    z-index:998;
-}
+.product-hover > div  a {
+    background-color:#e5e5e5;
 }
 .product-hover > div > a > img {
-    padding-top:15px;
+    max-height: 318px;
+    min-height: 318px;
+    max-width: 295px;
+    min-width:295px;
 }
-.product-hover > div {
-    overflow: hidden;
-}
-.product-hover > div:hover {
-    overflow: visible;
-}
-.product-hover > div:hover div.product-hover-detail.odd {
-    overflow: visible;
-    z-index: 998;
-    /*left:15px;*/
-}
-.product-hover > div:hover div.product-hover-detail.even {
-    left:-358px;
-    overflow: visible;
-    z-index: 998;
-}
-.product-hover > div div.product-hover-detail.even {
-    overflow: hidden;
-    left: -358px;
-    z-index: -1;
-}
-.product-hover > div > div {
-    padding-top: 15px;
+.quick-shop-wrapper {
+    padding-top: 50px;
 }
 .quick-shop-wrapper h2,
 .quick-shop-wrapper p {
@@ -179,11 +131,11 @@
 .quick-shop-wrapper p {
     font-size: 13px;
 }
-.quick-shop-wrapper > div {
+.quick-shop-wrapper div {
     margin-bottom: 20px;
     text-align: center;
 }
-.quick-shop-wrapper > div .btn {
+.quick-shop-wrapper div .btn {
     width: 100%;
 }
 .section > div {
@@ -260,11 +212,54 @@ img {
 .vc_row.container {
     margin: 0 auto;
 }
-.product-hover img {
-    max-height: 300px;
-    min-height: 300px;
+.product-hover-next a img {
+    max-width: 296px;
 }
-.row.short-product,
-.row.fourth-product {
-    padding-bottom: 50px;
+.product-hover-next {
+    border:1px solid transparent;
+}
+.product-hover-next.odd:hover {
+    border-top: 1px solid #c1c1c1;
+    border-left: 1px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1;
+}
+.padding-right_0 {
+    padding-right: 0 !important;
+}
+.product-hover-detail {
+    display: none;
+    height: calc(100% + 2px);
+    z-index: 998;
+    width: 100%;
+    top: -1px;
+    left: 100%;
+    background-color: #fff;
+    position: absolute;
+    border: 1px solid #c1c1c1;
+    border-left:0 ;
+    /*transition: ease all 0.7s;*/
+    opacity: 0;
+}
+.product-hover > div.product-hover-next {
+    position: relative;
+    text-align: center;
+}
+.product-hover > div.product-hover-next.even:hover {
+    border-top: 1px solid #c1c1c1;
+    border-right: 1px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1;
+    z-index:999;
+}
+.product-hover > div:hover {
+    cursor: pointer;
+}
+.product-hover > div.product-hover-next:hover .product-hover-detail {
+    display: block;
+    opacity: 1;
+}
+.product-hover > div.product-hover-next.even:hover .product-hover-detail {
+    left:inherit;
+    right: 100%;
+    border-left: 1px solid #c1c1c1;
+    border-right: 0;
 }

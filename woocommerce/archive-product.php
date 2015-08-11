@@ -4,7 +4,6 @@ $browse_category = $query_string;
 /*if($query_string == "all") {
     $browse_category = _get_cookie('current_category');
     _delete_cookie('current_category');
-
 }else {
     _set_cookie($query_string);
     $browse_category = $query_string;
@@ -18,10 +17,7 @@ $browse_category = $query_string;
  * @package 	WooCommerce/Templates
  * @version     2.0.0
  */
-
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-
-
 get_header('shop'); ?>
 
 <?php
@@ -47,7 +43,6 @@ if(is_shop()) {
         $hierarchical = 1;      // 1 for yes, 0 for no
         $title        = '';
         $empty        = 0;
-
         $args = array(
             'taxonomy'     => $taxonomy,
             'orderby'      => $orderby,
@@ -58,7 +53,6 @@ if(is_shop()) {
             'hide_empty'   => $empty
         );
         $all_categories = get_categories( $args );
-
         ?>
         <!----Masonry -->
         <div class="vc_grid-container-wrapper vc_clearfix">
@@ -73,8 +67,6 @@ if(is_shop()) {
                         // get the image URL
                         $image = wp_get_attachment_url( $thumbnail_id );
                         // echo $image;
-
-
                         ?>
                         <div class="grid-item">
                             <a class="product-cat-hyper" href="<?php echo get_term_link( $cat->slug, 'product_cat' ); ?>"><img src="<?php echo $image ?>" class=""></a>
@@ -186,7 +178,6 @@ if(is_shop()) {
     $current_category = $browse_category;
     $current_category_id = get_woocategories_id_from_category_slug($current_category);
     $parent_cat = get_woocategories_parent($current_category_id);
-
     ?>
     <div class="row category-title">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -277,117 +268,45 @@ if(is_shop()) {
                                 <img src="<?php echo $image_output_src; ?>" alt=""/>
                             </a>
 
-                            <div class="product-hover-detail row <?php echo $even; ?> s-product main-item-hover-wrapper">
-                                <?php
-                                if($even == "odd") {
-                                    ?>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                            <div class="row h-img-wrapper">
-                                                <a href="<?php echo get_permalink(); ?>">
-                                                    <img src="<?php echo $image_output_src; ?>" alt=""/>
-                                                </a>
-                                            </div>
-                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
-                                                <p class="color"><?php echo $color_choices; ?></p>
-                                                <p class="name"><?php the_title(); ?></p>
-                                                <p class="price"><?php echo wc_price($price); ?></p>
-                                            </div>
+                            <div
+                                class="product-hover-detail row <?php echo $even; ?> s-product main-item-hover-wrapper">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="row h-img-wrapper">
+                                            <a href="<?php echo get_permalink(); ?>">
+                                                <img src="<?php echo $image_output_src; ?>" alt=""/>
+                                            </a>
                                         </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
-                                            <h2>Quick Shop</h2>
-
-                                            <p>Use your Saved Custom preferences or KLYNC design</p>
-                                            <div
-                                                class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12 saved-preferences">
-                                                <!--<label for="saved-preferences">
-                                                        <span class="custom-checkbox-wrapper btn btn-primary">
-                                                            <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
-                                                            Saved Preferences
-                                                        </span>
-                                                </label>
-                                                <label for="klnyc">
-                                                        <span class="custom-checkbox-wrapper btn btn-primary">
-                                                            <input type="checkbox" name="klnyc" id="klnyc"/>
-                                                            KLNYC
-                                                        </span>
-                                                </label>-->
-                                                <label for="custom-preferences">
-                                                    <select name="custom-preferences" id="custom-preferences"
-                                                            class="form-control">
-                                                        <option value="saved-preferences"> Saved Preferences
-                                                        </option>
-                                                        <option value="saved-preferences"> KLYNC Preferences
-                                                        </option>
-                                                    </select>
-                                                </label>
-                                            </div>
-                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <button class="btn btn-primary">ADD TO CART</button>
-                                            </div>
-                                            <div class="or-text">OR</div>
-                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <button class="btn btn-default customize">Customize</button>
-                                            </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                            <p class="color"><?php echo $color_choices; ?></p>
+                                            <p class="name"><?php the_title(); ?></p>
+                                            <p class="price"><?php echo wc_price($price); ?></p>
                                         </div>
                                     </div>
-                                <?php
-                                }
-                                else {
-                                    ?>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
-                                            <h2>Quick Shop</h2>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                        <h2>Quick Shop</h2>
 
-                                            <p>Use your Saved Custom preferences or KLYNC design</p>
-                                            <div
-                                                class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12 saved-preferences">
-                                                <!--<label for="saved-preferences">
-                                                        <span class="custom-checkbox-wrapper btn btn-primary">
-                                                            <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
-                                                            Saved Preferences
-                                                        </span>
-                                                </label>
-                                                <label for="klnyc">
-                                                        <span class="custom-checkbox-wrapper btn btn-primary">
-                                                            <input type="checkbox" name="klnyc" id="klnyc"/>
-                                                            KLNYC
-                                                        </span>
-                                                </label>-->
-                                                <label for="custom-preferences">
-                                                    <select name="custom-preferences" id="custom-preferences"
-                                                            class="form-control">
-                                                        <option value="saved-preferences"> Saved Preferences
-                                                        </option>
-                                                        <option value="saved-preferences"> KLYNC Preferences
-                                                        </option>
-                                                    </select>
-                                                </label>
-                                            </div>
-                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <button class="btn btn-primary">ADD TO CART</button>
-                                            </div>
-                                            <div class="or-text">OR</div>
-                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <button class="btn btn-default customize">Customize</button>
-                                            </div>
+                                        <p>Use your Saved Custom preferences or KLYNC design</p>
+                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12 saved-preferences">
+                                            <label for="custom-preferences">
+                                                <select name="custom-preferences" id="custom-preferences"
+                                                        class="form-control">
+                                                    <option value="saved-preferences"> Saved Preferences
+                                                    </option>
+                                                    <option value="saved-preferences"> KLYNC Preferences
+                                                    </option>
+                                                </select>
+                                            </label>
                                         </div>
-                                        <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                            <div class="row h-img-wrapper">
-                                                <a href="<?php echo get_permalink(); ?>">
-                                                    <img src="<?php echo $image_output_src; ?>" alt=""/>
-                                                </a>
-                                            </div>
-                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
-                                                <p class="color"><?php echo $color_choices; ?></p>
-                                                <p class="name"><?php the_title(); ?></p>
-                                                <p class="price"><?php echo wc_price($price); ?></p>
-                                            </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-primary">ADD TO CART</button>
+                                        </div>
+                                        <div class="or-text">OR</div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-default customize">Customize</button>
                                         </div>
                                     </div>
-                                <?php
-                                }
-                                ?>
+                                </div>
                             </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
@@ -422,7 +341,7 @@ if(is_shop()) {
                     ?>
 
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="row fourth-product">
+                    <div class="row">
                 <?php
                 }
                 if ($j > 4) {
@@ -434,116 +353,46 @@ if(is_shop()) {
                             </a>
 
                             <div class="product-hover-detail row <?php echo $even; ?> main-item-hover-wrapper">
-                                <?php
-                                if($even == "odd") {
-                                    ?>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                            <div class="row h-img-wrapper">
-                                                <a href="<?php echo get_permalink(); ?>">
-                                                    <img src="<?php echo $image_output_src; ?>" alt=""/>
-                                                </a>
-                                            </div>
-                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
-                                                <p class="color"><?php echo $color_choices; ?></p>
-                                                <p class="name"><?php the_title(); ?></p>
-                                                <p class="price"><?php echo wc_price($price); ?></p>
-                                            </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="row h-img-wrapper">
+                                            <a href="<?php echo get_permalink(); ?>">
+                                                <img src="<?php echo $image_output_src; ?>" alt=""/>
+                                            </a>
                                         </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
-                                            <h2>Quick Shop</h2>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
+                                            <p class="color"><?php echo $color_choices; ?></p>
 
-                                            <p>Use your Saved Custom preferences or KLYNC design</p>
-                                            <div
-                                                class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12 saved-preferences">
-                                                <!--<label for="saved-preferences">
-                                                        <span class="custom-checkbox-wrapper btn btn-primary">
-                                                            <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
-                                                            Saved Preferences
-                                                        </span>
-                                                </label>
-                                                <label for="klnyc">
-                                                        <span class="custom-checkbox-wrapper btn btn-primary">
-                                                            <input type="checkbox" name="klnyc" id="klnyc"/>
-                                                            KLNYC
-                                                        </span>
-                                                </label>-->
-                                                <label for="custom-preferences">
-                                                    <select name="custom-preferences" id="custom-preferences"
-                                                            class="form-control">
-                                                        <option value="saved-preferences"> Saved Preferences
-                                                        </option>
-                                                        <option value="saved-preferences"> KLYNC Preferences
-                                                        </option>
-                                                    </select>
-                                                </label>
-                                            </div>
-                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <button class="btn btn-primary">ADD TO CART</button>
-                                            </div>
-                                            <div class="or-text">OR</div>
-                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <button class="btn btn-default customize">Customize</button>
-                                            </div>
+                                            <p class="name"><?php the_title(); ?></p>
+
+                                            <p class="price"><?php echo wc_price($price); ?></p>
                                         </div>
                                     </div>
-                                <?php
-                                }
-                                else {
-                                    ?>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
-                                            <h2>Quick Shop</h2>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                        <h2>Quick Shop</h2>
 
-                                            <p>Use your Saved Custom preferences or KLYNC design</p>
-                                            <div
-                                                class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12 saved-preferences">
-                                                <!--<label for="saved-preferences">
-                                                        <span class="custom-checkbox-wrapper btn btn-primary">
-                                                            <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
-                                                            Saved Preferences
-                                                        </span>
-                                                </label>
-                                                <label for="klnyc">
-                                                        <span class="custom-checkbox-wrapper btn btn-primary">
-                                                            <input type="checkbox" name="klnyc" id="klnyc"/>
-                                                            KLNYC
-                                                        </span>
-                                                </label>-->
-                                                <label for="custom-preferences">
-                                                    <select name="custom-preferences" id="custom-preferences"
-                                                            class="form-control">
-                                                        <option value="saved-preferences"> Saved Preferences
-                                                        </option>
-                                                        <option value="saved-preferences"> KLYNC Preferences
-                                                        </option>
-                                                    </select>
-                                                </label>
-                                            </div>
-                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <button class="btn btn-primary">ADD TO CART</button>
-                                            </div>
-                                            <div class="or-text">OR</div>
-                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <button class="btn btn-default customize">Customize</button>
-                                            </div>
+                                        <p>Use your Saved Custom preferences or KLYNC design</p>
+
+                                        <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12 saved-preferences">
+                                            <label for="custom-preferences">
+                                                <select name="custom-preferences" id="custom-preferences"
+                                                        class="form-control">
+                                                    <option value="saved-preferences"> Saved Preferences
+                                                    </option>
+                                                    <option value="saved-preferences"> KLYNC Preferences
+                                                    </option>
+                                                </select>
+                                            </label>
                                         </div>
-                                        <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                            <div class="row h-img-wrapper">
-                                                <a href="<?php echo get_permalink(); ?>">
-                                                    <img src="<?php echo $image_output_src; ?>" alt=""/>
-                                                </a>
-                                            </div>
-                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
-                                                <p class="color"><?php echo $color_choices; ?></p>
-                                                <p class="name"><?php the_title(); ?></p>
-                                                <p class="price"><?php echo wc_price($price); ?></p>
-                                            </div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-primary">ADD TO CART</button>
+                                        </div>
+                                        <div class="or-text">OR</div>
+                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <button class="btn btn-default customize">Customize</button>
                                         </div>
                                     </div>
-                                <?php
-                                }
-                                ?>
+                                </div>
                             </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
@@ -575,7 +424,6 @@ if(is_shop()) {
         ?>
                         </div>
     <?php
-
     } else {
         foreach ($sub_categories_post as $cat_posts) {
             ?>
@@ -610,11 +458,9 @@ if(is_shop()) {
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <?php
-
 //                global $product;
 //                $koostis = array_shift(wc_get_product_terms($product->id, 'pa_koostis', array('fields' => 'color')));
 //                    var_dump($koostis);
-
             ?>
             <?php
             $args = array(
@@ -663,132 +509,45 @@ if(is_shop()) {
                     }
                     if ($j < 5) {
                         ?>
-                        <div class="col-lg-6 col-md-6 col-sm-6 product-hover">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="padding-right_0 padding-left_0 col-lg-6 col-md-6 col-sm-6 product-hover">
+                            <div class="product-hover-next <?php echo $even; ?>">
                                 <a href="<?php echo get_permalink(); ?>">
                                     <img src="<?php echo $image_output_src; ?>" alt=""/>
                                 </a>
+                                <div class="row product-detail">
+                                    <p class="color"><?php echo $color_choices; ?></p>
+
+                                    <p class="name"><?php the_title(); ?></p>
+
+                                    <p class="price"><?php echo wc_price($price); ?></p>
+                                </div>
                                 <div class="product-hover-detail row <?php echo $even; ?> s-product main-item-hover-wrapper">
-                                    <?php
-                                        if($even == "odd") {
-                                            ?>
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                    <div class="row h-img-wrapper">
-                                                        <a href="<?php echo get_permalink(); ?>">
-                                                            <img src="<?php echo $image_output_src; ?>" alt=""/>
-                                                        </a>
-                                                    </div>
-                                                    <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
-                                                        <p class="color"><?php echo $color_choices; ?></p>
-                                                        <p class="name"><?php the_title(); ?></p>
-                                                        <p class="price"><?php echo wc_price($price); ?></p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
-                                                    <h2>Quick Shop</h2>
+                                    <div class="">
+                                        <div class="quick-shop-wrapper">
+                                            <h2>Quick Shop</h2>
 
-                                                    <p>Use your Saved Custom preferences or KLYNC design</p>
-                                                    <div
-                                                        class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12 saved-preferences">
-                                                        <!--<label for="saved-preferences">
-                                                                <span class="custom-checkbox-wrapper btn btn-primary">
-                                                                    <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
-                                                                    Saved Preferences
-                                                                </span>
-                                                        </label>
-                                                        <label for="klnyc">
-                                                                <span class="custom-checkbox-wrapper btn btn-primary">
-                                                                    <input type="checkbox" name="klnyc" id="klnyc"/>
-                                                                    KLNYC
-                                                                </span>
-                                                        </label>-->
-                                                        <label for="custom-preferences">
-                                                            <select name="custom-preferences" id="custom-preferences"
-                                                                    class="form-control">
-                                                                <option value="saved-preferences"> Saved Preferences
-                                                                </option>
-                                                                <option value="saved-preferences"> KLYNC Preferences
-                                                                </option>
-                                                            </select>
-                                                        </label>
-                                                    </div>
-                                                    <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                        <button class="btn btn-primary">ADD TO CART</button>
-                                                    </div>
-                                                    <div class="or-text">OR</div>
-                                                    <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                        <button class="btn btn-default customize">Customize</button>
-                                                    </div>
-                                                </div>
+                                            <p>Use your Saved Custom preferences or KLYNC design</p>
+                                            <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12 saved-preferences">
+                                                <label for="custom-preferences">
+                                                    <select name="custom-preferences" id="custom-preferences"
+                                                            class="form-control">
+                                                        <option value="saved-preferences"> Saved Preferences
+                                                        </option>
+                                                        <option value="saved-preferences"> KLYNC Preferences
+                                                        </option>
+                                                    </select>
+                                                </label>
                                             </div>
-                                            <?php
-                                        }
-                                    else {
-                                        ?>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
-                                                <h2>Quick Shop</h2>
-
-                                                <p>Use your Saved Custom preferences or KLYNC design</p>
-                                                <div
-                                                    class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12 saved-preferences">
-                                                    <!--<label for="saved-preferences">
-                                                            <span class="custom-checkbox-wrapper btn btn-primary">
-                                                                <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
-                                                                Saved Preferences
-                                                            </span>
-                                                    </label>
-                                                    <label for="klnyc">
-                                                            <span class="custom-checkbox-wrapper btn btn-primary">
-                                                                <input type="checkbox" name="klnyc" id="klnyc"/>
-                                                                KLNYC
-                                                            </span>
-                                                    </label>-->
-                                                    <label for="custom-preferences">
-                                                        <select name="custom-preferences" id="custom-preferences"
-                                                                class="form-control">
-                                                            <option value="saved-preferences"> Saved Preferences
-                                                            </option>
-                                                            <option value="saved-preferences"> KLYNC Preferences
-                                                            </option>
-                                                        </select>
-                                                    </label>
-                                                </div>
-                                                <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                    <button class="btn btn-primary">ADD TO CART</button>
-                                                </div>
-                                                <div class="or-text">OR</div>
-                                                <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                    <button class="btn btn-default customize">Customize</button>
-                                                </div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <button class="btn btn-primary">ADD TO CART</button>
                                             </div>
-                                            <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                <div class="pull-right">
-                                                    <div class="row h-img-wrapper">
-                                                        <a href="<?php echo get_permalink(); ?>">
-                                                            <img src="<?php echo $image_output_src; ?>" alt=""/>
-                                                        </a>
-                                                    </div>
-                                                    <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
-                                                        <p class="color"><?php echo $color_choices; ?></p>
-                                                        <p class="name"><?php the_title(); ?></p>
-                                                        <p class="price"><?php echo wc_price($price); ?></p>
-                                                    </div>
-                                                </div>
+                                            <div class="or-text">OR</div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <button class="btn btn-default customize">Customize</button>
                                             </div>
                                         </div>
-                                        <?php
-                                    }
-                                    ?>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
-                                <p class="color"><?php echo $color_choices; ?></p>
-
-                                <p class="name"><?php the_title(); ?></p>
-
-                                <p class="price"><?php echo wc_price($price); ?></p>
                             </div>
                         </div>
                     <?php
@@ -815,137 +574,50 @@ if(is_shop()) {
                         ?>
 
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="row  fourth-product">
+                        <div class="row">
                     <?php
                     }
                     if ($j > 4) {
                         ?>
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="padding-right_0 padding-left_0 col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover">
+                            <div class="product-hover-next <?php echo $even; ?>">
                                 <a href="<?php echo get_permalink(); ?>">
                                     <img src="<?php echo $image_output_src; ?>" alt=""/>
                                 </a>
+                                <div class="row product-detail">
+                                    <p class="color"><?php echo $color_choices; ?></p>
 
-                                <div class="product-hover-detail row <?php echo $even; ?> main-item-hover-wrapper">
-                                    <?php
-                                    if($even == "odd") {
-                                        ?>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                <div class="row h-img-wrapper">
-                                                    <a href="<?php echo get_permalink(); ?>">
-                                                        <img src="<?php echo $image_output_src; ?>" alt=""/>
-                                                    </a>
-                                                </div>
-                                                <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
-                                                    <p class="color"><?php echo $color_choices; ?></p>
-                                                    <p class="name"><?php the_title(); ?></p>
-                                                    <p class="price"><?php echo wc_price($price); ?></p>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
-                                                <h2>Quick Shop</h2>
+                                    <p class="name"><?php the_title(); ?></p>
 
-                                                <p>Use your Saved Custom preferences or KLYNC design</p>
-                                                <div
-                                                    class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12 saved-preferences">
-                                                    <!--<label for="saved-preferences">
-                                                            <span class="custom-checkbox-wrapper btn btn-primary">
-                                                                <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
-                                                                Saved Preferences
-                                                            </span>
-                                                    </label>
-                                                    <label for="klnyc">
-                                                            <span class="custom-checkbox-wrapper btn btn-primary">
-                                                                <input type="checkbox" name="klnyc" id="klnyc"/>
-                                                                KLNYC
-                                                            </span>
-                                                    </label>-->
-                                                    <label for="custom-preferences">
-                                                        <select name="custom-preferences" id="custom-preferences"
-                                                                class="form-control">
-                                                            <option value="saved-preferences"> Saved Preferences
-                                                            </option>
-                                                            <option value="saved-preferences"> KLYNC Preferences
-                                                            </option>
-                                                        </select>
-                                                    </label>
-                                                </div>
-                                                <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                    <button class="btn btn-primary">ADD TO CART</button>
-                                                </div>
-                                                <div class="or-text">OR</div>
-                                                <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                    <button class="btn btn-default customize">Customize</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    <?php
-                                    }
-                                    else {
-                                        ?>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
-                                                <h2>Quick Shop</h2>
-
-                                                <p>Use your Saved Custom preferences or KLYNC design</p>
-                                                <div
-                                                    class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12 saved-preferences">
-                                                    <!--<label for="saved-preferences">
-                                                            <span class="custom-checkbox-wrapper btn btn-primary">
-                                                                <input type="checkbox" name="saved-preferences" id="saved-preferences"/>
-                                                                Saved Preferences
-                                                            </span>
-                                                    </label>
-                                                    <label for="klnyc">
-                                                            <span class="custom-checkbox-wrapper btn btn-primary">
-                                                                <input type="checkbox" name="klnyc" id="klnyc"/>
-                                                                KLNYC
-                                                            </span>
-                                                    </label>-->
-                                                    <label for="custom-preferences">
-                                                        <select name="custom-preferences" id="custom-preferences"
-                                                                class="form-control">
-                                                            <option value="saved-preferences"> Saved Preferences
-                                                            </option>
-                                                            <option value="saved-preferences"> KLYNC Preferences
-                                                            </option>
-                                                        </select>
-                                                    </label>
-                                                </div>
-                                                <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                    <button class="btn btn-primary">ADD TO CART</button>
-                                                </div>
-                                                <div class="or-text">OR</div>
-                                                <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                    <button class="btn btn-default customize">Customize</button>
-                                                </div>
-                                            </div>
-                                            <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                <div class="pull-right">
-                                                    <div class="row h-img-wrapper">
-                                                        <a href="<?php echo get_permalink(); ?>">
-                                                            <img src="<?php echo $image_output_src; ?>" alt=""/>
-                                                        </a>
-                                                    </div>
-                                                    <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
-                                                        <p class="color"><?php echo $color_choices; ?></p>
-                                                        <p class="name"><?php the_title(); ?></p>
-                                                        <p class="price"><?php echo wc_price($price); ?></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    <?php
-                                    }
-                                    ?>
+                                    <p class="price"><?php echo wc_price($price); ?></p>
                                 </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
-                                <p class="color"><?php echo $color_choices; ?></p>
+                                <div class="product-hover-detail row <?php echo $even; ?> s-product main-item-hover-wrapper">
+                                    <div class="">
+                                        <div class="quick-shop-wrapper">
+                                            <h2>Quick Shop</h2>
 
-                                <p class="name"><?php the_title(); ?></p>
-                                <p class="price"><?php echo wc_price($price); ?></p>
+                                            <p>Use your Saved Custom preferences or KLYNC design</p>
+                                            <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12 saved-preferences">
+                                                <label for="custom-preferences">
+                                                    <select name="custom-preferences" id="custom-preferences"
+                                                            class="form-control">
+                                                        <option value="saved-preferences"> Saved Preferences
+                                                        </option>
+                                                        <option value="saved-preferences"> KLYNC Preferences
+                                                        </option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <button class="btn btn-primary">ADD TO CART</button>
+                                            </div>
+                                            <div class="or-text">OR</div>
+                                            <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <button class="btn btn-default customize">Customize</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     <?php
@@ -970,7 +642,6 @@ if(is_shop()) {
                         </div>
     <?php
         }
-
     }
     ?> </div> <?php
 }
