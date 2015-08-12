@@ -70,7 +70,12 @@ jQuery(document).ready(
         });
         // scroll function
         function scrollToID(id, speed){
-            var offSet = 250;
+            var offSet;
+            if($(window).width() > 768){
+                offSet = 200;
+            } else {
+                offSet = 30;
+            }
             var targetOffset = $(id).offset().top - offSet;
             $('html,body').animate({scrollTop:targetOffset}, speed);
         }

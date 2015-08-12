@@ -111,13 +111,12 @@ if(is_shop()) {
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"></a>
+                    <a class="navbar-brand all" href="<?php echo esc_url(get_permalink(get_page_by_title('all'))); ?>">ALL</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                    <li><a href="<?php echo esc_url(get_permalink(get_page_by_title('all'))); ?>">All</a></li>
                         <?php
     foreach ($parent_categories as $parent_category) {
         if ($parent_category['has_child']) {
