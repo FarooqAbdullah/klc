@@ -1,6 +1,7 @@
 
 .wrapper {
-    max-width:100%;
+    max-width:1140px;
+    margin: 0 auto;
 }
 .row {
     margin-right:0;
@@ -107,70 +108,44 @@
     max-width:100%;
 }
 .row.section {
-    margin-bottom: 200px;
+    margin-bottom: 50px;
+    max-width:1600px;
+    margin-left: auto;
+    margin-right: auto;
 }
-.product-hover-detail {
-    /*display: none;*/
-    max-height: 411px;
-    min-height:400px;
-    z-index: 998;
-    width: 685px;
-    background-color: #fff;
-    position: absolute;
-    border: 1px solid #c1c1c1;
-    /*box-shadow: 0 0 1px 3px #e8e8e8;*/
-    transition: ease all 0.7s;
-    opacity: 0;
-    top: -5px;
-    /*overflow: hidden;*/
-    /*left: -5px;*/
+.row.section > div {
+    margin-bottom: 50px;
 }
-.product-hover-detail.odd {
-    /*width: 0;*/
-    /*left:-358px;*/
-    z-index: -1;
+.product-hover > div  a {
+    background-color: #f3f3f5;
+    display: inline-block;
+    max-height: 318px;
+    min-height: 318px;
+    max-width: 295px;
+    /*min-width:295px;*/
+    width:100%;
+    line-height: 318px;
     overflow: hidden;
-}
-.product-hover > div {
-    position: relative;
-}
-.product-hover > div:hover {
-    cursor: pointer;
-}
-@media(min-width:1140px){
-.product-hover > div:hover div.product-hover-detail {
-    display: block;
-    opacity: 1;
-    width: 685px;
-    z-index:998;
-}
 }
 .product-hover > div > a > img {
-    padding-top:15px;
+    max-width: 275px;
+    width: 100%;
+    height: 290px;
+    vertical-align: middle;
+    display: inline-block;
+    margin: auto;
+    transition: linear all 0.2s;
+    transform: scale(1);
 }
-.product-hover > div {
-    overflow: hidden;
+.product-hover > div.product-hover-next:hover > a > img {
+   /* zoom: 150%;*/
+    transform: scale(1.1);
+    vertical-align: middle;
+    display: inline-block;
+    margin: auto;
 }
-.product-hover > div:hover {
-    overflow: visible;
-}
-.product-hover > div:hover div.product-hover-detail.odd {
-    overflow: visible;
-    z-index: 998;
-    /*left:15px;*/
-}
-.product-hover > div:hover div.product-hover-detail.even {
-    left:-358px;
-    overflow: visible;
-    z-index: 998;
-}
-.product-hover > div div.product-hover-detail.even {
-    overflow: hidden;
-    left: -358px;
-    z-index: -1;
-}
-.product-hover > div > div {
-    padding-top: 15px;
+.quick-shop-wrapper {
+    padding-top: 50px;
 }
 .quick-shop-wrapper h2,
 .quick-shop-wrapper p {
@@ -179,11 +154,11 @@
 .quick-shop-wrapper p {
     font-size: 13px;
 }
-.quick-shop-wrapper > div {
+.quick-shop-wrapper div {
     margin-bottom: 20px;
     text-align: center;
 }
-.quick-shop-wrapper > div .btn {
+.quick-shop-wrapper div .btn {
     width: 100%;
 }
 .section > div {
@@ -260,11 +235,131 @@ img {
 .vc_row.container {
     margin: 0 auto;
 }
-.product-hover img {
-    max-height: 300px;
-    min-height: 300px;
+.product-hover-next a img {
+    max-width: 296px;
+    width: 100%;
 }
-.row.short-product,
-.row.fourth-product {
-    padding-bottom: 50px;
+.product-hover-detail {
+    display: none;
+    height: calc(100% + 2px);
+    z-index: 998;
+    width: 100%;
+    top: -1px;
+    left: 100%;
+    background-color: #fff;
+    position: absolute;
+    border: 1px solid #c1c1c1;
+    border-left:0 ;
+    transition: ease all 0.7s;
+    opacity: 0;
+}
+.product-hover > div.product-hover-next {
+    position: relative;
+    text-align: center;
+}
+.row.section .section .big-image {
+    margin-bottom: 20px;
+}
+.navbar-brand.all {
+    color: #fff;
+    font-size: 13px;
+    font-family:MyriadPro, sans-serif;
+}
+.navbar-brand.all:hover {
+    color: #fff;
+    font-size: 13px;
+}
+@media screen and (min-width: 768px) and (max-width: 968px) {
+    #bs-example-navbar-collapse-1 > ul > li > a {
+        padding-left:0px;
+        padding-right:0px;
+    }
+    #bs-example-navbar-collapse-1 > ul > li > .dropdown-menu ul ,
+    #bs-example-navbar-collapse-1 > ul > li > .dropdown-menu ul li {
+        margin-left: 0;
+    }
+
+
+}
+@media screen and (max-width: 767px){
+    .product-hover-next {
+        margin-bottom: 20px;
+    }
+    .row.section > div {
+        margin-bottom: 0;
+    }
+    #bs-example-navbar-collapse-1 .dropdown-menu {
+        background-color: transparent;
+    }
+    #bs-example-navbar-collapse-1 .dropdown-menu ul li {
+        float: none;
+        padding: 0;
+        margin-left: 0;
+    }
+    #bs-example-navbar-collapse-1 .dropdown-menu ul li a {
+        color: #fff !important;
+    }
+    #bs-example-navbar-collapse-1 .dropdown-menu ul li a:hover {
+        color: #fff !important;
+    }
+}
+@media screen and (min-width: 768px) {
+
+    .product-hover-next {
+        border:1px solid transparent;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        overflow: hidden;
+        transition: ease all 0.2s;
+    }
+    .product-hover-next:hover {
+
+    }
+    .product-hover-next.odd:hover {
+        border-top: 1px solid #c1c1c1;
+        border-left: 1px solid #c1c1c1;
+        border-bottom: 1px solid #c1c1c1;
+        overflow: visible;
+    }
+    .padding-right_0 {
+        padding-right: 0 !important;
+    }
+    .product-hover-detail {
+        display: none;
+        height: calc(100% + 2px);
+        z-index: 998;
+        width: 100%;
+        top: -1px;
+        left: 100%;
+        background-color: #fff;
+        position: absolute;
+        border: 1px solid #c1c1c1;
+        border-left:0 ;
+        transition: ease all 0.7s;
+        opacity: 0;
+    }
+    .product-hover > div.product-hover-next.even:hover {
+        border-top: 1px solid #c1c1c1;
+        border-right: 1px solid #c1c1c1;
+        border-bottom: 1px solid #c1c1c1;
+        z-index:998;
+        overflow: visible;
+    }
+    .product-hover > div:hover {
+        cursor: pointer;
+    }
+    .product-hover > div.product-hover-next:hover .product-hover-detail {
+        display: block;
+        opacity: 1;
+    }
+    .product-hover > div.product-hover-next.even:hover .product-hover-detail {
+        left:inherit;
+        right: 100%;
+        border-left: 1px solid #c1c1c1;
+        border-right: 0;
+    }
+    .navbar>.container-fluid .navbar-brand.all {
+        padding: 15px 0 0 8px;
+        margin-left: 0;
+    }
 }
