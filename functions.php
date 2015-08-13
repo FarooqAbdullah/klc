@@ -1,4 +1,6 @@
 <?php
+
+include('custom-functions.php');
 //Image sizes
 
 add_image_size ( 'menu-image', 786, 186, false );
