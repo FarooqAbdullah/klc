@@ -178,28 +178,21 @@ if (empty($parent_cat)) {
                             }
                             if ($j < 5) {
                                 ?>
-                                <div class="col-lg-6 col-md-6 col-sm-6 product-hover">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="padding-right_0 padding-left_0 col-lg-6 col-md-6 col-sm-6 product-hover">
+                                    <div class="product-hover-next <?php echo $even; ?>">
                                         <a href="<?php echo get_permalink(); ?>">
                                             <img src="<?php echo $image_output_src; ?>" alt=""/>
                                         </a>
+                                        <div class="row product-detail">
+                                            <p class="color"><?php echo $color_choices; ?></p>
 
-                                        <div
-                                            class="product-hover-detail row <?php echo $even; ?> s-product main-item-hover-wrapper">
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                    <div class="row h-img-wrapper">
-                                                        <a href="<?php echo get_permalink(); ?>">
-                                                            <img src="<?php echo $image_output_src; ?>" alt=""/>
-                                                        </a>
-                                                    </div>
-                                                    <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
-                                                        <p class="color">Navy And White</p>
-                                                        <p class="name"><?php the_title(); ?></p>
-                                                        <p class="price">$<?php echo $price; ?></p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                            <p class="name"><?php the_title(); ?></p>
+
+                                            <p class="price"><?php echo wc_price($price); ?></p>
+                                        </div>
+                                        <div class="product-hover-detail row <?php echo $even; ?> s-product main-item-hover-wrapper">
+                                            <div class="">
+                                                <div class="quick-shop-wrapper">
                                                     <h2>Quick Shop</h2>
 
                                                     <p>Use your Saved Custom preferences or KLYNC design</p>
@@ -221,16 +214,28 @@ if (empty($parent_cat)) {
                                                     <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                         <button class="btn btn-default customize">Customize</button>
                                                     </div>
+                                                    <div>
+                                                        <!-- Load Facebook SDK for JavaScript -->
+                                                        <div id="fb-root"></div>
+                                                        <script>(function(d, s, id) {
+                                                                var js, fjs = d.getElementsByTagName(s)[0];
+                                                                if (d.getElementById(id)) return;
+                                                                js = d.createElement(s); js.id = id;
+                                                                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+                                                                fjs.parentNode.insertBefore(js, fjs);
+                                                            }(document, 'script', 'facebook-jssdk'));</script>
+
+                                                        <!-- Your like button code -->
+                                                        <div class="fb-like"
+                                                             data-href="https://www.facebook.com/pages/KLYNC/406970722833296?ref=hl"
+                                                             data-layout="standard"
+                                                             data-action="like"
+                                                             data-show-faces="true">
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
-                                        <p class="color">Navy And White</p>
-
-                                        <p class="name">Daily Grind No Pocket</p>
-
-                                        <p class="price">$<?php echo $price; ?></p>
                                     </div>
                                 </div>
                             <?php
@@ -262,33 +267,24 @@ if (empty($parent_cat)) {
                             }
                             if ($j > 4) {
                                 ?>
-                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="padding-right_0 padding-left_0 col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover">
+                                    <div class="product-hover-next <?php echo $even; ?>">
                                         <a href="<?php echo get_permalink(); ?>">
                                             <img src="<?php echo $image_output_src; ?>" alt=""/>
                                         </a>
+                                        <div class="row product-detail">
+                                            <p class="color"><?php echo $color_choices; ?></p>
 
-                                        <div class="product-hover-detail row <?php echo $even; ?> main-item-hover-wrapper">
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                    <div class="row h-img-wrapper">
-                                                        <a href="<?php echo get_permalink(); ?>">
-                                                            <img src="<?php echo $image_output_src; ?>" alt=""/>
-                                                        </a>
-                                                    </div>
-                                                    <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
-                                                        <p class="color">Navy And White</p>
+                                            <p class="name"><?php the_title(); ?></p>
 
-                                                        <p class="name">Daily Grind No Pocket</p>
-
-                                                        <p class="price">$<?php echo $price; ?></p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                            <p class="price"><?php echo wc_price($price); ?></p>
+                                        </div>
+                                        <div class="product-hover-detail row <?php echo $even; ?> s-product main-item-hover-wrapper">
+                                            <div class="">
+                                                <div class="quick-shop-wrapper">
                                                     <h2>Quick Shop</h2>
 
                                                     <p>Use your Saved Custom preferences or KLYNC design</p>
-
                                                     <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12 saved-preferences">
                                                         <label for="custom-preferences">
                                                             <select name="custom-preferences" id="custom-preferences"
@@ -310,13 +306,6 @@ if (empty($parent_cat)) {
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
-                                        <p class="color">Navy And White</p>
-
-                                        <p class="name">Daily Grind No Pocket</p>
-
-                                        <p class="price">$<?php echo $price; ?></p>
                                     </div>
                                 </div>
                             <?php
@@ -407,26 +396,21 @@ if (empty($parent_cat)) {
                 }
                 if ($j < 5) {
                     ?>
-                    <div class="col-lg-6 col-md-6 col-sm-6 product-hover">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="padding-right_0 padding-left_0 col-lg-6 col-md-6 col-sm-6 product-hover">
+                        <div class="product-hover-next <?php echo $even; ?>">
                             <a href="<?php echo get_permalink(); ?>">
                                 <img src="<?php echo $image_output_src; ?>" alt=""/>
                             </a>
+                            <div class="row product-detail">
+                                <p class="color"><?php echo $color_choices; ?></p>
+
+                                <p class="name"><?php the_title(); ?></p>
+
+                                <p class="price"><?php echo wc_price($price); ?></p>
+                            </div>
                             <div class="product-hover-detail row <?php echo $even; ?> s-product main-item-hover-wrapper">
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="row h-img-wrapper">
-                                            <a href="<?php echo get_permalink(); ?>">
-                                                <img src="<?php echo $image_output_src; ?>" alt=""/>
-                                            </a>
-                                        </div>
-                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
-                                            <p class="color">Navy And White</p>
-                                            <p class="name"><?php the_title(); ?></p>
-                                            <p class="price">$<?php echo $price; ?></p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                <div class="">
+                                    <div class="quick-shop-wrapper">
                                         <h2>Quick Shop</h2>
 
                                         <p>Use your Saved Custom preferences or KLYNC design</p>
@@ -448,16 +432,28 @@ if (empty($parent_cat)) {
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-default customize">Customize</button>
                                         </div>
+                                        <div>
+                                            <!-- Load Facebook SDK for JavaScript -->
+                                            <div id="fb-root"></div>
+                                            <script>(function(d, s, id) {
+                                                    var js, fjs = d.getElementsByTagName(s)[0];
+                                                    if (d.getElementById(id)) return;
+                                                    js = d.createElement(s); js.id = id;
+                                                    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+                                                    fjs.parentNode.insertBefore(js, fjs);
+                                                }(document, 'script', 'facebook-jssdk'));</script>
+
+                                            <!-- Your like button code -->
+                                            <div class="fb-like"
+                                                 data-href="https://www.facebook.com/pages/KLYNC/406970722833296?ref=hl"
+                                                 data-layout="standard"
+                                                 data-action="like"
+                                                 data-show-faces="true">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
-                            <p class="color">Navy And White</p>
-
-                            <p class="name">Daily Grind No Pocket</p>
-
-                            <p class="price">$<?php echo $price; ?></p>
                         </div>
                     </div>
                 <?php
@@ -489,35 +485,26 @@ if (empty($parent_cat)) {
                 }
                 if ($j > 4) {
                     ?>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="padding-right_0 padding-left_0 col-lg-3 col-md-3 col-sm-6 col-xs-12 product-hover">
+                        <div class="product-hover-next <?php echo $even; ?>">
                             <a href="<?php echo get_permalink(); ?>">
                                 <img src="<?php echo $image_output_src; ?>" alt=""/>
                             </a>
+                            <div class="row product-detail">
+                                <p class="color"><?php echo $color_choices; ?></p>
 
-                            <div class="product-hover-detail row <?php echo $even; ?> main-item-hover-wrapper">
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <div class="padding-left_0 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="row h-img-wrapper">
-                                            <a href="<?php echo get_permalink(); ?>">
-                                                <img src="<?php echo $image_output_src; ?>" alt=""/>
-                                            </a>
-                                        </div>
-                                        <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
-                                            <p class="color">Navy And White</p>
+                                <p class="name"><?php the_title(); ?></p>
 
-                                            <p class="name">Daily Grind No Pocket</p>
-
-                                            <p class="price">$<?php echo $price; ?></p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 quick-shop-wrapper">
+                                <p class="price"><?php echo wc_price($price); ?></p>
+                            </div>
+                            <div class="product-hover-detail row <?php echo $even; ?> s-product main-item-hover-wrapper">
+                                <div class="">
+                                    <div class="quick-shop-wrapper">
                                         <h2>Quick Shop</h2>
 
                                         <p>Use your Saved Custom preferences or KLYNC design</p>
-
                                         <div class=" row col-lg-12 col-md-12 col-sm-12 col-xs-12 saved-preferences">
-                                           <label for="custom-preferences">
+                                            <label for="custom-preferences">
                                                 <select name="custom-preferences" id="custom-preferences"
                                                         class="form-control">
                                                     <option value="saved-preferences"> Saved Preferences
@@ -525,7 +512,7 @@ if (empty($parent_cat)) {
                                                     <option value="saved-preferences"> KLYNC Preferences
                                                     </option>
                                                 </select>
-                                           </label>
+                                            </label>
                                         </div>
                                         <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <button class="btn btn-primary">ADD TO CART</button>
@@ -537,13 +524,6 @@ if (empty($parent_cat)) {
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail">
-                            <p class="color">Navy And White</p>
-
-                            <p class="name">Daily Grind No Pocket</p>
-
-                            <p class="price">$<?php echo $price; ?></p>
                         </div>
                     </div>
                 <?php

@@ -119,3 +119,8 @@ h2.product-category-name{    pointer-events: none;  background:url(../images/tra
 	.menu-gifts-pricing li a.active{ background:#ccc;}
 	.page-id-507 #mk-page-id-507{margin:0px !important;
 padding:0px !important; display:none;}
+@media screen and (max-width: 540px) {
+    h2.product-category-name {
+        font-size: 9px;
+    }
+}
