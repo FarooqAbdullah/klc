@@ -544,6 +544,25 @@ if(is_shop()) {
                                             <div class="row col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <button class="btn btn-default customize">Customize</button>
                                             </div>
+                                            <div>
+                                                <!-- Load Facebook SDK for JavaScript -->
+                                                <div id="fb-root"></div>
+                                                <script>(function(d, s, id) {
+                                                        var js, fjs = d.getElementsByTagName(s)[0];
+                                                        if (d.getElementById(id)) return;
+                                                        js = d.createElement(s); js.id = id;
+                                                        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+                                                        fjs.parentNode.insertBefore(js, fjs);
+                                                    }(document, 'script', 'facebook-jssdk'));</script>
+
+                                                <!-- Your like button code -->
+                                                <div class="fb-like"
+                                                     data-href="https://www.facebook.com/pages/KLYNC/406970722833296?ref=hl"
+                                                     data-layout="standard"
+                                                     data-action="like"
+                                                     data-show-faces="true">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
