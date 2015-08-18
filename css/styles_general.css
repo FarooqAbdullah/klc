@@ -124,3 +124,11 @@ padding:0px !important; display:none;}
         font-size: 9px;
     }
 }
+.single-product .mk-single-thumbnails {
+    max-width:100px;
+    float:left;
+}
+.single-product .mk-woocommerce-main-image {
+    float: right;
+    width:500px;
+}
