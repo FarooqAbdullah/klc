@@ -134,6 +134,32 @@ do_action( 'woocommerce_before_single_product' );
 
 
     </div><!-- .summary -->
+    <div class="promise-wrapper">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h3 class="our-promise">Our Promise To You</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <p class="fit-guarantee">Perfect Fit Guarantee</p>
+                <p class="fit-guarantee">
+                    Order your first garment. If it doesn't fit perfectly then simply tell us what need to be changed and return it. We will alter it or remake it.
+                    Yes that simple. We will make it right.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <p class="fit-guarantee">Easy Measurements | Re-Ordering is a Breeze!</p>
+                <p class="fit-guarantee">
+                    Measure yourself in less than 15 minutes. Save your custom design preferences (e.g. you wear only a medium spread collar shirt? the save that
+                    as a preference and use this to make reordering easy). Use saved preferences and saved measurements to efficiently re-order with our new
+                    "Quick Shop" feature!
+                </p>
+            </div>
+        </div>
+    </div>
 
     <?php
     /**

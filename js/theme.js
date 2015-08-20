@@ -172,8 +172,6 @@ jQuery(document).ready(
                 $('#ubermenu-main-2-primary-menu').css('left','0px');
                 var leftpos=(width*71.87)/100;
 
-
-
             }
         }, 500);
 

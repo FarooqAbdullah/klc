@@ -204,3 +204,25 @@ h2.product-category-name{    pointer-events: none;  background:url(../images/tra
     margin-left: auto;
     margin-right: auto;
 }
+.our-promise {
+    text-transform: uppercase;
+    text-align: center;
+    color: #bcbcbe;
+    letter-spacing: 3px;
+    font-weight: normal;
+    font-size: 46px !important;
+    max-height: 50px !important;
+}
+p.fit-guarantee:first-child {
+    text-transform: uppercase;
+}
+.fit-guarantee {
+    text-align: center;
+    color: #959595;
+    margin-bottom: 0;
+}
+.promise-wrapper > div {
+    margin-top: 30px;
+    margin-top: 30px;
+    clear: both;
+}
