@@ -180,8 +180,6 @@ jQuery(document).ready(
         //Resize
         //$(window).trigger('resize');
 
-
-
         //Login Modal Open
         $(".dropdownJavascript #menu-item-13 a").attr("data-toggle", "modal");
         $(".dropdownJavascript #menu-item-13 a").attr("data-target", "#ModalLogin");
