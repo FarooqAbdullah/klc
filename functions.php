@@ -330,3 +330,13 @@ function myplugin_user_register($user_id) {
         update_users($user_pass, 'user_pass', trim($_POST['user_pass']));
     }
 }
+
+add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
+
+function woo_remove_product_tabs( $tabs ) {
+    unset( $tabs['description'] );       // Remove the description tab
+    unset( $tabs['reviews'] );    // Remove the reviews tab
+    unset( $tabs['additional_information'] );   // Remove the additional information tab
+
+    return $tabs;
+}

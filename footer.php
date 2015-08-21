@@ -140,9 +140,11 @@ switch($footer_column):
 <?php
 			break;
 	endswitch;
+
 endif;?>
 <div class="clearboth"></div>
 </div>
+    <button class="btn btn-primary" id="custom-measurement">Measurement</button>
 </div>
 <?php endif;?>
 <?php if ( $mk_options['disable_sub_footer'] == 'true' && ($show_footer_old != 'false' && $show_footer != 'no-footer' && $show_footer != 'no-header-footer' && $show_footer != 'no-header-title-footer' && $show_footer != 'no-footer-title')) { ?>
@@ -399,6 +401,192 @@ endif;?>
 </div>
 <!-- Reset Modal -->
 	<?php } ?>
+
+<div id="custom-measurement-body" class="custom-measurement-body-wrapper">
+    <a href="javascript:void(0)" class="close">X</a>
+    <div class="cw-container">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <h2 class="enter-your-measurement">Enter your Measurements in 15 minutes</h2>
+            <p class="p-head">All you need is a Friend <span>&</span> a Measuring Tape</p>
+            <p class="p-head-slug">
+                * Alternatively download this measurement form and take it to a local tailor (e.g. a neighborhood dry cleaner) and have them measure you.
+            </p>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <form>
+                <div class="row">
+                    <label>
+                        English vs Metric System:
+                        <input type="radio" name="length_unit"/> Inches
+                        <input type="radio" name="length_unit"/> Cm
+                    </label>
+                </div>
+                <div class="row enter-height-gender">
+                    <div>
+                        <label>First enter your height, weight, age and gender: </label>
+                    </div>
+                    <div>
+                        <p>
+                            Height <input type="text" name="feet"/> <span>FT</span>
+                            <input type="text" name="inch"/> <span>IN</span>
+                        </p>
+                        <p>
+                            Weight <input type="text" name="weight"/> <span>LBS</span>
+                        </p>
+                        <p>
+                            AGE <input type="text" name="age"/> <span>YRS</span>
+                        </p>
+                        <p>
+                            Gender <input type="text" name="gender"/>
+                        </p>
+                    </div>
+                </div>
+                <div class="row video-form">
+                    <div class="col-lg-8 col-mg-8 col-sm-12 col-xs-12">
+                        <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">Jacket/Shirt Measurements</th>
+                                <th colspan="2">Pant Measurements</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Neck
+                                </td>
+                                <td>
+                                    <input type="text" name="neck"/> <span>IN</span>
+                                </td>
+                                <td>
+                                    Waist
+                                </td>
+                                <td>
+                                    <input type="text" name="waist"/> <span>IN</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    CHEST
+                                </td>
+                                <td>
+                                    <input type="text" name="chest"/> <span>IN</span>
+                                </td>
+                                <td>
+                                    Thigh
+                                </td>
+                                <td>
+                                    <input type="text" name="thigh"/> <span>IN</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Stomach
+                                </td>
+                                <td>
+                                    <input type="text" name="stomach"/> <span>IN</span>
+                                </td>
+                                <td>
+                                    Knee
+                                </td>
+                                <td>
+                                    <input type="text" name="knee"/> <span>IN</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Hip
+                                </td>
+                                <td>
+                                    <input type="text" name="hip"/> <span>IN</span>
+                                </td>
+                                <td>
+                                    Rise
+                                </td>
+                                <td>
+                                    <input type="text" name="rise"/> <span>IN</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Length
+                                </td>
+                                <td>
+                                    <input type="text" name="length"/> <span>IN</span>
+                                </td>
+                                <td>
+                                    Pant Length
+                                </td>
+                                <td>
+                                    <input type="text" name="p-length"/> <span>IN</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Bicep
+                                </td>
+                                <td>
+                                    <input type="text" name="bicep"/> <span>IN</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Armhole
+                                </td>
+                                <td>
+                                    <input type="text" name="armhole"/> <span>IN</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Shoulder Width
+                                </td>
+                                <td>
+                                    <input type="text" name="shoulder-width"/> <span>IN</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Sleeve Length
+                                </td>
+                                <td>
+                                    <input type="text" name="sleeve-length"/> <span>IN</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    <div class="col-lg-4 col-mg-4 col-sm-12 col-xs-12">
+<!--                        <iframe frameborder="0" width="480" height="270" src="//www.dailymotion.com/embed/video/xscm42" allowfullscreen></iframe>-->
+                        <iframe frameborder="0" width="480" height="270" src="//www.dailymotion.com/embed/video/xd0f6x" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="row bottom-img">
+                    <div class="padding-left_0 padding-right_0 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="padding-left_0 padding-right_0 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <h3>SHOULDERS</h3>
+                            <div class="padding-left_0 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                <div class="row">
+                                    <div class="padding-left_0 padding-right_0 col-sm-12 col-md-12">
+                                        <div class="thumbnail">
+                                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/square-shoulder.png" alt="Square Shoulder">
+                                            <div class="caption">
+                                                <h3>Thumbnail label</h3>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</div>
 </body>
 </html>
 
