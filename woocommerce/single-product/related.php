@@ -32,7 +32,7 @@ $woocommerce_loop['columns'] 	= $columns;
 if ( $products->have_posts() ) : ?>
 
 	<div class="related products">
-	<h4><?php _e( 'Related Products', 'mk_framework' ); ?></h4>	
+	<h4><?php _e( 'ALSO RECOMMENDED FOR YOU', 'mk_framework' ); ?></h4>
 
 		<?php woocommerce_product_loop_start(); ?>
 
