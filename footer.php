@@ -563,16 +563,168 @@ endif;?>
                 </div>
                 <div class="row bottom-img">
                     <div class="padding-left_0 padding-right_0 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="padding-left_0 padding-right_0 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="padding-left_0 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                             <h3>SHOULDERS</h3>
-                            <div class="padding-left_0 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <div class="single_wrapper padding-left_0 padding-right_0 col-lg-4 col-md-4 col-sm-12 col-xs-12">
                                 <div class="row">
                                     <div class="padding-left_0 padding-right_0 col-sm-12 col-md-12">
                                         <div class="thumbnail">
                                             <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/square-shoulder.png" alt="Square Shoulder">
                                             <div class="caption">
-                                                <h3>Thumbnail label</h3>
+                                                <h3>Square Shoulders</h3>
                                                 <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single_wrapper padding-left_0 padding-right_0 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                <div class="row">
+                                    <div class="padding-left_0 padding-right_0 col-sm-12 col-md-12">
+                                        <div class="thumbnail">
+                                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/square-shoulder.png" alt="Square Shoulder">
+                                            <div class="caption">
+                                                <h3>Rounded Shoulders</h3>
+                                                <p>Your Shoulders are gently reounded</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single_wrapper padding-left_0 padding-right_0 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                <div class="row">
+                                    <div class="padding-left_0 padding-right_0 col-sm-12 col-md-12">
+                                        <div class="thumbnail">
+                                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/square-shoulder.png" alt="Square Shoulder">
+                                            <div class="caption">
+                                                <h3>Sloping Shoulders</h3>
+                                                <p>Your Shoulders have a prominent</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="padding-right_0 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <h3>Chest</h3>
+                            <div class="single_wrapper padding-left_0 padding-right_0 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                <div class="row">
+                                    <div class="padding-left_0 padding-right_0 col-sm-12 col-md-12">
+                                        <div class="thumbnail">
+                                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/muscular-chest.png" alt="Square Shoulder">
+                                            <div class="caption">
+                                                <h3>Mascular Chest</h3>
+                                                <p>Your Chest is broad with promi</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single_wrapper padding-left_0 padding-right_0 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                <div class="row">
+                                    <div class="padding-left_0 padding-right_0 col-sm-12 col-md-12">
+                                        <div class="thumbnail">
+                                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/flat-chest.png" alt="Square Shoulder">
+                                            <div class="caption">
+                                                <h3>Flat Chest</h3>
+                                                <p>Your Chest is flat with some m</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single_wrapper padding-left_0 padding-right_0 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                <div class="row">
+                                    <div class="padding-left_0 padding-right_0 col-sm-12 col-md-12">
+                                        <div class="thumbnail">
+                                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/large-chest.png" alt="Square Shoulder">
+                                            <div class="caption">
+                                                <h3>Largest Chest</h3>
+                                                <p>Your Chest is large no mu</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="padding-left_0 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <h3>Stomach</h3>
+                            <div class="single_wrapper padding-left_0 padding-right_0 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                <div class="row">
+                                    <div class="padding-left_0 padding-right_0 col-sm-12 col-md-12">
+                                        <div class="thumbnail">
+                                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/flat-stomach.png" alt="Square Shoulder">
+                                            <div class="caption">
+                                                <h3>Flat Stomach</h3>
+                                                <p>Your Stomach is flat</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single_wrapper padding-left_0 padding-right_0 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                <div class="row">
+                                    <div class="padding-left_0 padding-right_0 col-sm-12 col-md-12">
+                                        <div class="thumbnail">
+                                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slightly-rounded-stomach.png" alt="Square Shoulder">
+                                            <div class="caption">
+                                                <h3>Slightly Rounded Stomach</h3>
+                                                <p>Your Stomach is slightly rounded</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single_wrapper padding-left_0 padding-right_0 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                <div class="row">
+                                    <div class="padding-left_0 padding-right_0 col-sm-12 col-md-12">
+                                        <div class="thumbnail">
+                                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/rounded-stomach.png" alt="Square Shoulder">
+                                            <div class="caption">
+                                                <h3>Rounded Stomach</h3>
+                                                <p>Your Stomach is larger</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="padding-right_0 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <h3>Posture</h3>
+                            <div class="single_wrapper padding-left_0 padding-right_0 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                <div class="row">
+                                    <div class="padding-left_0 padding-right_0 col-sm-12 col-md-12">
+                                        <div class="thumbnail">
+                                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/flat-posture.png" alt="Square Shoulder">
+                                            <div class="caption">
+                                                <h3>Flat Posture</h3>
+                                                <p>Your Shoulders are manually</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single_wrapper padding-left_0 padding-right_0 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                <div class="row">
+                                    <div class="padding-left_0 padding-right_0 col-sm-12 col-md-12">
+                                        <div class="thumbnail">
+                                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/straight-posture.png" alt="Square Shoulder">
+                                            <div class="caption">
+                                                <h3>Straight Posture</h3>
+                                                <p>Your shoulders are roughly</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single_wrapper padding-left_0 padding-right_0 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                <div class="row">
+                                    <div class="padding-left_0 padding-right_0 col-sm-12 col-md-12">
+                                        <div class="thumbnail">
+                                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/relaxed-posture.png" alt="Square Shoulder">
+                                            <div class="caption">
+                                                <h3>Relaxed Posture</h3>
+                                                <p>Your Shoulders are manually</p>
                                             </div>
                                         </div>
                                     </div>
@@ -581,11 +733,13 @@ endif;?>
                         </div>
                     </div>
                 </div>
+                <div class="row save-reset">
+                    <button class="btn btn-primary">Save Measurements</button>
+                    <button class="btn btn-primary">Recent</button>
+                </div>
             </form>
         </div>
     </div>
-
-
 </div>
 </body>
 </html>

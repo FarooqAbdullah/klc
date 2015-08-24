@@ -187,15 +187,22 @@ jQuery(document).ready(
 
         $('#custom-measurement').click(
             function() {
+                $('#custom-measurement-body').addClass('_active');
                 $('#custom-measurement-body').show(0);
+                $('body').css({'height':'100%', 'overflow':'hidden'});
             }
         );
         //close popup
         $('.custom-measurement-body-wrapper .close').click(function () {
             $('.custom-measurement-body-wrapper').hide();
+            $('.custom-measurement-body-wrapper').removeClass('_active');
+            $('body').css({'height':'auto', 'overflow':'initial'});
+        });
+
+        $('.row.bottom-img .thumbnail').click(function() {
+            $(this).addClass('active-selected');
+            $(this).closest('.single_wrapper').siblings().find('.thumbnail').removeClass('active-selected');
         });
 
     }
 );
-
-

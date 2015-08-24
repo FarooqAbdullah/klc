@@ -235,7 +235,9 @@ p.fit-guarantee:first-child {
 }
 .custom-measurement-body-wrapper {
     background: #c9c9cb;
-    position: absolute;
+    position: fixed;
+    height: calc(100% - 50px);
+    overflow-y: scroll;
     top:53px;
     width: 100%;
     z-index: 999;
@@ -305,4 +307,35 @@ p.fit-guarantee:first-child {
 }
 .cw-container .enter-height-gender > div > p input {
     max-width: 80px;
+}
+.row.bottom-img img {
+    min-width: 100%;
+    max-height: 150px;
+    min-height: 150px;
+}
+.row.bottom-img .caption h3 {
+    font-size: 16px;
+    min-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.row.bottom-img .caption h3 + p {
+    line-height: 16px;
+    margin-bottom: 0;
+    min-height: 32px;
+    text-align: center;
+}
+.row.bottom-img {
+    padding: 10px;
+    background-color: #bbbbbb;
+    margin-bottom: 50px;
+}
+.row.bottom-img .thumbnail {
+    border: 3px solid #fff;
+    border-radius: 0;
+}
+.row.bottom-img .thumbnail.active-selected {
+    border: 3px solid #d1ebf8;
+    border-radius: 0;
+    outline: none;
 }
