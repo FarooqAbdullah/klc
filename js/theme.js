@@ -203,6 +203,54 @@ jQuery(document).ready(
             $(this).addClass('active-selected');
             $(this).closest('.single_wrapper').siblings().find('.thumbnail').removeClass('active-selected');
         });
-
+        $('.cw-container .video-form > div input').focus(
+            function () {
+                var neck = '//www.dailymotion.com/embed/video/xscm42';
+                var chest = '//www.dailymotion.com/embed/video/xd0f6x';
+                var name = $(this).attr('name');
+                if(name == 'neck') {
+                    $('iframe').attr('src', neck);
+                }
+                else if(name == 'waist') {
+                    $('iframe').attr('src', neck);
+                }
+                else if(name == 'chest') {
+                    $('iframe').attr('src', chest);
+                }
+                else if(name == 'thigh') {
+                    $('iframe').attr('src', chest);
+                }
+                else if(name == 'stomach') {
+                    $('iframe').attr('src', neck);
+                }
+                else if(name == 'knee') {
+                    $('iframe').attr('src', neck);
+                }
+                else if(name == 'hip') {
+                    $('iframe').attr('src', chest);
+                }
+                else if(name == 'rise') {
+                    $('iframe').attr('src', chest);
+                }
+                else if(name == 'length') {
+                    $('iframe').attr('src', neck);
+                }
+                else if(name == 'p-length') {
+                    $('iframe').attr('src', neck);
+                }
+                else if(name == 'bicep') {
+                    $('iframe').attr('src', chest);
+                }
+                else if(name == 'armhole') {
+                    $('iframe').attr('src', neck);
+                }
+                else if(name == 'shoulder-width') {
+                    $('iframe').attr('src', chest);
+                }
+                else if(name == 'sleeve-length') {
+                    $('iframe').attr('src', neck);
+                }
+            }
+        );
     }
 );

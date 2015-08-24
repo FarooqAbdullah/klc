@@ -308,6 +308,9 @@ p.fit-guarantee:first-child {
 .cw-container .enter-height-gender > div > p input {
     max-width: 80px;
 }
+.cw-container .english-metric > label > input[type='radio'] {
+    margin: 0 5px 2px 5px;
+}
 .row.bottom-img img {
     min-width: 100%;
     max-height: 150px;
