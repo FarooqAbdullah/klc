@@ -731,7 +731,7 @@ endif;?>
                 </div>
                 <div class="row save-reset">
                     <button class="btn btn-primary">Save Measurements</button>
-                    <button class="btn btn-primary">Recent</button>
+                    <button class="btn btn-primary">Reset</button>
                 </div>
             </form>
         </div>
