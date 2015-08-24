@@ -342,3 +342,21 @@ p.fit-guarantee:first-child {
     border-radius: 0;
     outline: none;
 }
+
+@media (max-width:420px) {
+    .single-product .mk-woocommerce-main-image {
+        float: none;
+        width: 250px;
+        display: block;
+        margin: 0 auto;
+    }
+    .woocommerce-page div.product div.images.mk-single-images > a > img {
+        margin-right: 0 !important;
+    }
+    .single-product .mk-single-thumbnails {
+        max-width: 100%;
+        float: none;
+        width: 250px;
+        margin: 0 auto;
+    }
+}
