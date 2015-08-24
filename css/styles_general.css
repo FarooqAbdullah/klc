@@ -385,8 +385,8 @@ p.fit-guarantee:first-child {
         margin: 0 auto;
     }
 }
-#loginform label{ display:none;}
-#loginform input, #user_registration_form input{display: block;
+#loginform label, #wppb-recover-password p , #wppb-recover-password label{ display:none;}
+#loginform input, #user_registration_form input, #wppb-recover-password input{display: block;
     width: 100%;
     height: 34px;
     padding: 6px 12px;
@@ -402,6 +402,8 @@ p.fit-guarantee:first-child {
     -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
     -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;}
-	#loginform #wp-submit, #user_registration_form .btnRegister{    color: #fff !important;background-color: #21345e !important;
-    border-color: #21345e !important;border-radius: 0px !important;  float: left;  max-width: 155px;    margin-bottom: 30px;}
+	#loginform #wp-submit, #user_registration_form .btnRegister, #wppb-recover-password-button{color: #fff !important;background-color: #21345e !important;
+    border-color: #21345e !important;border-radius: 0px !important;  float: left;  max-width: 190px;    margin-bottom: 30px;}
 	#user_registration_form fieldset{ border:0px; padding:0px;}
+	#wppb-recover-password li, #wppb-recover-password ul{ list-style:none; margin:0px;}
+	#wppb-recover-password  p.form-submit{ display:block; padding-top:10px;}
