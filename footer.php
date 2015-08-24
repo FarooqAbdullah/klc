@@ -375,12 +375,8 @@ endif;?>
             <div class="modal-body">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <div class="row">
-                    <div class="col-sm-5 col-md-5 RestPassBox">
-                        <div class="ResetImage">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/reset.jpg" />
-                        </div>
-                    </div>
-                    <div class="col-lg-7 col-md-7 col-sm-7 loginBox resetPasswordBox">
+                    
+                    <div class="col-lg-12 col-md-12 col-sm-12 loginBox resetPasswordBox">
                         <h2>RESET PASSWORD</h2>
 
                         <p>Enter your email address below. You will receive instructions<br/>
@@ -403,7 +399,7 @@ endif;?>
     <div class="cw-container">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <h2 class="enter-your-measurement">Enter your Measurements in 15 minutes</h2>
-            <p class="p-head">All you need is a Friend <span>&</span> a Measuring Tape</p>
+            <p class="p-head">All you need is a Friend <span>& </span> a Measuring Tape</p>
             <p class="p-head-slug">
                 * Alternatively download this measurement form and take it to a local tailor (e.g. a neighborhood dry cleaner) and have them measure you.
             </p>

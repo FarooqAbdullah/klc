@@ -181,6 +181,8 @@ jQuery(document).ready(
         //Login Modal Open
         $(".dropdownJavascript #menu-item-13 a").attr("data-toggle", "modal");
         $(".dropdownJavascript #menu-item-13 a").attr("data-target", "#ModalLogin");
+		$("#loginform #user_login").attr('placeholder','Username');
+		$("#loginform #user_pass").attr('placeholder','Password');
         //$("#menu-item-13 a").attr("data-toggle", "modal");
         //$("#menu-item-13 a").attr("data-target", "#ModalLogin");
         $('#wp-submit').after('<div class="reset pull-right"> <a  href="#" data-toggle="modal" data-target="#ModalReset" data-dismiss="modal" >Reset Password ?</a> | <a  href="#" data-toggle="modal" data-target="#ModalRegister" data-dismiss="modal" >Register Now</a> </div>');
