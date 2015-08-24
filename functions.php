@@ -330,7 +330,174 @@ function myplugin_user_register($user_id) {
         update_users($user_pass, 'user_pass', trim($_POST['user_pass']));
     }
 }
+////////////////////////////////////////////
 
+/* * ***********Shortcode Register ***************** */
+
+function objects_registration_form() {
+
+    // only show the registration form to non-logged-in members
+    if (!is_user_logged_in()) {
+
+        global $pippin_load_css;
+
+        // set this to true so the CSS is loaded
+        $pippin_load_css = false;
+
+        // check to make sure user registration is enabled
+        $registration_enabled = get_option('users_can_register');
+
+        // only show the registration form if allowed
+        if ($registration_enabled) {
+            $output = pippin_registration_form_fields();
+        } else {
+            $output = __('User registration is not enabled');
+        }
+        return $output;
+    }
+}
+
+add_shortcode('register_form', 'objects_registration_form');
+
+/* * *************Form Content ********************* */
+global $sess;
+
+//session_start();
+function pippin_registration_form_fields() {
+
+    ob_start();
+    ?>
+
+
+    <?php
+    // show any error messages after form submission
+
+    pippin_show_error_messages();
+    ?>
+
+    <form id="user_registration_form" class="user_form" action="" method="POST">
+        <fieldset>
+
+            <p>
+                <input name="pippin_user_email" placeholder="Email" id="pippin_user_email" class="required" type="email"/>
+            </p>
+            <p>
+
+                <input name="pippin_user_pass" placeholder="Password" id="password" class="required" type="password"/>
+            </p>
+            <p>By registering, you agree to our <a class="termsConds" href="<?php echo home_url('terms') ?>">Terms & Conditions</a> and <a class="termsConds" href="<?php echo home_url('privacy') ?>"> Privacy Policy.</a></p>
+
+            <p>  <input type="hidden" name="pippin_register_nonce" value="<?php echo wp_create_nonce('pippin-register-nonce'); ?>"/> </p>
+            <input type="submit" class="btnRegister" name="form_submit" value="<?php _e('Register'); ?>" />
+            <div class="reset pull-right">Already a member ? <a href="#" data-toggle="modal" data-target="#ModalLogin" data-dismiss="modal" id="loginme">Login</a></div>
+
+        </fieldset>
+    </form>
+    <?php
+    return ob_get_clean();
+}
+
+/* * ************Register Fom ********************* */
+
+// register a new user
+function pippin_add_new_member() {
+    if (isset($_POST["pippin_user_email"]) && wp_verify_nonce($_POST['pippin_register_nonce'], 'pippin-register-nonce')) {
+        $user_login = $_POST["pippin_user_email"];
+        $user_email = $_POST["pippin_user_email"];
+        $user_pass = $_POST["pippin_user_pass"];
+
+        // this is required for username checks
+        // require_once(ABSPATH . WPINC . '/registration.php');
+
+        if (username_exists($user_login)) {
+            // Username already registered
+            pippin_errors()->add('username_unavailable', __('Username already taken'));
+        }
+        if (!validate_username($user_login)) {
+            // invalid username
+            pippin_errors()->add('username_invalid', __('Invalid username'));
+        }
+        if ($user_login == '') {
+            // empty username
+            pippin_errors()->add('username_empty', __('Please enter a username'));
+        }
+        if (!is_email($user_email)) {
+            //invalid email
+            pippin_errors()->add('email_invalid', __('Invalid email'));
+        }
+        if (email_exists($user_email)) {
+            //Email address already registered
+            pippin_errors()->add('email_used', __('Email already registered'));
+        }
+        if ($user_pass == '') {
+            // passwords do not match
+            pippin_errors()->add('password_empty', __('Please enter a password'));
+        }
+
+
+        $errors = pippin_errors()->get_error_messages();
+
+        // only create the user in if there are no errors
+        if (empty($errors)) {
+
+            $new_user_id = wp_insert_user(array(
+                'user_login' => $user_login,
+                'user_pass' => $user_pass,
+                'user_email' => $user_email,
+                'user_registered' => date('Y-m-d H:i:s'),
+                'role' => 'subscriber'
+                    )
+            );
+            if ($new_user_id) {
+                // send an email to the admin alerting them of the registration
+                wp_new_user_notification($new_user_id);
+                // log the new user in
+                wp_set_auth_cookie($user_login, $user_pass, true);
+                wp_set_current_user($new_user_id, $user_login);
+                do_action('wp_login', $user_login);
+
+                // send the newly created user to the home page after logging them in
+                echo $sess = " Hello World";
+
+                $_SESSION["ok"] = "ok";
+                wp_redirect(home_url());
+                exit;
+            }
+        } else {
+            echo "Success";
+        }
+    }
+}
+
+add_action('init', 'pippin_add_new_member');
+
+/* * ****Errors8*** */
+
+function pippin_errors() {
+    static $wp_error; // Will hold global variable safely
+    return isset($wp_error) ? $wp_error : ($wp_error = new WP_Error(null, null, null));
+}
+
+// displays error messages from form submissions
+function pippin_show_error_messages() {
+    if ($codes = pippin_errors()->get_error_codes()) {
+        echo '<div class="pippin_errors">';
+        // Loop error codes and display errors
+        foreach ($codes as $code) {
+
+            $message = pippin_errors()->get_error_message($code);
+            echo '<span class="error"><strong>' . __('Error') . '</strong>: ' . $message . '</span><br/>';
+        }
+
+
+
+        echo '</div>';
+    }
+}
+
+
+
+////////////////////////////////////////////
 add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
 
 function woo_remove_product_tabs( $tabs ) {

@@ -305,7 +305,7 @@ endif;?>
 		?>
 		
 	</script>
-	<?php if (is_user_logged_in()){ ?>
+	<?php if (!is_user_logged_in()){ ?>
 	<!-- Login Modal -->
 <div class="modal fade" id="ModalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -317,7 +317,7 @@ endif;?>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <div class="row">                   
                     <div class="col-lg-12 col-md-12 col-sm-12 loginBox">
-                        <h2>LOG IN TO OUTFT</h2>
+                        <h2>LOG IN TO KLNYC</h2>
 <!--								<div class="fbLogin"> <i class="fa fa-facebook-square"></i> Login with Facebook</div>-->
                         <?php do_action('wordpress_social_login'); ?>
                         <hr/> <p class="LoginMessage">Login with your email address. </p>
@@ -345,13 +345,9 @@ endif;?>
             <div class="modal-body">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <div class="row">
-                    <div class="col-sm-5 col-md-5 RegisterImageBox">
-                        <div class="RegisterImage">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/registerBg.jpg" />
-                        </div>
-                    </div>
-                    <div class="col-lg-7 col-md-7 col-sm-7 loginBox">
-                        <h2 class="joinOutft">JOIN OUTFT</h2>
+                   
+                    <div class="col-lg-12 col-md-12 col-sm-12 loginBox">
+                        <h2 class="joinKlnyc">JOIN KLNYC</h2>
                         <p class="joinDesc">Receive customized looks amd weekly updates in your inbox. </p>
                         <?php do_action('wordpress_social_login'); ?>
                         <hr/> <p style="  margin-bottom: 17px;">Sign Up with your email address. </p>
